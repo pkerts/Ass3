@@ -1,0 +1,16 @@
+step 1: get travel times in a useful internal format. (map) given source and destination find time
+
+step 2: get a set a routes for ships. can i get that in and verify the constraints (which is trave time + layover time)
+
+step 3: graph of the route structure. can i construct the cost fucntion. and write dijkstras algo for that
+
+
+
+TravelTimes* needs to be a data structure. he hinted it should be a map (or a map containing a map)
+
+
+
+Function that reads in and checks TSV. skip # lines, etc
+
+Pay attention to if ship arrives next day (after 1440 min)
+

@@ -1,0 +1,3 @@
+Space Lady	Coruscant	0	Tatooine	542
+Space Lady	Tatooine	546	Yavin	561
+Space Lady	Yavin	565	Coruscant	693
