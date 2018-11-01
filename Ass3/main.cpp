@@ -49,7 +49,7 @@ int main(int argc, char** argv) {
 		;
 	}
 
-	for (size_t i = 0; i < A.size(); i++) {
+	for (auto i = 0; i < A.size(); i++) {
 		cout << A[i] << '\t' << B[i] << '\t' << times[i] << '\n';
 	}
 
