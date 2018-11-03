@@ -47,22 +47,9 @@ int main(int argc, char** argv) {
 	while (in >> t) {}
 	t.dump();
 
-	/*Reader r(in, &t);
-	Fleet f;
-	ifstream ships("ship-names.txt");
-	string ship;
-	while (getline(ships, ship)) {
-		f.add()
-	}*/
+	// READER
+	Reader r(in, &t);
 
-/*
-	for (auto i = 0; i < A.size(); i++) {
-		cout << A[i] << '\t' << B[i] << '\t' << times[i] << '\n';
-	}*/
-
-	/*for (auto i : Travel_Times) {
-		cout << i.first.first << '\t' << i.first.second << '\t' << i.second << '\n';
-	}*/
-
+	// RETURN YA BISH
 	return 0;
 }

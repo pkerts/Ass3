@@ -12,17 +12,26 @@ Reader::Reader(std::istream & in, Travel_Times * constraints) : in(in), constrai
 		ships[ship] = f.add(ship);
 	}*/
 	galaxy = load();
+
 }
 
 Galaxy* Reader::load() {
-	Galaxy galaxy;
+	auto galaxy = new Galaxy();
 
 	auto planet_strings = constraints->planet_strings(); // TEST IF I CAN REMOVE THIS LINE AND REPLACE "planet_strings" with "constraints->planet_strings()"
 	for (const auto& i : planet_strings) {
 		auto planet = new Planet(i);
-		galaxy.add(planet);
+		galaxy->add(planet);
+		planets.emplace(i, planet);
 	}
 
+	ifstream ship_names("ship-names.txt");
+	string ship;
+	while (getline(ship_names, ship)) {
+		ships.emplace(ship, galaxy->fleet.add(ship));
+	}
 
-	return nullptr;
+	// At this point there should be 23ish/24ish planets in the data structure holding planets here and there should be about 10 ships holding ship ldhfaskljdh
+
+	return galaxy;
 }

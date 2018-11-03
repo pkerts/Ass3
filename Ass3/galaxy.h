@@ -43,7 +43,7 @@ public:
 	void dump() {for (const auto& i : times) {for (const auto& k : i.second) {std::cout << i.first << '\t' << k.first << '\t' << k.second << '\n';}}}
 	std::vector<std::string> planet_strings() { std::vector<std::string> v(planet_names.begin(), planet_names.end()); return v; }
 private:
-	std::set<std::string> planet_names;
+	std::set<std::string> planet_names; // Should I just make this public as opposed to the above vector? or what?
 	std::map<std::string, std::map<std::string, Time> > times;
 };
 
