@@ -21,6 +21,9 @@
 #include <vector>
 
 #include "priority.h"
+#include <map>
+#include <unordered_map>
+#include <set>
 
 typedef int Time;
 const Time MAX_TIME = INT_MAX;
@@ -31,6 +34,18 @@ typedef int Ship_ID;
 
 class Planet;
 class Galaxy;
+
+class Travel_Times {
+public:
+	void add(const std::string& origin, const std::string& destination, const std::string& time) {times[origin][destination] = std::stoi(time);
+																								  planet_names.insert(origin);
+																								  planet_names.insert(destination);	}
+	void dump() {for (const auto& i : times) {for (const auto& k : i.second) {std::cout << i.first << '\t' << k.first << '\t' << k.second << '\n';}}}
+	std::vector<std::string> planet_strings() { std::vector<std::string> v(planet_names.begin(), planet_names.end()); return v; }
+private:
+	std::set<std::string> planet_names;
+	std::map<std::string, std::map<std::string, Time> > times;
+};
 
 // Class Fleet maps internal ship ID to the ship's name .
 class Fleet {
