@@ -28,13 +28,16 @@ istream& operator>>(istream& is, Travel_Times& t) {
 	if (getline(is, origin, '\t') &&
 		getline(is, destination, '\t') &&
 		getline(is, time)) {
-			t.add(origin, destination, time);
-			Ab.insert(origin);
+		t.add(origin, destination, time);
+	}
+
+
+			/*Ab.insert(origin);
 			A.push_back(origin);
 			B.push_back(destination);
 			Bb.insert(destination);
-			times.push_back(stoi(time));
-	}
+			times.push_back(stoi(time));*/
+	
 
 	return is;
 }
@@ -50,6 +53,5 @@ int main(int argc, char** argv) {
 	// READER
 	Reader r(in, &t);
 
-	// RETURN YA BISH
 	return 0;
 }

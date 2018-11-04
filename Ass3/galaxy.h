@@ -28,7 +28,7 @@
 typedef int Time;
 const Time MAX_TIME = INT_MAX;
 const Time TURNAROUND_TIME = 4;
-const Time TRANSFER_TIME = 6;
+const Time TRANSFER_TIME = 4;
 
 typedef int Ship_ID;
 
@@ -40,7 +40,7 @@ public:
 	void add(const std::string& origin, const std::string& destination, const std::string& time) {times[origin][destination] = std::stoi(time);
 																								  planet_names.insert(origin);
 																								  planet_names.insert(destination);	}
-	void dump() {for (const auto& i : times) {for (const auto& k : i.second) {std::cout << i.first << '\t' << k.first << '\t' << k.second << '\n';}}}
+	void dump() {for (const auto& i : times) {for (const auto& k : i.second) {std::cerr << i.first << '\t' << k.first << '\t' << k.second << '\n';}}}
 	std::vector<std::string> planet_strings() { std::vector<std::string> v(planet_names.begin(), planet_names.end()); return v; }
 private:
 	std::set<std::string> planet_names; // Should I just make this public as opposed to the above vector? or what?
