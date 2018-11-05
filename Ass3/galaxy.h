@@ -38,10 +38,14 @@ class Galaxy;
 class Travel_Times {
 public:
 	void add(const std::string& origin, const std::string& destination, const std::string& time) {times[origin][destination] = std::stoi(time);
+																								  times[destination][origin] = std::stoi(time);
 																								  planet_names.insert(origin);
 																								  planet_names.insert(destination);	}
-	void dump() {for (const auto& i : times) {for (const auto& k : i.second) {std::cerr << i.first << '\t' << k.first << '\t' << k.second << '\n';}}}
-	std::vector<std::string> planet_strings() { std::vector<std::string> v(planet_names.begin(), planet_names.end()); return v; }
+	// void dump() {for (const auto& i : times) {for (const auto& k : i.second) {std::cerr << i.first << '\t' << k.first << '\t' << k.second << '\n';}}}
+	void dump() { for (const auto& i : times) { std::cerr << i.first << '\n'; for (const auto& k : i.second) { std::cerr << "\t\t" << k.first << '\t' << k.second << '\n'; } } }
+
+	std::set<std::string>::iterator begin() { return planet_names.begin(); }
+	std::set<std::string>::iterator end() { return planet_names.end(); }
 private:
 	std::set<std::string> planet_names; // Should I just make this public as opposed to the above vector? or what?
 	std::map<std::string, std::map<std::string, Time> > times;

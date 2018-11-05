@@ -18,11 +18,12 @@ Reader::Reader(std::istream & in, Travel_Times * constraints) : in(in), constrai
 Galaxy* Reader::load() {
 	auto galaxy = new Galaxy();
 
-	auto planet_strings = constraints->planet_strings(); // TEST IF I CAN REMOVE THIS LINE AND REPLACE "planet_strings" with "constraints->planet_strings()"
-	for (const auto& i : planet_strings) {
-		auto planet = new Planet(i);
+	const auto begin = constraints->begin();
+	const auto end = constraints->end();
+	for (auto i = begin; i != end; ++i) {
+		auto planet = new Planet(*i);
 		galaxy->add(planet);
-		planets.emplace(i, planet);
+		planets.emplace(*i, planet);
 	}
 
 	ifstream ship_names("ship-names.txt");

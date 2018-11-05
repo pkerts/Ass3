@@ -1,0 +1,150 @@
+Alderaan
+		Bespin	8
+		Corellia	6
+		Coruscant	16
+		Dagobah	30
+		Dantooine	13
+		Endor	18
+		Gamorr	180
+		Hoth	27
+		Sullust	213
+		Tatooine	7
+		Yavin	5
+Bakura
+		Corellia	52
+		Corporate Sector	60
+		Coruscant	77
+		Hapes Cluster	11
+		Kessel	27
+		Mon Calamari	22
+Bespin
+		Corellia	6
+		Coruscant	158
+		Dagobah	27
+		Dantooine	22
+		Endor	32
+		Gamorr	75
+		Hoth	4
+		Sullust	268
+		Tatooine	16
+		Yavin	11
+Brentaal
+		Chandrila	1
+		Corellia	3
+		Corulag	2
+		Coruscant	7
+		Esseles	2
+		Ralltiir	7
+		Rhinnal	5
+Chandrila
+		Corellia	2
+		Corulag	1
+		Coruscant	5
+		Esseles	3
+		Ralltiir	4
+		Rhinnal	2
+Corellia
+		Corporate Sector	9
+		Corulag	1
+		Coruscant	4
+		Dagobah	31
+		Dantooine	12
+		Endor	17
+		Esseles	4
+		Gamorr	254
+		Hapes Cluster	21
+		Hoth	21
+		Kashyyyk	36
+		Kessel	10
+		Mon Calamari	6
+		Myrkr	81
+		Ralltiir	9
+		Rhinnal	7
+		Sullust	19
+		Tatooine	4
+		Wayland	99
+		Yaga Minor	12
+		Yavin	15
+Corporate Sector
+		Coruscant	15
+		Hapes Cluster	7
+		Kessel	9
+		Mon Calamari	24
+Corulag
+		Coruscant	6
+		Esseles	4
+		Ralltiir	11
+		Rhinnal	8
+Coruscant
+		Dagobah	302
+		Dantooine	19
+		Endor	156
+		Esseles	8
+		Gamorr	387
+		Hapes Cluster	39
+		Hoth	81
+		Kashyyyk	43
+		Kessel	27
+		Mon Calamari	13
+		Myrkr	108
+		Ralltiir	12
+		Rhinnal	10
+		Sullust	194
+		Tatooine	542
+		Wayland	58
+		Yaga Minor	15
+		Yavin	128
+Dagobah
+		Dantooine	32
+		Endor	97
+		Gamorr	656
+		Hoth	89
+		Sullust	78
+		Tatooine	28
+		Yavin	314
+Dantooine
+		Endor	21
+		Gamorr	86
+		Hoth	28
+		Sullust	126
+		Tatooine	20
+		Yavin	12
+Endor
+		Gamorr	341
+		Hoth	60
+		Sullust	19
+		Tatooine	24
+		Yavin	10
+Esseles
+		Ralltiir	4
+		Rhinnal	2
+Gamorr
+		Hoth	346
+		Sullust	74
+		Tatooine	40
+		Yavin	55
+Hapes Cluster
+		Kessel	12
+		Mon Calamari	18
+Hoth
+		Sullust	22
+		Tatooine	56
+		Yavin	39
+Kashyyyk
+		Myrkr	55
+		Wayland	54
+		Yaga Minor	53
+Kessel
+		Mon Calamari	9
+Myrkr
+		Wayland	21
+		Yaga Minor	55
+Rhinnal
+		Ralltiir	1
+Sullust
+		Tatooine	38
+		Yavin	17
+Tatooine
+		Yavin	15
+Wayland
+		Yaga Minor	30
