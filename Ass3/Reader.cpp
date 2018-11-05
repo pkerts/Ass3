@@ -40,3 +40,11 @@ Galaxy* Reader::load() {
 bool Reader::contains_ship(const std::string& ship_name) const {
 	return ships.count(ship_name);
 }
+
+void Reader::dump_ships() const {
+	int count = 1;
+	for (auto i : ships) {
+		cout << count << " " << i.first << endl;
+		count++;
+	}
+}

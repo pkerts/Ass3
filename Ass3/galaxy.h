@@ -44,6 +44,45 @@ public:
 	// void dump() {for (const auto& i : times) {for (const auto& k : i.second) {std::cerr << i.first << '\t' << k.first << '\t' << k.second << '\n';}}}
 	void dump() { for (const auto& i : times) { std::cerr << i.first << '\n'; for (const auto& k : i.second) { std::cerr << "\t\t" << k.first << '\t' << k.second << '\n'; } } }
 
+	std::string dump(int number) const {
+		int i = 1;
+		if (number == 0) {
+			for (const auto& k : times) {
+				std::cout << i << " " << k.first << std::endl;
+				i++;
+			}
+			return "";
+		}
+		for (const auto& k : times) {
+			if (number == i) {
+				i = 1;
+				for (const auto& j : k.second) {
+					std::cout << i << " " << j.first << std::endl;
+					i++;
+				}
+				return k.first;
+			}
+			i++;
+		}
+		return "END OF STD::STRING DUMP(INT NUMBER) CONST";
+	}
+
+	std::pair<std::string, int> travel_time(int origin, int destination) const {
+		int counter = 1;
+		for (const auto& i : times) {
+			if (counter == origin) {
+				counter = 1;
+				for (const auto& j : i.second) {
+					if (counter == destination) {
+						return j;
+					}
+					counter++;
+				}
+			}
+			counter++;
+		}
+		return std::make_pair("", 0);
+	}
 	std::set<std::string>::iterator begin() { return planet_names.begin(); }
 	std::set<std::string>::iterator end() { return planet_names.end(); }
 private:
