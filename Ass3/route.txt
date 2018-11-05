@@ -1,1 +1,3 @@
-USS Enterprise	Yaga Minor	0	Wayland	30
+USS Enterprise	Coruscant	0	Tatooine	542
+USS Enterprise	Tatooine	546	Yavin	561
+USS Enterprise	Yavin	565	Coruscant	693
