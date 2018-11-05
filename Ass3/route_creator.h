@@ -1,6 +1,7 @@
 ﻿#pragma once
+#include "Reader.h"
 
 class RouteCreator {
 public:
-	void Create();
+	void Create(const Reader& r);
 };

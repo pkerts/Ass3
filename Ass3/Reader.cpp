@@ -36,3 +36,7 @@ Galaxy* Reader::load() {
 
 	return galaxy;
 }
+
+bool Reader::contains_ship(const std::string& ship_name) const {
+	return ships.count(ship_name);
+}
