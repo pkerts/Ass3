@@ -7,6 +7,7 @@
 #include <map>
 #include "Reader.h"
 #include <set>
+#include "route_creator.h"
 
 using namespace std;
 
@@ -52,6 +53,9 @@ int main(int argc, char** argv) {
 
 	// READER
 	Reader r(in, &t);
+
+	RouteCreator c;
+	c.Create(r, t);
 
 	return 0;
 }

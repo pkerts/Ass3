@@ -8,6 +8,7 @@ public:
 	Reader(std::istream& in, Travel_Times* constraints);
 	Galaxy* load();
 	bool contains_ship(const std::string& ship_name) const;
+	void dump_ships() const;
 
 private:
 	static const int MIN_LAYOVER_TIME;
