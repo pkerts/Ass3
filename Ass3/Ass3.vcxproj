@@ -118,10 +118,12 @@
     <ClInclude Include="galaxy.h" />
     <ClInclude Include="priority.h" />
     <ClInclude Include="Reader.h" />
+    <ClInclude Include="route_creator.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Reader.cpp" />
+    <ClCompile Include="route_creator.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

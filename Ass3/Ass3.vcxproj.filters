@@ -24,12 +24,18 @@
     <ClInclude Include="galaxy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="route_creator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Reader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="route_creator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
