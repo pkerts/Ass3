@@ -42,7 +42,7 @@ void RouteCreator::Create(const Reader& r, const Travel_Times& t) {
 		cin >> destination;
 		auto travel_pair = t.travel_time(origin, destination);
 		route << travel_pair.first << '\t' << (time + travel_pair.second) << endl;
-		cout << "keep going? type 0 to halt ";
+		cout << "type 0 to halt, type 1 for another ship" << endl;
 		cin >> status;
 	}
 }
