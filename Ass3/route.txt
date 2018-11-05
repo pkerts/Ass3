@@ -1,1 +1,21 @@
-Serenity	Coruscant	0	Tatooine	542
+Andromeda Ascendant	Alderaan	0	Bespin	8
+Andromeda Ascendant	Bespin	12	Corellia	18
+Andromeda Ascendant	Corellia	22	Bakura	74
+Andromeda Ascendant	Bakura	78	Corporate Sector	138
+Andromeda Ascendant	Corporate Sector	142	Coruscant	157
+Andromeda Ascendant	Coruscant	161	Brentaal	168
+Andromeda Ascendant	Brentaal	172	Chandrila	173
+Andromeda Ascendant	Chandrila	177	Brentaal	178
+Andromeda Ascendant	Brentaal	182	Esseles	184
+Andromeda Ascendant	Esseles	188	Corulag	192
+Andromeda Ascendant	Corulag	196	Ralltiir	207
+Andromeda Ascendant	Ralltiir	211	Rhinnal	212
+Andromeda Ascendant	Rhinnal	216	Brentaal	221
+Andromeda Ascendant	Brentaal	225	Chandrila	226
+Galactica	Dagobah	0	Hoth	89
+Galactica	Hoth	93	Gamorr	439
+Galactica	Gamorr	443	Dantooine	529
+Galactica	Dantooine	533	Sullust	659
+Galactica	Sullust	663	Tatooine	701
+Galactica	Tatooine	705	Yavin	720
+Galactica	Yavin	724	Endor	734

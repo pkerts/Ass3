@@ -44,6 +44,32 @@ public:
 	// void dump() {for (const auto& i : times) {for (const auto& k : i.second) {std::cerr << i.first << '\t' << k.first << '\t' << k.second << '\n';}}}
 	void dump() { for (const auto& i : times) { std::cerr << i.first << '\n'; for (const auto& k : i.second) { std::cerr << "\t\t" << k.first << '\t' << k.second << '\n'; } } }
 
+	std::map<std::basic_string<char>, std::map<std::basic_string<char>, int>>::const_iterator
+	travel_time(std::string planet) const { return times.find(planet); }
+
+	int obtain_origin_int(std::string origin_name) const {
+		int i = 1;
+		for (const auto& k : times) {
+			if (k.first == origin_name) return i;
+			i++;
+		}
+		return 0;
+	}
+
+	int obtain_destination_int(int origin_int, std::string destination_name) const {
+		int i = 1;
+		for (const auto& k : times) {
+			if (i == origin_int) {
+				i = 1;
+				for (const auto& j : k.second) {
+					if (j.first == destination_name) return i;
+					i++;
+				}
+			}
+		}
+		return 0;
+	}
+
 	std::string dump(int number) const {
 		int i = 1;
 		if (number == 0) {
