@@ -47,15 +47,16 @@ int main(int argc, char** argv) {
 	// TRAVEL TIMES
 	string filename = argv[1];
 	fstream in(filename);
+	fstream conduits("conduits.txt");
 	Travel_Times t;
-	while (in >> t) {}
+	while (conduits >> t) {}
 	t.dump();
 
 	// READER
 	Reader r(in, &t);
 
-	RouteCreator c;
-	c.Create(r, t);
+	// RouteCreator c;
+	// c.Create(r, t);
 
 	return 0;
 }

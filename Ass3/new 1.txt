@@ -1,0 +1,5 @@
+Andromeda Ascendant	Coruscant	0	Tatooine	542
+Andromeda Ascendant	Tatooine	546	Yavin	561
+Andromeda Ascendant	Yavin	565	Coruscant	693
+Andromeda Ascendant	Coruscant	697	Kessel	724
+Andromeda Ascendant	Kessel	728	Mon Calamari	737

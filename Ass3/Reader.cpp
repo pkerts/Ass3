@@ -12,7 +12,9 @@ Reader::Reader(std::istream & in, Travel_Times * constraints) : in(in), constrai
 		ships[ship] = f.add(ship);
 	}*/
 	galaxy = load();
-
+	while (get_record()) {
+		;
+	}
 }
 
 Galaxy* Reader::load() {
@@ -47,4 +49,33 @@ void Reader::dump_ships() const {
 		cout << count << " " << i.first << endl;
 		count++;
 	}
+}
+
+bool Reader::get_record() {
+	if (getline(in, current_input_line)) {
+		previous_ship_id = ship_id;
+		previous_destination_planet = destination_planet;
+		previous_arrival_time = arrival_time;
+		
+		
+		string delimiter = "\t";
+		size_t pos = 0;
+		string token;
+		int i = 1;
+		while ((pos = current_input_line.find(delimiter)) != string::npos) {
+			token = current_input_line.substr(0, pos);
+			switch (i) {
+			case 1: ship_id = ships.find(token)->second; break;
+			case 2: departure_planet = planets.find(token)->second; break;
+			case 3: departure_time = stoi(token); break;
+			case 4: destination_planet = planets.find(token)->second; break;
+			default: ;
+			}
+			current_input_line.erase(0, pos + delimiter.length());
+			i++;
+		}
+		arrival_time = stoi(current_input_line);
+		return true;
+	}
+	return false;
 }

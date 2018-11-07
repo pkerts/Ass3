@@ -1,0 +1,7 @@
+Leg(Ship_ID id, Time departure_time, Time arrival_time)
+    : id(id), departure_time(departure_time), arrival_time(arrival_time) {
+  }
+  
+  Ship_ID id;
+  Time departure_time;
+  Time arrival_time;
