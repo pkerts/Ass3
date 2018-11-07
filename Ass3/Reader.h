@@ -9,7 +9,8 @@ public:
 	Galaxy* load();
 	bool contains_ship(const std::string& ship_name) const;
 	void dump_ships() const;
-
+	void dump_current_info() const;
+	bool ReadAndVerify();
 private:
 	static const int MIN_LAYOVER_TIME;
 
@@ -18,7 +19,7 @@ private:
 
 	// Verify that that current leg is a valid continuation of the
 	// previous leg or the beginning of the route for another ship.
-	bool validate();
+	bool validate() const;
 
 	std::istream& in;
 
@@ -29,16 +30,16 @@ private:
 	std::string current_input_line;
 
 	// Previous leg information for validation.
-	Ship_ID previous_ship_id;
-	Planet* previous_destination_planet;
-	int previous_arrival_time;
+	Ship_ID previous_ship_id{};
+	Planet* previous_destination_planet{};
+	int previous_arrival_time{};
 
 	// Current leg information
-	Ship_ID ship_id;
-	Planet* departure_planet;
-	Time departure_time;
-	Planet* destination_planet;
-	Time arrival_time;
+	Ship_ID ship_id{};
+	Planet* departure_planet{};
+	Time departure_time{};
+	Planet* destination_planet{};
+	Time arrival_time{};
 
 	// Planet name to planet object
 	std::map<std::string, Planet*> planets;

@@ -25,110 +25,14 @@
 #include <unordered_map>
 #include <set>
 
-typedef int Time;
-const Time MAX_TIME = INT_MAX;
+
 const Time TURNAROUND_TIME = 4;
 const Time TRANSFER_TIME = 4;
 
-typedef int Ship_ID;
-
-class Planet;
-class Galaxy;
-
-class Travel_Times {
-public:
-	void add(const std::string& origin, const std::string& destination, const std::string& time) {times[origin][destination] = std::stoi(time);
-																								  times[destination][origin] = std::stoi(time);
-																								  planet_names.insert(origin);
-																								  planet_names.insert(destination);	}
-	// void dump() {for (const auto& i : times) {for (const auto& k : i.second) {std::cerr << i.first << '\t' << k.first << '\t' << k.second << '\n';}}}
-	void dump() { for (const auto& i : times) { std::cerr << i.first << '\n'; for (const auto& k : i.second) { std::cerr << "\t\t" << k.first << '\t' << k.second << '\n'; } } }
-
-	std::map<std::basic_string<char>, std::map<std::basic_string<char>, int>>::const_iterator
-	travel_time(std::string planet) const { return times.find(planet); }
-	Time transit_time(std::string origin, std::string destination) {
-		return times.find(origin)->second.find(destination)->second;
-	}
-
-	int obtain_origin_int(std::string origin_name) const {
-		int i = 1;
-		for (const auto& k : times) {
-			if (k.first == origin_name) return i;
-			i++;
-		}
-		return 0;
-	}
-
-	int obtain_destination_int(int origin_int, std::string destination_name) const {
-		int i = 1;
-		for (const auto& k : times) {
-			if (i == origin_int) {
-				i = 1;
-				for (const auto& j : k.second) {
-					if (j.first == destination_name) return i;
-					i++;
-				}
-			}
-		}
-		return 0;
-	}
-
-	std::string dump(int number) const {
-		int i = 1;
-		if (number == 0) {
-			for (const auto& k : times) {
-				std::cout << i << " " << k.first << std::endl;
-				i++;
-			}
-			return "";
-		}
-		for (const auto& k : times) {
-			if (number == i) {
-				i = 1;
-				for (const auto& j : k.second) {
-					std::cout << i << " " << j.first << std::endl;
-					i++;
-				}
-				return k.first;
-			}
-			i++;
-		}
-		return "END OF STD::STRING DUMP(INT NUMBER) CONST";
-	}
-
-	std::pair<std::string, int> travel_time(int origin, int destination) const {
-		int counter = 1;
-		for (const auto& i : times) {
-			if (counter == origin) {
-				counter = 1;
-				for (const auto& j : i.second) {
-					if (counter == destination) {
-						return j;
-					}
-					counter++;
-				}
-			}
-			counter++;
-		}
-		return std::make_pair("", 0);
-	}
-	std::set<std::string>::iterator begin() { return planet_names.begin(); }
-	std::set<std::string>::iterator end() { return planet_names.end(); }
-private:
-	std::set<std::string> planet_names; // Should I just make this public as opposed to the above vector? or what?
-	std::map<std::string, std::map<std::string, Time> > times;
-};
-
 // Class Fleet maps internal ship ID to the ship's name .
 class Fleet {
-public:
-  Ship_ID add(const std::string& name) {names.push_back(name); return names.size() - 1;}
   const std::string& name(Ship_ID id) const {return names[id];}
-
-private:
-  std::vector<std::string> names;
 };
-
 
 // Class Leg represents a single leg of an itinerary, consisting of a
 // ship ID, departure time, and arrival time.  Legs are associated
@@ -196,7 +100,6 @@ public:
 //  Dijkstra's shortest-path algorithm.
 class Planet {
 public:
-  Planet(const std::string& name): name(name) {}
   void add(Edge* e) {edges.push_back(e);}
 
   // reset() clears the fields set by Dijkstra's algorithm so the
@@ -250,7 +153,6 @@ private:
 // adding edges to the planet objects.
 class Galaxy {
 public:
-  void add(Planet * planet) {planets.push_back(planet);}
 
   void reset() {for (auto planet: planets) {planet->reset();}}
 
@@ -263,9 +165,6 @@ public:
 
   void dump();
   void dump_routes(Planet* origin, std::ostream& out=std::cerr);
-
-  Fleet fleet;
-  std::vector<Planet*> planets;
 };
 
 #endif

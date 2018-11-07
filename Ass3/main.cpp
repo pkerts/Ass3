@@ -54,6 +54,9 @@ int main(int argc, char** argv) {
 
 	// READER
 	Reader r(in, &t);
+	if (!r.ReadAndVerify()) {
+		return EXIT_FAILURE;
+	}
 
 	// RouteCreator c;
 	// c.Create(r, t);

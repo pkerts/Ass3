@@ -12,9 +12,6 @@ Reader::Reader(std::istream & in, Travel_Times * constraints) : in(in), constrai
 		ships[ship] = f.add(ship);
 	}*/
 	galaxy = load();
-	while (get_record()) {
-		;
-	}
 }
 
 Galaxy* Reader::load() {
@@ -51,6 +48,47 @@ void Reader::dump_ships() const {
 	}
 }
 
+void Reader::dump_current_info() const {
+	// Previous SHIP_ID
+	cerr << "previous_ship_id: " << previous_ship_id << endl;
+
+	// Previous DESTINATION PLANET *
+	cerr << "previous_destination_planet: ";
+	if (previous_destination_planet) cerr << previous_destination_planet->name << endl;
+	else cerr << "0" << endl;
+
+	// Previous arrival time
+	cerr << "previous_arrival_time: " << previous_arrival_time << endl;
+
+
+
+
+
+
+	// SHIP_ID
+	cerr << "ship_id: " << ship_id << endl;
+
+	// DEPARTURE PLANET *
+	cerr << "departure_planet: " << departure_planet->name << endl;
+
+	// DEPARTURE TIME
+	cerr << "departure_time: " << departure_time << endl;
+
+	// destination planet *
+	cerr << "destination_planet: " << destination_planet->name << endl;
+
+	// Arrival time
+	cerr << "arrival_time: " << arrival_time << endl;
+
+}
+
+bool Reader::ReadAndVerify() {
+	while (get_record()) {
+		if (!validate()) return false;
+	}
+	return true;
+}
+
 bool Reader::get_record() {
 	if (getline(in, current_input_line)) {
 		previous_ship_id = ship_id;
@@ -78,4 +116,22 @@ bool Reader::get_record() {
 		return true;
 	}
 	return false;
+}
+
+bool Reader::validate() const {
+	if (!(departure_time == (previous_arrival_time+4))) {
+		if (!(departure_time == 0 && ship_id != previous_ship_id)) {
+			cerr << "\nERROR: Current leg is not a valid continuation of the previous leg / is not the beginning of the route for another ship.\ninfo: " << endl;
+			dump_current_info();
+			return false;
+		}
+	}
+	if (arrival_time - departure_time != constraints->transit_time(departure_planet->name, destination_planet->name)) {
+		cerr << "\nERROR: Travel time does not seem right. Please step to the side for a random space search\ndebug info: " << endl;
+		dump_current_info();
+		return false;
+	}
+	cerr << "ALL GOOD:" << endl;
+	dump_current_info();
+	return true;
 }
