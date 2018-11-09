@@ -5,7 +5,9 @@ using namespace std;
 
 Reader::Reader(std::istream & in, Travel_Times * constraints) : in(in), constraints(constraints)
 {
-	galaxy = load();
+	galaxy = load(); // this is all that's done in the constructor. read below
+	// ADD PLANETS TO READER MAP (PLANET NAMES/PLANET OBJS) AND GALAXY VECTOR (PLANETS OBJS..) 
+	// AS WELL ADD SHIPS(to the READER ship names / id's map and also galaxy's FLEET's vector of names. (ships.) ok ,.
 }
 
 Galaxy* Reader::load() {
