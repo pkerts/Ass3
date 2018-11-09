@@ -1,3 +1,4 @@
-Galactica	Coruscant	0	Tatooine	542
-Galactica	Tatooine	546	Yavin	561
-Galactica	Yavin	565	Coruscant	694
+Spaebus	Animus	0	Bronxus	4
+Spaebus	Bronxus	8	Charlie	16
+Spaebus	Charlie	20	Bronxus	28
+Spaebus	Bronxus	32	Animus	36

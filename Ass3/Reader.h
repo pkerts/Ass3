@@ -30,7 +30,7 @@ private:
 	std::string current_input_line;
 
 	// Previous leg information for validation.
-	Ship_ID previous_ship_id{};
+	Ship_ID previous_ship_id={-1};
 	Planet* previous_destination_planet{};
 	int previous_arrival_time{};
 

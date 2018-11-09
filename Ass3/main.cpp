@@ -44,22 +44,26 @@ istream& operator>>(istream& is, Travel_Times& t) {
 }
 
 int main(int argc, char** argv) {
+	string filename = argv[1]; // argument passed. this is route.txt
+	fstream in(filename); // fstream created w/ route.txt
+
+
 	// TRAVEL TIMES
-	string filename = argv[1];
-	fstream in(filename);
-	fstream conduits("conduits.txt");
-	Travel_Times t;
-	while (conduits >> t) {}
-	t.dump();
+	fstream conduits("conduits.txt"); // fstream for conduits.txt
+	Travel_Times t; // TravelTimes object created
+	while (conduits >> t) {} // Fill TravelTimes w conduits.txt
+	t.dump(); // dump it for validation (std::cerr)
+
 
 	// READER
-	Reader r(in, &t);
-	if (!r.ReadAndVerify()) {
+	Reader r(in, &t); // create a reader w/ route.txt and Travel_Times which we filled with "conduits.txt"
+	if (!r.ReadAndVerify()) { // 
 		return EXIT_FAILURE;
 	}
 
+
+	// CREATOR
 	// RouteCreator c;
 	// c.Create(r, t);
-
 	return 0;
 }
