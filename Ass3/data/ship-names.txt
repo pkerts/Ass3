@@ -1,10 +1,2 @@
-Andromeda Ascendant
-USSC Discovery One
-Galactica
-Heart of Gold
-Millenium Falcon
-Moya
-NSEA Protector
-Red Dwarf
-Serenity
-USS Enterprise
+Spaebus
+Omegus

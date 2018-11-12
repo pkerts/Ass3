@@ -23,14 +23,14 @@ void RouteCreator::Create(const Reader& r, const Travel_Times& t) {
 		}
 
 		switch (ship) {
-		case 1: route << "Andromeda Ascendant\t"; break;
-		case 2: route << "Galactica\t"; break;
-		case 3: route << "Heart of Gold\t"; break;
-		case 4: route << "Millenium Falcon\t"; break;
-		case 5: route << "Moya\t"; break;
-		case 6: route << "NSEA Protector\t"; break;
-		case 7: route << "Red Dwarf\t"; break;
-		case 8: route << "Serenity\t"; break;
+		case 1: route << "Ship1\t"; break;
+		case 2: route << "Ship2\t"; break;
+		case 3: route << "Ship3\t"; break;
+		case 4: route << "Ship4\t"; break;
+		case 5: route << "Ship5\t"; break;
+		case 6: route << "Ship6\t"; break;
+		case 7: route << "Ship7\t"; break;
+		case 8: route << "Ship8\t"; break;
 		case 9: route << "USS Enterprise\t"; break;
 		case 10: route << "USSC Discovery One\t"; break;
 		default:;

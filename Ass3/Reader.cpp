@@ -94,8 +94,19 @@ void Reader::dump_current_info() const {
 bool Reader::ReadAndVerify() {
 	while (get_record()) {
 		if (!validate()) return false;
+		const auto leg = new Leg(ship_id, departure_time, arrival_time);
+		if (!(edges.count(departure_planet) && edges[departure_planet].count(destination_planet))) {
+			edges[departure_planet][destination_planet] = new Edge(destination_planet);
+		}
+		edges[departure_planet][destination_planet]->add(*leg); // here we finalize the edges
 	}
+	// once edges are finalized and legs are added to them. we can add them to the planets using the public add() method
+	for (auto i : galaxy->planets) { for (auto k : galaxy->planets) { if (i != k) { if (edges.find(i) != edges.end()) { auto edge = edges[i].find(k); if (edge != edges[i].end()) { i->add(edge->second);}}}}}
 	return true;
+}
+
+void Reader::Dijkstras() {
+	galaxy->search();
 }
 
 // ACTUALLY EXTRACTS THE CURRENT LINE FROM ROUTE.TXT YOOOOO. and puts ze shit in its correct place. ex. previous_arrival_time etc.

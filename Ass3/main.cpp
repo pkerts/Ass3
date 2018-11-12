@@ -57,12 +57,15 @@ int main(int argc, char** argv) {
 
 	// READER
 	Reader r(in, &t); // create a reader w/ route.txt and Travel_Times which we filled with "conduits.txt"
+
+	// TO USE ROUTE CREATOR, COMMENT OUT THIS BLOCK (the following three lines)
 	if (!r.ReadAndVerify()) { // 
 		return EXIT_FAILURE;
 	}
 
+	r.Dijkstras();
 
-	// CREATOR
+	// CREATOR. TO USE ROUTE CREATOR, UNCOMMENT THIS BLOCK
 	// RouteCreator c;
 	// c.Create(r, t);
 	return 0;

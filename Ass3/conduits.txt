@@ -1,2 +1,9 @@
-Animus	Bronxus	4
-Bronxus	Charlie	8
+A	E	14
+A	D	12
+A	B	70
+A	C	13
+C	B	10
+D	B	80
+E	B	100
+C	D	7
+D	E	9

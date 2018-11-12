@@ -11,6 +11,7 @@ public:
 	void dump_ships() const;
 	void dump_current_info() const;
 	bool ReadAndVerify();
+	void Dijkstras();
 private:
 	static const int MIN_LAYOVER_TIME;
 
@@ -30,7 +31,7 @@ private:
 	std::string current_input_line;
 
 	// Previous leg information for validation.
-	Ship_ID previous_ship_id={-1};
+	Ship_ID previous_ship_id{};
 	Planet* previous_destination_planet{};
 	int previous_arrival_time{};
 

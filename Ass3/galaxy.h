@@ -24,6 +24,7 @@
 #include <map>
 #include <unordered_map>
 #include <set>
+#include <algorithm>
 
 typedef int Time;
 const Time MAX_TIME = INT_MAX;
@@ -45,7 +46,8 @@ public:
 	void dump() { for (const auto& i : times) { std::cerr << i.first << '\n'; for (const auto& k : i.second) { std::cerr << "\t\t" << k.first << '\t' << k.second << '\n'; } } }
 
 	std::map<std::basic_string<char>, std::map<std::basic_string<char>, int>>::const_iterator
-	travel_time(std::string planet) const { return times.find(planet); }
+	immediate_neighbors(const std::string& planet) const { return times.find(planet); }
+
 	Time transit_time(std::string origin, std::string destination) {
 		return times.find(origin)->second.find(destination)->second;
 	}
@@ -150,7 +152,7 @@ public:
 
   static bool less_than(const Leg& left, const Leg& right) {
     return compare(left, right) < 0;
-  }
+  } 
 
   Ship_ID id;
   Time departure_time;
@@ -159,7 +161,7 @@ public:
 
 
 // Class Itinerary is a sequence of legs with a parallel sequence of
-// destinaion planets. i.e. destinations[i] is the destination of
+// destination planets. i.e. destinations[i] is the destination of
 // leg[i].
 class Itinerary {
 public:
@@ -267,5 +269,63 @@ public:
   Fleet fleet;
   std::vector<Planet*> planets;
 };
+
+inline void Edge::sort() {
+	std::sort(departures.begin(), departures.end(), Leg::compare);
+}
+
+inline Planet* Planet::search(PriorityQueue<Planet, int(*)(Planet*, Planet*)>& queue) {
+	// for (auto p : )
+	
+	best_leg.departure_time = 0;
+	best_leg.arrival_time = 0;
+
+	std::vector<Planet*> neighbors;
+	for (auto i : edges) {
+		i->destination->predecessor = this;
+		i->sort();
+		neighbors.push_back(i->destination);
+	}
+
+	for (auto v : neighbors) {
+		queue.push_back(v);
+	}
+
+	auto u = queue.pop();
+	
+	//while (!queue.empty()) {
+	//	auto u = queue.pop();
+	//	std::vector<Planet*> neighbors_of_u;
+	//	for (auto vu : u->edges) {
+	//		neighbors_of_u.push_back(vu->destination);
+	//	}
+	//	for (auto neighbor_v : neighbors_of_u) {
+	//		// auto alt = 
+	//	}
+	//}
+
+	for (auto i : edges) {
+		;
+	}
+
+	return u;
+}
+
+inline Itinerary* Planet::make_itinerary(Planet* destination) {
+	best_leg.departure_time = 0;
+	best_leg.arrival_time = 0;
+
+	PriorityQueue<Planet, int(*)(Planet*, Planet*)> pq(compare);
+	
+}
+
+inline void Galaxy::search() {
+	for (auto k : planets)
+	for (auto i : planets) {
+		reset();
+		PriorityQueue<Planet, int(*)(Planet*, Planet*)> pq(Planet::compare);
+		i->search(pq);
+	}
+}
 
 #endif
