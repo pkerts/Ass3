@@ -320,11 +320,33 @@ inline Itinerary* Planet::make_itinerary(Planet* destination) {
 }
 
 inline void Galaxy::search() {
-	for (auto k : planets)
-	for (auto i : planets) {
-		reset();
-		PriorityQueue<Planet, int(*)(Planet*, Planet*)> pq(Planet::compare);
-		i->search(pq);
+	// itinerary furthest galaxy planet
+	for (auto k : planets) {
+		Itinerary* farthest_planet{};
+		for (auto i : planets) {
+			if (i != k) {
+				reset();
+				PriorityQueue<Planet, int(*)(Planet*, Planet*)> pq(Planet::compare);
+				auto itinerary = k->make_itinerary(i);
+				if (!farthest_planet) {
+					farthest_planet = itinerary;
+				}
+				else {
+					auto total_time = itinerary->legs.back().arrival_time - itinerary->legs.front().departure_time;
+					if (total_time > farthest_planet->legs.back().arrival_time - farthest_planet->legs.front().departure_time) {
+						farthest_planet = itinerary;
+					}
+				}
+				// just finished writing the above 10:35 AM
+				// the below line probably needs to go
+				i->search(pq);
+
+				// Now we just finish in make_itinerary. it will do the starting steps and now we must search shortest time to the planet passed to make itinerary
+				// using planet search. hmmmm. but the planet search does not take a planet pointer
+			}
+		}
+		// dump furthest planet
+		// initialize and check against furthest galaxy planet
 	}
 }
 
