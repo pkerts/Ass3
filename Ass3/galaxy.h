@@ -167,6 +167,7 @@ class Itinerary {
 public:
   Itinerary(Planet* origin): origin(origin) {}
   void print(Fleet& fleet, std::ostream& out=std::cout);
+  Time total_time() { assert(!legs.empty()); return legs.back().arrival_time - legs.front().departure_time; }
 
   Planet* origin;
   std::vector<Planet*> destinations;
@@ -271,83 +272,150 @@ public:
 };
 
 inline void Edge::sort() {
-	std::sort(departures.begin(), departures.end(), Leg::compare);
+	std::sort(departures.begin(), departures.end(), Leg::less_than);
 }
 
 inline Planet* Planet::search(PriorityQueue<Planet, int(*)(Planet*, Planet*)>& queue) {
-	// for (auto p : )
-	
-	best_leg.departure_time = 0;
-	best_leg.arrival_time = 0;
+	//best_leg.departure_time = 0;
+	//best_leg.arrival_time = 0;
+	//// Insert source itself in priority queue and initialize 
+	//// its distance as 0.
+	//queue.push_back(this);
 
-	std::vector<Planet*> neighbors;
-	for (auto i : edges) {
-		i->destination->predecessor = this;
-		i->sort();
-		neighbors.push_back(i->destination);
-	}
-
-	for (auto v : neighbors) {
-		queue.push_back(v);
-	}
-
-	auto u = queue.pop();
-	
+	//* Looping till priority queue becomes empty (or all
+	//distances are not finalized) */
 	//while (!queue.empty()) {
+	//	// The first vertex in pair is the minimum distance 
+	//	// vertex, extract it from priority queue.
 	//	auto u = queue.pop();
-	//	std::vector<Planet*> neighbors_of_u;
-	//	for (auto vu : u->edges) {
-	//		neighbors_of_u.push_back(vu->destination);
-	//	}
-	//	for (auto neighbor_v : neighbors_of_u) {
-	//		// auto alt = 
+
+	//	// Get all adjacent of u.
+	//	for (auto x : u->edges) {
+	//		x->sort();
+
+	//		if (x->destination->arrival_time() > u->arrival_time() + x->departures.front().arrival_time) {
+	//			x->destination->best_leg = x->departures.front();
+	//			x->destination->predecessor = u;
+	//			queue.push_back(x->destination);
+	//		}
+
 	//	}
 	//}
 
-	for (auto i : edges) {
-		;
+	//std::vector<Planet*> neighbors;
+	//for (auto i : edges) {
+	//	i->destination->predecessor = this;
+	//	i->sort();
+	//	i->destination->best_leg = i->departures.front();
+	//	neighbors.push_back(i->destination);
+	//}
+
+	//for (auto v : neighbors) {
+	//	queue.push_back(v);
+	//}
+
+	//while (!queue.empty()) {
+	//	auto u = queue.pop();
+	//	for (auto ii : u->edges) {
+	//		// ii->
+	//	}
+	//}
+	//
+	////while (!queue.empty()) {
+	////	auto u = queue.pop();
+	////	std::vector<Planet*> neighbors_of_u;
+	////	for (auto vu : u->edges) {
+	////		neighbors_of_u.push_back(vu->destination);
+	////	}
+	////	for (auto neighbor_v : neighbors_of_u) {
+	////		// auto alt = 
+	////	}
+	////}
+
+	//for (auto i : edges) {
+	//	;
+	//}
+
+	best_leg.departure_time = 0;
+	best_leg.arrival_time = 0;
+	queue.reduce(this);
+
+	Planet* furthest_planet = this;
+
+	while (!queue.empty()) {
+		auto min = queue.pop();
+		if (min->arrival_time() != INT_MAX && min->arrival_time() > furthest_planet->arrival_time()) {
+			furthest_planet = min;
+		}
+
+		for (auto neighbor : min->edges) {
+			neighbor->sort();
+			// (neighbor->destination->arrival_time() > min->arrival_time() + neighbor->departures.front().arrival_time)
+			if (min->arrival_time() != INT_MAX && neighbor->departures.front().arrival_time + min->arrival_time() < neighbor->destination->arrival_time()) {
+				neighbor->destination->best_leg = neighbor->departures.front();
+				neighbor->destination->predecessor = min;
+				queue.reduce(neighbor->destination);
+			}
+		}
 	}
 
-	return u;
+	return furthest_planet;
 }
 
 inline Itinerary* Planet::make_itinerary(Planet* destination) {
-	best_leg.departure_time = 0;
-	best_leg.arrival_time = 0;
 
-	PriorityQueue<Planet, int(*)(Planet*, Planet*)> pq(compare);
-	
+
+	return nullptr;
 }
 
 inline void Galaxy::search() {
-	// itinerary furthest galaxy planet
-	for (auto k : planets) {
-		Itinerary* farthest_planet{};
-		for (auto i : planets) {
-			if (i != k) {
-				reset();
-				PriorityQueue<Planet, int(*)(Planet*, Planet*)> pq(Planet::compare);
-				auto itinerary = k->make_itinerary(i);
-				if (!farthest_planet) {
-					farthest_planet = itinerary;
-				}
-				else {
-					auto total_time = itinerary->legs.back().arrival_time - itinerary->legs.front().departure_time;
-					if (total_time > farthest_planet->legs.back().arrival_time - farthest_planet->legs.front().departure_time) {
-						farthest_planet = itinerary;
-					}
-				}
-				// just finished writing the above 10:35 AM
-				// the below line probably needs to go
-				i->search(pq);
+	assert(!planets.empty());
+	Planet* diameter{};
+	for (auto i : planets) {
+		reset();
+		PriorityQueue<Planet, int(*)(Planet*, Planet*)> pq(Planet::compare);
+		for (auto k : planets) { pq.push_back(k); }
+		auto furthest_planet = i->search(pq);
+		auto itinerary = i->make_itinerary(furthest_planet);
 
-				// Now we just finish in make_itinerary. it will do the starting steps and now we must search shortest time to the planet passed to make itinerary
-				// using planet search. hmmmm. but the planet search does not take a planet pointer
-			}
-		}
-		// dump furthest planet
-		// initialize and check against furthest galaxy planet
+		if (!diameter) { diameter = furthest_planet; }
+		else if (furthest_planet->arrival_time() > diameter->arrival_time()) { diameter = furthest_planet; }
 	}
+	//// itinerary furthest galaxy planet
+	//Itinerary* diameter{};
+	//for (auto k : planets) {
+	//	Itinerary* farthest_planet{};
+	//	for (auto i : planets) {
+	//		if (i != k) {
+	//			reset();
+	//			PriorityQueue<Planet, int(*)(Planet*, Planet*)> pq(Planet::compare);
+	//			auto itinerary = k->make_itinerary(i);
+	//			if (!farthest_planet) {
+	//				farthest_planet = itinerary;
+	//			}
+	//			else {
+	//				if (itinerary->total_time() > farthest_planet->total_time()) {
+	//					farthest_planet = itinerary;
+	//				}
+	//			}
+	//			// just finished writing the above 10:35 AM
+	//			// the below line probably needs to go
+
+	//			// Now we just finish in make_itinerary. it will do the starting steps and now we must search shortest time to the planet passed to make itinerary
+	//			// using planet search. hmmmm. but the planet search does not take a planet pointer
+	//		}
+	//	}
+	//	// dump furthest planet
+	//	if (!diameter) {
+	//		diameter = farthest_planet;
+	//	}
+	//	else {
+	//		if (farthest_planet->total_time() > diameter->total_time()) {
+	//			diameter = farthest_planet;
+	//		}
+	//	}
+	//	// initialize and check against furthest galaxy planet
+	// }
 }
 
 #endif
