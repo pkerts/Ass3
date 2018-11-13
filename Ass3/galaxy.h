@@ -167,7 +167,7 @@ class Itinerary {
 public:
   Itinerary(Planet* origin): origin(origin) {}
   void print(Fleet& fleet, std::ostream& out=std::cout);
-  Time total_time() { assert(!legs.empty()); return legs.back().arrival_time - legs.front().departure_time; }
+  Time total_time() { assert(!legs.empty()); return legs.back().arrival_time - legs.front().departure_time;}
 
   Planet* origin;
   std::vector<Planet*> destinations;
@@ -271,6 +271,23 @@ public:
   std::vector<Planet*> planets;
 };
 
+inline void Itinerary::print(Fleet& fleet, std::ostream& out) {
+	if (!destinations.empty()) {
+		out << "itinerary:\n";
+		std::string og;
+		out << fleet.name(legs.back().id) << '\t' << origin->name << '\t' << legs.back().departure_time << '\t' << destinations.back()->name << '\t' << legs.back().arrival_time << std::endl;
+		og = destinations.back()->name;
+		legs.pop_back();
+		destinations.pop_back();
+		while (!destinations.empty()) {
+			out << fleet.name(legs.back().id) << '\t' << origin->name << '\t' << legs.back().departure_time << '\t' << destinations.back()->name << '\t' << legs.back().arrival_time << std::endl;
+			og = destinations.back()->name;
+			legs.pop_back();
+			destinations.pop_back();
+		}
+	}
+}
+
 inline void Edge::sort() {
 	std::sort(departures.begin(), departures.end(), Leg::less_than);
 }
@@ -351,7 +368,7 @@ inline Planet* Planet::search(PriorityQueue<Planet, int(*)(Planet*, Planet*)>& q
 		for (auto neighbor : min->edges) {
 			neighbor->sort();
 			// (neighbor->destination->arrival_time() > min->arrival_time() + neighbor->departures.front().arrival_time)
-			if (min->arrival_time() != INT_MAX && neighbor->departures.front().arrival_time + min->arrival_time() < neighbor->destination->arrival_time()) {
+			if (min->arrival_time() != INT_MAX && neighbor->departures.front().arrival_time + min->arrival_time() < neighbor->destination->arrival_time() && neighbor->departures.front().departure_time >= min->arrival_time()+4) {
 				neighbor->destination->best_leg = neighbor->departures.front();
 				neighbor->destination->predecessor = min;
 				queue.reduce(neighbor->destination);
@@ -363,9 +380,15 @@ inline Planet* Planet::search(PriorityQueue<Planet, int(*)(Planet*, Planet*)>& q
 }
 
 inline Itinerary* Planet::make_itinerary(Planet* destination) {
+	Itinerary* itin = new Itinerary(this);
+	Planet* curr = destination;
+	while (curr->predecessor) {
+		itin->destinations.push_back(curr);
+		itin->legs.push_back(curr->best_leg);
+		curr = curr->predecessor;
+	}
 
-
-	return nullptr;
+	return itin;
 }
 
 inline void Galaxy::search() {
@@ -376,7 +399,11 @@ inline void Galaxy::search() {
 		PriorityQueue<Planet, int(*)(Planet*, Planet*)> pq(Planet::compare);
 		for (auto k : planets) { pq.push_back(k); }
 		auto furthest_planet = i->search(pq);
-		auto itinerary = i->make_itinerary(furthest_planet);
+		auto itin = i->make_itinerary(furthest_planet);
+		itin->print(fleet);
+		// itin->print();
+		// std::cout << "origin: " << i->name << "\tfarthest planet: " << furthest_planet->name << "\tarrival time: " << furthest_planet->arrival_time() << std::endl;
+		// auto itinerary = i->make_itinerary(furthest_planet);
 
 		if (!diameter) { diameter = furthest_planet; }
 		else if (furthest_planet->arrival_time() > diameter->arrival_time()) { diameter = furthest_planet; }
