@@ -1,0 +1,51 @@
+
+
+
+
+
+B
+
+Ship2	B	74	A	144
+Ship9	B	74	A	144
+Ship10	B	74	A	144
+Ship10	B	222	A	292
+Ship7	B	0	C	10
+Ship5	B	0	D	80
+Ship6	B	0	E	100
+
+
+
+A
+
+Ship2	A	0	B	70
+Ship10	A	0	B	70
+Ship9	A	0	B	70
+Ship10	A	148	B	218
+
+Ship1	A	0	C	13
+Ship9	A	148	C	161
+Ship10	A	296	C	309
+
+Ship3	A	0	D	12
+
+Ship4	A	0	E	14
+
+
+
+D
+
+Ship8	D	37	C	44
+Ship8	D	11	E	20
+
+
+
+C
+
+Ship1	C	17	B	27
+Ship8	C	0	D	7
+
+
+
+E
+
+Ship8	E	24	D	33

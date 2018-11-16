@@ -1,0 +1,11 @@
+Ship2	B	74	A	144
+Ship3	A	0	D	12
+Ship4	A	0	E	14
+Ship5	B	0	D	80
+Ship6	B	0	E	100
+Ship8	D	11	E	20
+Ship8	E	24	D	33
+Ship9	B	74	A	144
+Ship10	B	74	A	144
+
+Ship10	B	222	A	292

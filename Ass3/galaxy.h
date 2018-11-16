@@ -280,7 +280,7 @@ inline void Itinerary::print(Fleet& fleet, std::ostream& out) {
 		legs.pop_back();
 		destinations.pop_back();
 		while (!destinations.empty()) {
-			out << fleet.name(legs.back().id) << '\t' << origin->name << '\t' << legs.back().departure_time << '\t' << destinations.back()->name << '\t' << legs.back().arrival_time << std::endl;
+			out << fleet.name(legs.back().id) << '\t' << og << '\t' << legs.back().departure_time << '\t' << destinations.back()->name << '\t' << legs.back().arrival_time << std::endl;
 			og = destinations.back()->name;
 			legs.pop_back();
 			destinations.pop_back();
