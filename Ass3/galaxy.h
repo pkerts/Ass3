@@ -428,7 +428,7 @@ inline Itinerary* Planet::make_itinerary(Planet* destination) {
 
 inline void Galaxy::search() {
 	assert(!planets.empty());
-	Planet* diameter{};
+	std::pair<Planet*, Planet*> diameter{};
 	for (auto i : planets) {
 		reset();
 		PriorityQueue<Planet, int(*)(Planet*, Planet*)> pq(Planet::compare);
@@ -440,9 +440,12 @@ inline void Galaxy::search() {
 		// std::cout << "origin: " << i->name << "\tfarthest planet: " << furthest_planet->name << "\tarrival time: " << furthest_planet->arrival_time() << std::endl;
 		// auto itinerary = i->make_itinerary(furthest_planet);
 
-		if (!diameter) { diameter = furthest_planet; }
-		else if (furthest_planet->arrival_time() > diameter->arrival_time()) { diameter = furthest_planet; }
+		if (!diameter.first) { diameter.first = i; diameter.second = furthest_planet; }
+		else if (furthest_planet->arrival_time() > diameter.second->arrival_time()) { diameter.first = i; diameter.second = furthest_planet; }
 	}
+	std::cout << "\nWeighted diameter:" << std::endl;
+	auto diameter_itinerary = diameter.first->make_itinerary(diameter.second);
+	diameter_itinerary->print(fleet);
 	//// itinerary furthest galaxy planet
 	//Itinerary* diameter{};
 	//for (auto k : planets) {
