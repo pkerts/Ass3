@@ -273,7 +273,7 @@ public:
 
 inline void Itinerary::print(Fleet& fleet, std::ostream& out) {
 	if (!destinations.empty()) {
-		out << "itinerary:\n";
+		out << origin->name << " itinerary to furthest planet:\n\n";
 		std::string og;
 		out << fleet.name(legs.back().id) << '\t' << origin->name << '\t' << legs.back().departure_time << '\t' << destinations.back()->name << '\t' << legs.back().arrival_time << std::endl;
 		og = destinations.back()->name;
@@ -285,6 +285,7 @@ inline void Itinerary::print(Fleet& fleet, std::ostream& out) {
 			legs.pop_back();
 			destinations.pop_back();
 		}
+		out << std::endl;
 	}
 }
 
@@ -353,6 +354,33 @@ inline Planet* Planet::search(PriorityQueue<Planet, int(*)(Planet*, Planet*)>& q
 	//	;
 	//}
 
+	//best_leg.departure_time = 0;
+	//best_leg.arrival_time = 0;
+	//queue.reduce(this);
+
+	//Planet* furthest_planet = this;
+
+	//while (!queue.empty()) {
+	//	auto min = queue.pop();
+	//	if (min->arrival_time() != INT_MAX && min->arrival_time() > furthest_planet->arrival_time()) {
+	//		furthest_planet = min;
+	//	}
+
+	//	for (auto neighbor : min->edges) {
+	//		neighbor->sort();
+	//		// (neighbor->destination->arrival_time() > min->arrival_time() + neighbor->departures.front().arrival_time)
+	//		if (min->arrival_time() != INT_MAX && neighbor->departures.front().arrival_time + min->arrival_time() < neighbor->destination->arrival_time() && neighbor->departures.front().departure_time >= min->arrival_time()+4) {
+	//			neighbor->destination->best_leg = neighbor->departures.front();
+	//			neighbor->destination->predecessor = min;
+	//			queue.reduce(neighbor->destination);
+	//		}
+	//	}
+	//}
+
+	//return furthest_planet;
+
+	std::set<Planet*> visited;
+
 	best_leg.departure_time = 0;
 	best_leg.arrival_time = 0;
 	queue.reduce(this);
@@ -361,18 +389,25 @@ inline Planet* Planet::search(PriorityQueue<Planet, int(*)(Planet*, Planet*)>& q
 
 	while (!queue.empty()) {
 		auto min = queue.pop();
-		if (min->arrival_time() != INT_MAX && min->arrival_time() > furthest_planet->arrival_time()) {
-			furthest_planet = min;
+		if (min->arrival_time() == INT_MAX) {
+			std::cerr << "Graph not adequate." << std::endl;
+			return nullptr;
 		}
-
-		for (auto neighbor : min->edges) {
-			neighbor->sort();
-			// (neighbor->destination->arrival_time() > min->arrival_time() + neighbor->departures.front().arrival_time)
-			if (min->arrival_time() != INT_MAX && neighbor->departures.front().arrival_time + min->arrival_time() < neighbor->destination->arrival_time() && neighbor->departures.front().departure_time >= min->arrival_time()+4) {
-				neighbor->destination->best_leg = neighbor->departures.front();
-				neighbor->destination->predecessor = min;
-				queue.reduce(neighbor->destination);
+		for (auto e : min->edges) {
+			e->sort();
+			if (!(visited.count(e->destination))) {
+				if (arrival_time() == 0 || e->departures.front().departure_time >= arrival_time() + 4) {
+					if (e->departures.front().arrival_time < e->destination->arrival_time()) {
+						e->destination->best_leg = e->departures.front();
+						e->destination->predecessor = min;
+						queue.reduce(e->destination);
+					}
+				}
 			}
+		}
+		visited.emplace(min);
+		if (min->arrival_time() > furthest_planet->arrival_time()) {
+			furthest_planet = min;
 		}
 	}
 

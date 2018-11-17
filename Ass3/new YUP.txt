@@ -41,7 +41,7 @@ Ship8	D	11	E	20
 
 C
 
-Ship1	C	17	B	27
+Ship1	C	49	B	59
 Ship8	C	0	D	7
 
 
