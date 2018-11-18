@@ -294,91 +294,6 @@ inline void Edge::sort() {
 }
 
 inline Planet* Planet::search(PriorityQueue<Planet, int(*)(Planet*, Planet*)>& queue) {
-	//best_leg.departure_time = 0;
-	//best_leg.arrival_time = 0;
-	//// Insert source itself in priority queue and initialize 
-	//// its distance as 0.
-	//queue.push_back(this);
-
-	//* Looping till priority queue becomes empty (or all
-	//distances are not finalized) */
-	//while (!queue.empty()) {
-	//	// The first vertex in pair is the minimum distance 
-	//	// vertex, extract it from priority queue.
-	//	auto u = queue.pop();
-
-	//	// Get all adjacent of u.
-	//	for (auto x : u->edges) {
-	//		x->sort();
-
-	//		if (x->destination->arrival_time() > u->arrival_time() + x->departures.front().arrival_time) {
-	//			x->destination->best_leg = x->departures.front();
-	//			x->destination->predecessor = u;
-	//			queue.push_back(x->destination);
-	//		}
-
-	//	}
-	//}
-
-	//std::vector<Planet*> neighbors;
-	//for (auto i : edges) {
-	//	i->destination->predecessor = this;
-	//	i->sort();
-	//	i->destination->best_leg = i->departures.front();
-	//	neighbors.push_back(i->destination);
-	//}
-
-	//for (auto v : neighbors) {
-	//	queue.push_back(v);
-	//}
-
-	//while (!queue.empty()) {
-	//	auto u = queue.pop();
-	//	for (auto ii : u->edges) {
-	//		// ii->
-	//	}
-	//}
-	//
-	////while (!queue.empty()) {
-	////	auto u = queue.pop();
-	////	std::vector<Planet*> neighbors_of_u;
-	////	for (auto vu : u->edges) {
-	////		neighbors_of_u.push_back(vu->destination);
-	////	}
-	////	for (auto neighbor_v : neighbors_of_u) {
-	////		// auto alt = 
-	////	}
-	////}
-
-	//for (auto i : edges) {
-	//	;
-	//}
-
-	//best_leg.departure_time = 0;
-	//best_leg.arrival_time = 0;
-	//queue.reduce(this);
-
-	//Planet* furthest_planet = this;
-
-	//while (!queue.empty()) {
-	//	auto min = queue.pop();
-	//	if (min->arrival_time() != INT_MAX && min->arrival_time() > furthest_planet->arrival_time()) {
-	//		furthest_planet = min;
-	//	}
-
-	//	for (auto neighbor : min->edges) {
-	//		neighbor->sort();
-	//		// (neighbor->destination->arrival_time() > min->arrival_time() + neighbor->departures.front().arrival_time)
-	//		if (min->arrival_time() != INT_MAX && neighbor->departures.front().arrival_time + min->arrival_time() < neighbor->destination->arrival_time() && neighbor->departures.front().departure_time >= min->arrival_time()+4) {
-	//			neighbor->destination->best_leg = neighbor->departures.front();
-	//			neighbor->destination->predecessor = min;
-	//			queue.reduce(neighbor->destination);
-	//		}
-	//	}
-	//}
-
-	//return furthest_planet;
-
 	std::set<Planet*> visited;
 
 	best_leg.departure_time = 0;
@@ -453,41 +368,6 @@ inline void Galaxy::search() {
 	std::cout << "\nWeighted diameter:" << std::endl;
 	auto diameter_itinerary = diameter.first->make_itinerary(diameter.second);
 	diameter_itinerary->print(fleet);
-	//// itinerary furthest galaxy planet
-	//Itinerary* diameter{};
-	//for (auto k : planets) {
-	//	Itinerary* farthest_planet{};
-	//	for (auto i : planets) {
-	//		if (i != k) {
-	//			reset();
-	//			PriorityQueue<Planet, int(*)(Planet*, Planet*)> pq(Planet::compare);
-	//			auto itinerary = k->make_itinerary(i);
-	//			if (!farthest_planet) {
-	//				farthest_planet = itinerary;
-	//			}
-	//			else {
-	//				if (itinerary->total_time() > farthest_planet->total_time()) {
-	//					farthest_planet = itinerary;
-	//				}
-	//			}
-	//			// just finished writing the above 10:35 AM
-	//			// the below line probably needs to go
-
-	//			// Now we just finish in make_itinerary. it will do the starting steps and now we must search shortest time to the planet passed to make itinerary
-	//			// using planet search. hmmmm. but the planet search does not take a planet pointer
-	//		}
-	//	}
-	//	// dump furthest planet
-	//	if (!diameter) {
-	//		diameter = farthest_planet;
-	//	}
-	//	else {
-	//		if (farthest_planet->total_time() > diameter->total_time()) {
-	//			diameter = farthest_planet;
-	//		}
-	//	}
-	//	// initialize and check against furthest galaxy planet
-	// }
 }
 
 #endif
