@@ -1,36 +1,44 @@
-A itinerary to furthest planet:
+Bakura itinerary to furthest planet:
 
-Ship1	A	0	C	13
-Ship1	C	49	B	59
+Ship1	Bakura	96	Mon Calamari	118
+Ship1	Mon Calamari	234	Corellia	240
 
-B itinerary to furthest planet:
+Corellia itinerary to furthest planet:
 
-Ship2	B	74	A	144
+Ship1	Corellia	0	Mon Calamari	6
+Ship1	Mon Calamari	10	Corporate Sector	34
+Ship1	Corporate Sector	38	Hapes Cluster	45
+Ship1	Hapes Cluster	49	Kessel	61
+Ship1	Kessel	65	Bakura	92
 
-C itinerary to furthest planet:
+Corporate Sector itinerary to furthest planet:
 
-Ship1	C	49	B	59
-Ship2	B	74	A	144
+Ship1	Corporate Sector	38	Hapes Cluster	45
+Ship1	Hapes Cluster	49	Kessel	61
+Ship1	Kessel	65	Bakura	92
+Ship1	Bakura	96	Mon Calamari	118
+Ship1	Mon Calamari	234	Corellia	240
 
-D itinerary to furthest planet:
+Hapes Cluster itinerary to furthest planet:
 
-Ship8	D	37	C	44
-Ship1	C	49	B	59
-Ship2	B	74	A	144
+Ship1	Hapes Cluster	49	Kessel	61
+Ship1	Kessel	65	Bakura	92
+Ship1	Bakura	96	Mon Calamari	118
+Ship1	Mon Calamari	234	Corellia	240
 
-E itinerary to furthest planet:
+Kessel itinerary to furthest planet:
 
-Ship8	E	24	D	33
-Ship8	D	37	C	44
-Ship1	C	49	B	59
-Ship2	B	74	A	144
+Ship1	Kessel	65	Bakura	92
+Ship1	Bakura	96	Mon Calamari	118
+Ship1	Mon Calamari	234	Corellia	240
+
+Mon Calamari itinerary to furthest planet:
+
+Ship1	Mon Calamari	234	Corellia	240
 
 
 Weighted diameter:
-B itinerary to furthest planet:
+Corporate Sector itinerary to furthest planet:
 
-Ship8	B	24	D	33
-Ship8	D	37	C	44
-Ship1	C	49	B	59
-Ship2	B	74	A	144
+Ship1	Corporate Sector	234	Corellia	240
 

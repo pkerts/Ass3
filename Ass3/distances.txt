@@ -1,0 +1,220 @@
+Bakura
+		Corellia	52
+		Corporate Sector	60
+		Hapes Cluster	11
+		Kessel	27
+		Mon Calamari	22
+Corellia
+		Bakura	52
+		Corporate Sector	9
+		Hapes Cluster	21
+		Mon Calamari	6
+Corporate Sector
+		Bakura	60
+		Corellia	9
+		Hapes Cluster	7
+		Kessel	9
+		Mon Calamari	24
+Hapes Cluster
+		Bakura	11
+		Corellia	21
+		Corporate Sector	7
+		Kessel	12
+		Mon Calamari	18
+Kessel
+		Bakura	27
+		Corporate Sector	9
+		Hapes Cluster	12
+		Mon Calamari	9
+Mon Calamari
+		Bakura	22
+		Corellia	6
+		Corporate Sector	24
+		Hapes Cluster	18
+		Kessel	9
+ALL GOOD:
+
+previous_ship_id: NULL
+previous_destination_planet: NULL
+previous_arrival_time: NULL
+
+ship_id: 0
+departure_planet: Corellia
+departure_time: 0
+destination_planet: Mon Calamari
+arrival_time: 6
+
+ALL GOOD:
+
+previous_ship_id: 0
+previous_destination_planet: Mon Calamari
+previous_arrival_time: 6
+
+ship_id: 0
+departure_planet: Mon Calamari
+departure_time: 10
+destination_planet: Corporate Sector
+arrival_time: 34
+
+ALL GOOD:
+
+previous_ship_id: 0
+previous_destination_planet: Corporate Sector
+previous_arrival_time: 34
+
+ship_id: 0
+departure_planet: Corporate Sector
+departure_time: 38
+destination_planet: Hapes Cluster
+arrival_time: 45
+
+ALL GOOD:
+
+previous_ship_id: 0
+previous_destination_planet: Hapes Cluster
+previous_arrival_time: 45
+
+ship_id: 0
+departure_planet: Hapes Cluster
+departure_time: 49
+destination_planet: Kessel
+arrival_time: 61
+
+ALL GOOD:
+
+previous_ship_id: 0
+previous_destination_planet: Kessel
+previous_arrival_time: 61
+
+ship_id: 0
+departure_planet: Kessel
+departure_time: 65
+destination_planet: Bakura
+arrival_time: 92
+
+ALL GOOD:
+
+previous_ship_id: 0
+previous_destination_planet: Bakura
+previous_arrival_time: 92
+
+ship_id: 0
+departure_planet: Bakura
+departure_time: 96
+destination_planet: Mon Calamari
+arrival_time: 118
+
+ALL GOOD:
+
+previous_ship_id: 0
+previous_destination_planet: Mon Calamari
+previous_arrival_time: 118
+
+ship_id: 0
+departure_planet: Mon Calamari
+departure_time: 122
+destination_planet: Bakura
+arrival_time: 144
+
+ALL GOOD:
+
+previous_ship_id: 0
+previous_destination_planet: Bakura
+previous_arrival_time: 144
+
+ship_id: 0
+departure_planet: Bakura
+departure_time: 148
+destination_planet: Kessel
+arrival_time: 175
+
+ALL GOOD:
+
+previous_ship_id: 0
+previous_destination_planet: Kessel
+previous_arrival_time: 175
+
+ship_id: 0
+departure_planet: Kessel
+departure_time: 179
+destination_planet: Hapes Cluster
+arrival_time: 191
+
+ALL GOOD:
+
+previous_ship_id: 0
+previous_destination_planet: Hapes Cluster
+previous_arrival_time: 191
+
+ship_id: 0
+departure_planet: Hapes Cluster
+departure_time: 195
+destination_planet: Corporate Sector
+arrival_time: 202
+
+ALL GOOD:
+
+previous_ship_id: 0
+previous_destination_planet: Corporate Sector
+previous_arrival_time: 202
+
+ship_id: 0
+departure_planet: Corporate Sector
+departure_time: 206
+destination_planet: Mon Calamari
+arrival_time: 230
+
+ALL GOOD:
+
+previous_ship_id: 0
+previous_destination_planet: Mon Calamari
+previous_arrival_time: 230
+
+ship_id: 0
+departure_planet: Mon Calamari
+departure_time: 234
+destination_planet: Corellia
+arrival_time: 240
+
+Planets and distances from Bakura
+Corellia -> 240
+Corporate Sector -> 34
+Hapes Cluster -> 45
+Kessel -> 61
+Mon Calamari -> 118
+
+Planets and distances from Corellia
+Bakura -> 92
+Corporate Sector -> 34
+Hapes Cluster -> 45
+Kessel -> 61
+Mon Calamari -> 6
+
+Planets and distances from Corporate Sector
+Bakura -> 92
+Corellia -> 240
+Hapes Cluster -> 45
+Kessel -> 61
+Mon Calamari -> 118
+
+Planets and distances from Hapes Cluster
+Bakura -> 92
+Corellia -> 240
+Corporate Sector -> 34
+Kessel -> 61
+Mon Calamari -> 118
+
+Planets and distances from Kessel
+Bakura -> 92
+Corellia -> 240
+Corporate Sector -> 34
+Hapes Cluster -> 45
+Mon Calamari -> 118
+
+Planets and distances from Mon Calamari
+Bakura -> 92
+Corellia -> 240
+Corporate Sector -> 34
+Hapes Cluster -> 45
+Kessel -> 61
+

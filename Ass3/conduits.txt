@@ -1,9 +1,14 @@
-A	E	14
-A	D	12
-A	B	70
-A	C	13
-C	B	10
-D	B	80
-E	B	100
-C	D	7
-D	E	9
+Corporate Sector	Hapes Cluster	7
+Hapes Cluster	Mon Calamari	18
+Bakura	Hapes Cluster	11
+Hapes Cluster	Kessel	12
+Corellia	Hapes Cluster	21
+Corporate Sector	Mon Calamari	24
+Bakura	Corporate Sector	60
+Corporate Sector	Kessel	9
+Corellia	Corporate Sector	9
+Bakura	Mon Calamari	22
+Kessel	Mon Calamari	9
+Corellia	Mon Calamari	6
+Bakura	Kessel	27
+Bakura	Corellia	52

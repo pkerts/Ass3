@@ -411,6 +411,13 @@ inline Planet* Planet::search(PriorityQueue<Planet, int(*)(Planet*, Planet*)>& q
 		}
 	}
 
+	std::cerr << "Planets and distances from " << name << std::endl;
+	for (auto i : visited) {
+		if (i != this) {
+			std::cerr << i->name << " -> " << i->arrival_time() << std::endl;
+		}
+	}
+	std::cerr << std::endl;
 	return furthest_planet;
 }
 
