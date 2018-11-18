@@ -178,9 +178,9 @@ arrival_time: 240
 
 Planets and distances from Bakura
 Corellia -> 240
-Corporate Sector -> 34
-Hapes Cluster -> 45
-Kessel -> 61
+Corporate Sector -> 202
+Hapes Cluster -> 191
+Kessel -> 175
 Mon Calamari -> 118
 
 Planets and distances from Corellia
@@ -200,15 +200,15 @@ Mon Calamari -> 118
 Planets and distances from Hapes Cluster
 Bakura -> 92
 Corellia -> 240
-Corporate Sector -> 34
+Corporate Sector -> 202
 Kessel -> 61
 Mon Calamari -> 118
 
 Planets and distances from Kessel
 Bakura -> 92
 Corellia -> 240
-Corporate Sector -> 34
-Hapes Cluster -> 45
+Corporate Sector -> 202
+Hapes Cluster -> 191
 Mon Calamari -> 118
 
 Planets and distances from Mon Calamari
