@@ -318,15 +318,24 @@ inline Planet* Planet::search(PriorityQueue<Planet, int(*)(Planet*, Planet*)>& q
 		}
 		for (auto e : min->edges) {
 			e->sort();
-			if (!(visited.count(e->destination))) { // Check make sure neighbor is unvisited
-				if (min->arrival_time() == 0 || e->departures.front().departure_time >= min->arrival_time() + 4) {
-					if (e->departures.front().arrival_time < e->destination->arrival_time()) {
-						e->destination->best_leg = e->departures.front();
+			//if (!(visited.count(e->destination))) { // Check make sure neighbor is unvisited
+			for (const auto d : e->departures) {
+				if (min->arrival_time() == 0 || d.departure_time >= min->arrival_time() + 4) {
+					if (d.arrival_time < e->destination->arrival_time()) {
+						e->destination->best_leg = d;
 						e->destination->predecessor = min;
 						queue.reduce(e->destination);
 					}
 				}
 			}
+				/*if (min->arrival_time() == 0 || e->departures.front().departure_time >= min->arrival_time() + 4) {
+					if (e->departures.front().arrival_time < e->destination->arrival_time()) {
+						e->destination->best_leg = e->departures.front();
+						e->destination->predecessor = min;
+						queue.reduce(e->destination);
+					}
+				}*/
+			//}
 		}
 		visited.emplace(min);
 		if (min->arrival_time() > furthest_planet->arrival_time()) {

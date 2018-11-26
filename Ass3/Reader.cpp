@@ -148,7 +148,7 @@ bool Reader::get_record() {
 // TAKES THE CURRENT LINE FROM ROUTE.TXT AND RUNS THAT SHIT THRU A VIVID CHECK YOOOOO
 bool Reader::validate() const {
 	if (!(departure_time >= (previous_arrival_time+4))) { // checks to make sure there's a correct layover!
-		if (!(departure_time == 0 && ship_id != previous_ship_id)) { // if no layover (4 hours) detected. it must be a new ship then.. check
+		if (ship_id == previous_ship_id) { // if no layover (4 hours) detected. it must be a new ship then.. check
 			cerr << "\nERROR: Current leg is not a valid continuation of the previous leg / is not the beginning of the route for another ship.\ninfo: " << endl;
 			dump_current_info(); // dump for info
 			return false; // we only got here if neither the above two are true. this false triggers our eventual EXIT_FAILURE in main..

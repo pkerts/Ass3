@@ -1,0 +1,6 @@
+Corellia	Wayland	99
+Wayland	Yaga Minor	30
+Kashyyyk	Myrkr	55
+Corellia	Myrkr	81
+Kashyyyk	Yaga Minor	53
+Myrkr	Wayland	21

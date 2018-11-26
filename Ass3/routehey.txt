@@ -1,0 +1,14 @@
+Ship4	Coruscant	2490	Chandrila	2495
+Ship4	Chandrila	2499	Esseles	2502
+Ship4	Esseles	2506	Corulag	2510
+Ship4	Corulag	2514	Brentaal	2516
+Ship4	Brentaal	2520	Rhinnal	2525
+Ship4	Rhinnal	2529	Ralltiir	2530
+Ship4	Ralltiir	2534	Chandrila	2538
+Ship4	Chandrila	2542	Ralltiir	2546
+Ship4	Ralltiir	2550	Rhinnal	2551
+Ship4	Rhinnal	2555	Brentaal	2560
+Ship4	Brentaal	2564	Corulag	2566
+Ship4	Corulag	2570	Esseles	2574
+Ship4	Esseles	2578	Chandrila	2581
+Ship4	Chandrila	2585	Coruscant	2590

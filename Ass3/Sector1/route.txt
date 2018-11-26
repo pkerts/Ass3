@@ -1,0 +1,12 @@
+Ship1	Corellia	0	Mon Calamari	6
+Ship1	Mon Calamari	10	Corporate Sector	34
+Ship1	Corporate Sector	38	Hapes Cluster	45
+Ship1	Hapes Cluster	49	Kessel	61
+Ship1	Kessel	65	Bakura	92
+Ship1	Bakura	96	Mon Calamari	118
+Ship1	Mon Calamari	122	Bakura	144
+Ship1	Bakura	148	Kessel	175
+Ship1	Kessel	179	Hapes Cluster	191
+Ship1	Hapes Cluster	195	Corporate Sector	202
+Ship1	Corporate Sector	206	Mon Calamari	230
+Ship1	Mon Calamari	234	Corellia	240

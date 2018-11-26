@@ -1,0 +1,10 @@
+Ship3	Corellia	0	Wayland	99
+Ship3	Wayland	103	Yaga Minor	133
+Ship3	Yaga Minor	137	Kashyyyk	190
+Ship3	Kashyyyk	194	Myrkr	249
+Ship3	Myrkr	253	Wayland	274
+Ship3	Wayland	278	Myrkr	299
+Ship3	Myrkr	303	Kashyyyk	358
+Ship3	Kashyyyk	362	Yaga Minor	415
+Ship3	Yaga Minor	419	Wayland	449
+Ship3	Wayland	453	Corellia	552

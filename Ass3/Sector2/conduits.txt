@@ -1,0 +1,11 @@
+Bespin	Corellia	6
+Bespin	Sullust	268
+Gamorr	Sullust	74
+Alderaan	Gamorr	180
+Alderaan	Dantooine	13
+Dantooine	Yavin	12
+Dagobah	Tatooine	28
+Hoth	Tatooine	56
+Endor	Hoth	60
+Bespin	Endor	32
+Dagobah	Yavin	314

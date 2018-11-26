@@ -1,0 +1,14 @@
+Ship4	Corellia	0	Brentaal	3
+Ship4	Brentaal	7	Corulag	9
+Ship4	Corulag	13	Esseles	17
+Ship4	Esseles	21	Chandrila	24
+Ship4	Chandrila	28	Ralltiir	32
+Ship4	Ralltiir	36	Rhinnal	37
+Ship4	Rhinnal	41	Brentaal	46
+Ship4	Brentaal	50	Rhinnal	55
+Ship4	Rhinnal	59	Ralltiir	60
+Ship4	Ralltiir	64	Chandrila	68
+Ship4	Chandrila	72	Esseles	75
+Ship4	Esseles	79	Corulag	83
+Ship4	Corulag	87	Brentaal	89
+Ship4	Brentaal	93	Corellia	96

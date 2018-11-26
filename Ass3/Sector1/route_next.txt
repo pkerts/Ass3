@@ -1,0 +1,12 @@
+Ship1	Corellia	 2175 	Mon Calamari	 2181
+Ship1	Mon Calamari	 2185 	Corporate Sector	 2209
+Ship1	Corporate Sector	 2213 	Hapes Cluster	 2220
+Ship1	Hapes Cluster	 2224 	Kessel	 2236
+Ship1	Kessel	 2240 	Bakura	 2267
+Ship1	Bakura	 2271 	Mon Calamari	 2293
+Ship1	Mon Calamari	 2297 	Bakura	 2319
+Ship1	Bakura	 2323 	Kessel	 2350
+Ship1	Kessel	 2354 	Hapes Cluster	 2366
+Ship1	Hapes Cluster	 2370 	Corporate Sector	 2377
+Ship1	Corporate Sector	 2381 	Mon Calamari	 2405
+Ship1	Mon Calamari	 2409 	Corellia	 2415

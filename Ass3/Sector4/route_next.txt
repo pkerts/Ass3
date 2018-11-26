@@ -1,0 +1,14 @@
+Ship4	Corellia	 2175 	Brentaal	 2178
+Ship4	Brentaal	 2182 	Corulag	 2184
+Ship4	Corulag	 2188 	Esseles	 2192
+Ship4	Esseles	 2196 	Chandrila	 2199
+Ship4	Chandrila	 2203 	Ralltiir	 2207
+Ship4	Ralltiir	 2211 	Rhinnal	 2212
+Ship4	Rhinnal	 2216 	Brentaal	 2221
+Ship4	Brentaal	 2225 	Rhinnal	 2230
+Ship4	Rhinnal	 2234 	Ralltiir	 2235
+Ship4	Ralltiir	 2239 	Chandrila	 2243
+Ship4	Chandrila	 2247 	Esseles	 2250
+Ship4	Esseles	 2254 	Corulag	 2258
+Ship4	Corulag	 2262 	Brentaal	 2264
+Ship4	Brentaal	 2268 	Corellia	 2271

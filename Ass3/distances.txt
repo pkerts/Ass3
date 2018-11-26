@@ -1,26 +1,68 @@
+Alderaan
+		Dantooine	13
+		Gamorr	180
 Bakura
 		Corellia	52
 		Corporate Sector	60
 		Hapes Cluster	11
 		Kessel	27
 		Mon Calamari	22
+Bespin
+		Corellia	6
+		Endor	32
+		Sullust	268
+Brentaal
+		Corellia	3
+		Corulag	2
+		Rhinnal	5
+Chandrila
+		Esseles	3
+		Ralltiir	4
 Corellia
 		Bakura	52
+		Bespin	6
+		Brentaal	3
 		Corporate Sector	9
 		Hapes Cluster	21
 		Mon Calamari	6
+		Myrkr	81
+		Wayland	99
 Corporate Sector
 		Bakura	60
 		Corellia	9
 		Hapes Cluster	7
 		Kessel	9
 		Mon Calamari	24
+Corulag
+		Brentaal	2
+		Esseles	4
+Dagobah
+		Tatooine	28
+		Yavin	314
+Dantooine
+		Alderaan	13
+		Yavin	12
+Endor
+		Bespin	32
+		Hoth	60
+Esseles
+		Chandrila	3
+		Corulag	4
+Gamorr
+		Alderaan	180
+		Sullust	74
 Hapes Cluster
 		Bakura	11
 		Corellia	21
 		Corporate Sector	7
 		Kessel	12
 		Mon Calamari	18
+Hoth
+		Endor	60
+		Tatooine	56
+Kashyyyk
+		Myrkr	55
+		Yaga Minor	53
 Kessel
 		Bakura	27
 		Corporate Sector	9
@@ -32,6 +74,32 @@ Mon Calamari
 		Corporate Sector	24
 		Hapes Cluster	18
 		Kessel	9
+Myrkr
+		Corellia	81
+		Kashyyyk	55
+		Wayland	21
+Ralltiir
+		Chandrila	4
+		Rhinnal	1
+Rhinnal
+		Brentaal	5
+		Ralltiir	1
+Sullust
+		Bespin	268
+		Gamorr	74
+Tatooine
+		Dagobah	28
+		Hoth	56
+Wayland
+		Corellia	99
+		Myrkr	21
+		Yaga Minor	30
+Yaga Minor
+		Kashyyyk	53
+		Wayland	30
+Yavin
+		Dagobah	314
+		Dantooine	12
 ALL GOOD:
 
 previous_ship_id: NULL
@@ -176,45 +244,1953 @@ departure_time: 234
 destination_planet: Corellia
 arrival_time: 240
 
+ALL GOOD:
+
+previous_ship_id: 0
+previous_destination_planet: Corellia
+previous_arrival_time: 240
+
+ship_id: 1
+departure_planet: Corellia
+departure_time: 0
+destination_planet: Bespin
+arrival_time: 6
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Bespin
+previous_arrival_time: 6
+
+ship_id: 1
+departure_planet: Bespin
+departure_time: 10
+destination_planet: Sullust
+arrival_time: 278
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Sullust
+previous_arrival_time: 278
+
+ship_id: 1
+departure_planet: Sullust
+departure_time: 282
+destination_planet: Gamorr
+arrival_time: 356
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Gamorr
+previous_arrival_time: 356
+
+ship_id: 1
+departure_planet: Gamorr
+departure_time: 360
+destination_planet: Alderaan
+arrival_time: 540
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Alderaan
+previous_arrival_time: 540
+
+ship_id: 1
+departure_planet: Alderaan
+departure_time: 544
+destination_planet: Dantooine
+arrival_time: 557
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Dantooine
+previous_arrival_time: 557
+
+ship_id: 1
+departure_planet: Dantooine
+departure_time: 561
+destination_planet: Yavin
+arrival_time: 573
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Yavin
+previous_arrival_time: 573
+
+ship_id: 1
+departure_planet: Yavin
+departure_time: 577
+destination_planet: Dagobah
+arrival_time: 891
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Dagobah
+previous_arrival_time: 891
+
+ship_id: 1
+departure_planet: Dagobah
+departure_time: 895
+destination_planet: Tatooine
+arrival_time: 923
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Tatooine
+previous_arrival_time: 923
+
+ship_id: 1
+departure_planet: Tatooine
+departure_time: 927
+destination_planet: Hoth
+arrival_time: 983
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Hoth
+previous_arrival_time: 983
+
+ship_id: 1
+departure_planet: Hoth
+departure_time: 987
+destination_planet: Endor
+arrival_time: 1047
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Endor
+previous_arrival_time: 1047
+
+ship_id: 1
+departure_planet: Endor
+departure_time: 1051
+destination_planet: Bespin
+arrival_time: 1083
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Bespin
+previous_arrival_time: 1083
+
+ship_id: 1
+departure_planet: Bespin
+departure_time: 1087
+destination_planet: Endor
+arrival_time: 1119
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Endor
+previous_arrival_time: 1119
+
+ship_id: 1
+departure_planet: Endor
+departure_time: 1123
+destination_planet: Hoth
+arrival_time: 1183
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Hoth
+previous_arrival_time: 1183
+
+ship_id: 1
+departure_planet: Hoth
+departure_time: 1187
+destination_planet: Tatooine
+arrival_time: 1243
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Tatooine
+previous_arrival_time: 1243
+
+ship_id: 1
+departure_planet: Tatooine
+departure_time: 1247
+destination_planet: Dagobah
+arrival_time: 1275
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Dagobah
+previous_arrival_time: 1275
+
+ship_id: 1
+departure_planet: Dagobah
+departure_time: 1279
+destination_planet: Yavin
+arrival_time: 1593
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Yavin
+previous_arrival_time: 1593
+
+ship_id: 1
+departure_planet: Yavin
+departure_time: 1597
+destination_planet: Dantooine
+arrival_time: 1609
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Dantooine
+previous_arrival_time: 1609
+
+ship_id: 1
+departure_planet: Dantooine
+departure_time: 1613
+destination_planet: Alderaan
+arrival_time: 1626
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Alderaan
+previous_arrival_time: 1626
+
+ship_id: 1
+departure_planet: Alderaan
+departure_time: 1630
+destination_planet: Gamorr
+arrival_time: 1810
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Gamorr
+previous_arrival_time: 1810
+
+ship_id: 1
+departure_planet: Gamorr
+departure_time: 1814
+destination_planet: Sullust
+arrival_time: 1888
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Sullust
+previous_arrival_time: 1888
+
+ship_id: 1
+departure_planet: Sullust
+departure_time: 1892
+destination_planet: Bespin
+arrival_time: 2160
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Bespin
+previous_arrival_time: 2160
+
+ship_id: 1
+departure_planet: Bespin
+departure_time: 2164
+destination_planet: Corellia
+arrival_time: 2170
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Corellia
+previous_arrival_time: 2170
+
+ship_id: 2
+departure_planet: Corellia
+departure_time: 0
+destination_planet: Wayland
+arrival_time: 99
+
+ALL GOOD:
+
+previous_ship_id: 2
+previous_destination_planet: Wayland
+previous_arrival_time: 99
+
+ship_id: 2
+departure_planet: Wayland
+departure_time: 103
+destination_planet: Yaga Minor
+arrival_time: 133
+
+ALL GOOD:
+
+previous_ship_id: 2
+previous_destination_planet: Yaga Minor
+previous_arrival_time: 133
+
+ship_id: 2
+departure_planet: Yaga Minor
+departure_time: 137
+destination_planet: Kashyyyk
+arrival_time: 190
+
+ALL GOOD:
+
+previous_ship_id: 2
+previous_destination_planet: Kashyyyk
+previous_arrival_time: 190
+
+ship_id: 2
+departure_planet: Kashyyyk
+departure_time: 194
+destination_planet: Myrkr
+arrival_time: 249
+
+ALL GOOD:
+
+previous_ship_id: 2
+previous_destination_planet: Myrkr
+previous_arrival_time: 249
+
+ship_id: 2
+departure_planet: Myrkr
+departure_time: 253
+destination_planet: Wayland
+arrival_time: 274
+
+ALL GOOD:
+
+previous_ship_id: 2
+previous_destination_planet: Wayland
+previous_arrival_time: 274
+
+ship_id: 2
+departure_planet: Wayland
+departure_time: 278
+destination_planet: Myrkr
+arrival_time: 299
+
+ALL GOOD:
+
+previous_ship_id: 2
+previous_destination_planet: Myrkr
+previous_arrival_time: 299
+
+ship_id: 2
+departure_planet: Myrkr
+departure_time: 303
+destination_planet: Kashyyyk
+arrival_time: 358
+
+ALL GOOD:
+
+previous_ship_id: 2
+previous_destination_planet: Kashyyyk
+previous_arrival_time: 358
+
+ship_id: 2
+departure_planet: Kashyyyk
+departure_time: 362
+destination_planet: Yaga Minor
+arrival_time: 415
+
+ALL GOOD:
+
+previous_ship_id: 2
+previous_destination_planet: Yaga Minor
+previous_arrival_time: 415
+
+ship_id: 2
+departure_planet: Yaga Minor
+departure_time: 419
+destination_planet: Wayland
+arrival_time: 449
+
+ALL GOOD:
+
+previous_ship_id: 2
+previous_destination_planet: Wayland
+previous_arrival_time: 449
+
+ship_id: 2
+departure_planet: Wayland
+departure_time: 453
+destination_planet: Corellia
+arrival_time: 552
+
+ALL GOOD:
+
+previous_ship_id: 2
+previous_destination_planet: Corellia
+previous_arrival_time: 552
+
+ship_id: 3
+departure_planet: Corellia
+departure_time: 0
+destination_planet: Brentaal
+arrival_time: 3
+
+ALL GOOD:
+
+previous_ship_id: 3
+previous_destination_planet: Brentaal
+previous_arrival_time: 3
+
+ship_id: 3
+departure_planet: Brentaal
+departure_time: 7
+destination_planet: Corulag
+arrival_time: 9
+
+ALL GOOD:
+
+previous_ship_id: 3
+previous_destination_planet: Corulag
+previous_arrival_time: 9
+
+ship_id: 3
+departure_planet: Corulag
+departure_time: 13
+destination_planet: Esseles
+arrival_time: 17
+
+ALL GOOD:
+
+previous_ship_id: 3
+previous_destination_planet: Esseles
+previous_arrival_time: 17
+
+ship_id: 3
+departure_planet: Esseles
+departure_time: 21
+destination_planet: Chandrila
+arrival_time: 24
+
+ALL GOOD:
+
+previous_ship_id: 3
+previous_destination_planet: Chandrila
+previous_arrival_time: 24
+
+ship_id: 3
+departure_planet: Chandrila
+departure_time: 28
+destination_planet: Ralltiir
+arrival_time: 32
+
+ALL GOOD:
+
+previous_ship_id: 3
+previous_destination_planet: Ralltiir
+previous_arrival_time: 32
+
+ship_id: 3
+departure_planet: Ralltiir
+departure_time: 36
+destination_planet: Rhinnal
+arrival_time: 37
+
+ALL GOOD:
+
+previous_ship_id: 3
+previous_destination_planet: Rhinnal
+previous_arrival_time: 37
+
+ship_id: 3
+departure_planet: Rhinnal
+departure_time: 41
+destination_planet: Brentaal
+arrival_time: 46
+
+ALL GOOD:
+
+previous_ship_id: 3
+previous_destination_planet: Brentaal
+previous_arrival_time: 46
+
+ship_id: 3
+departure_planet: Brentaal
+departure_time: 50
+destination_planet: Rhinnal
+arrival_time: 55
+
+ALL GOOD:
+
+previous_ship_id: 3
+previous_destination_planet: Rhinnal
+previous_arrival_time: 55
+
+ship_id: 3
+departure_planet: Rhinnal
+departure_time: 59
+destination_planet: Ralltiir
+arrival_time: 60
+
+ALL GOOD:
+
+previous_ship_id: 3
+previous_destination_planet: Ralltiir
+previous_arrival_time: 60
+
+ship_id: 3
+departure_planet: Ralltiir
+departure_time: 64
+destination_planet: Chandrila
+arrival_time: 68
+
+ALL GOOD:
+
+previous_ship_id: 3
+previous_destination_planet: Chandrila
+previous_arrival_time: 68
+
+ship_id: 3
+departure_planet: Chandrila
+departure_time: 72
+destination_planet: Esseles
+arrival_time: 75
+
+ALL GOOD:
+
+previous_ship_id: 3
+previous_destination_planet: Esseles
+previous_arrival_time: 75
+
+ship_id: 3
+departure_planet: Esseles
+departure_time: 79
+destination_planet: Corulag
+arrival_time: 83
+
+ALL GOOD:
+
+previous_ship_id: 3
+previous_destination_planet: Corulag
+previous_arrival_time: 83
+
+ship_id: 3
+departure_planet: Corulag
+departure_time: 87
+destination_planet: Brentaal
+arrival_time: 89
+
+ALL GOOD:
+
+previous_ship_id: 3
+previous_destination_planet: Brentaal
+previous_arrival_time: 89
+
+ship_id: 3
+departure_planet: Brentaal
+departure_time: 93
+destination_planet: Corellia
+arrival_time: 96
+
+ALL GOOD:
+
+previous_ship_id: 3
+previous_destination_planet: Corellia
+previous_arrival_time: 96
+
+ship_id: 0
+departure_planet: Corellia
+departure_time: 2175
+destination_planet: Mon Calamari
+arrival_time: 2181
+
+ALL GOOD:
+
+previous_ship_id: 0
+previous_destination_planet: Mon Calamari
+previous_arrival_time: 2181
+
+ship_id: 0
+departure_planet: Mon Calamari
+departure_time: 2185
+destination_planet: Corporate Sector
+arrival_time: 2209
+
+ALL GOOD:
+
+previous_ship_id: 0
+previous_destination_planet: Corporate Sector
+previous_arrival_time: 2209
+
+ship_id: 0
+departure_planet: Corporate Sector
+departure_time: 2213
+destination_planet: Hapes Cluster
+arrival_time: 2220
+
+ALL GOOD:
+
+previous_ship_id: 0
+previous_destination_planet: Hapes Cluster
+previous_arrival_time: 2220
+
+ship_id: 0
+departure_planet: Hapes Cluster
+departure_time: 2224
+destination_planet: Kessel
+arrival_time: 2236
+
+ALL GOOD:
+
+previous_ship_id: 0
+previous_destination_planet: Kessel
+previous_arrival_time: 2236
+
+ship_id: 0
+departure_planet: Kessel
+departure_time: 2240
+destination_planet: Bakura
+arrival_time: 2267
+
+ALL GOOD:
+
+previous_ship_id: 0
+previous_destination_planet: Bakura
+previous_arrival_time: 2267
+
+ship_id: 0
+departure_planet: Bakura
+departure_time: 2271
+destination_planet: Mon Calamari
+arrival_time: 2293
+
+ALL GOOD:
+
+previous_ship_id: 0
+previous_destination_planet: Mon Calamari
+previous_arrival_time: 2293
+
+ship_id: 0
+departure_planet: Mon Calamari
+departure_time: 2297
+destination_planet: Bakura
+arrival_time: 2319
+
+ALL GOOD:
+
+previous_ship_id: 0
+previous_destination_planet: Bakura
+previous_arrival_time: 2319
+
+ship_id: 0
+departure_planet: Bakura
+departure_time: 2323
+destination_planet: Kessel
+arrival_time: 2350
+
+ALL GOOD:
+
+previous_ship_id: 0
+previous_destination_planet: Kessel
+previous_arrival_time: 2350
+
+ship_id: 0
+departure_planet: Kessel
+departure_time: 2354
+destination_planet: Hapes Cluster
+arrival_time: 2366
+
+ALL GOOD:
+
+previous_ship_id: 0
+previous_destination_planet: Hapes Cluster
+previous_arrival_time: 2366
+
+ship_id: 0
+departure_planet: Hapes Cluster
+departure_time: 2370
+destination_planet: Corporate Sector
+arrival_time: 2377
+
+ALL GOOD:
+
+previous_ship_id: 0
+previous_destination_planet: Corporate Sector
+previous_arrival_time: 2377
+
+ship_id: 0
+departure_planet: Corporate Sector
+departure_time: 2381
+destination_planet: Mon Calamari
+arrival_time: 2405
+
+ALL GOOD:
+
+previous_ship_id: 0
+previous_destination_planet: Mon Calamari
+previous_arrival_time: 2405
+
+ship_id: 0
+departure_planet: Mon Calamari
+departure_time: 2409
+destination_planet: Corellia
+arrival_time: 2415
+
+ALL GOOD:
+
+previous_ship_id: 0
+previous_destination_planet: Corellia
+previous_arrival_time: 2415
+
+ship_id: 1
+departure_planet: Corellia
+departure_time: 2175
+destination_planet: Bespin
+arrival_time: 2181
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Bespin
+previous_arrival_time: 2181
+
+ship_id: 1
+departure_planet: Bespin
+departure_time: 2185
+destination_planet: Sullust
+arrival_time: 2453
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Sullust
+previous_arrival_time: 2453
+
+ship_id: 1
+departure_planet: Sullust
+departure_time: 2457
+destination_planet: Gamorr
+arrival_time: 2531
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Gamorr
+previous_arrival_time: 2531
+
+ship_id: 1
+departure_planet: Gamorr
+departure_time: 2535
+destination_planet: Alderaan
+arrival_time: 2715
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Alderaan
+previous_arrival_time: 2715
+
+ship_id: 1
+departure_planet: Alderaan
+departure_time: 2719
+destination_planet: Dantooine
+arrival_time: 2732
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Dantooine
+previous_arrival_time: 2732
+
+ship_id: 1
+departure_planet: Dantooine
+departure_time: 2736
+destination_planet: Yavin
+arrival_time: 2748
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Yavin
+previous_arrival_time: 2748
+
+ship_id: 1
+departure_planet: Yavin
+departure_time: 2752
+destination_planet: Dagobah
+arrival_time: 3066
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Dagobah
+previous_arrival_time: 3066
+
+ship_id: 1
+departure_planet: Dagobah
+departure_time: 3070
+destination_planet: Tatooine
+arrival_time: 3098
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Tatooine
+previous_arrival_time: 3098
+
+ship_id: 1
+departure_planet: Tatooine
+departure_time: 3102
+destination_planet: Hoth
+arrival_time: 3158
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Hoth
+previous_arrival_time: 3158
+
+ship_id: 1
+departure_planet: Hoth
+departure_time: 3162
+destination_planet: Endor
+arrival_time: 3222
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Endor
+previous_arrival_time: 3222
+
+ship_id: 1
+departure_planet: Endor
+departure_time: 3226
+destination_planet: Bespin
+arrival_time: 3258
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Bespin
+previous_arrival_time: 3258
+
+ship_id: 1
+departure_planet: Bespin
+departure_time: 3262
+destination_planet: Endor
+arrival_time: 3294
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Endor
+previous_arrival_time: 3294
+
+ship_id: 1
+departure_planet: Endor
+departure_time: 3298
+destination_planet: Hoth
+arrival_time: 3358
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Hoth
+previous_arrival_time: 3358
+
+ship_id: 1
+departure_planet: Hoth
+departure_time: 3362
+destination_planet: Tatooine
+arrival_time: 3418
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Tatooine
+previous_arrival_time: 3418
+
+ship_id: 1
+departure_planet: Tatooine
+departure_time: 3422
+destination_planet: Dagobah
+arrival_time: 3450
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Dagobah
+previous_arrival_time: 3450
+
+ship_id: 1
+departure_planet: Dagobah
+departure_time: 3454
+destination_planet: Yavin
+arrival_time: 3768
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Yavin
+previous_arrival_time: 3768
+
+ship_id: 1
+departure_planet: Yavin
+departure_time: 3772
+destination_planet: Dantooine
+arrival_time: 3784
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Dantooine
+previous_arrival_time: 3784
+
+ship_id: 1
+departure_planet: Dantooine
+departure_time: 3788
+destination_planet: Alderaan
+arrival_time: 3801
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Alderaan
+previous_arrival_time: 3801
+
+ship_id: 1
+departure_planet: Alderaan
+departure_time: 3805
+destination_planet: Gamorr
+arrival_time: 3985
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Gamorr
+previous_arrival_time: 3985
+
+ship_id: 1
+departure_planet: Gamorr
+departure_time: 3989
+destination_planet: Sullust
+arrival_time: 4063
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Sullust
+previous_arrival_time: 4063
+
+ship_id: 1
+departure_planet: Sullust
+departure_time: 4067
+destination_planet: Bespin
+arrival_time: 4335
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Bespin
+previous_arrival_time: 4335
+
+ship_id: 1
+departure_planet: Bespin
+departure_time: 4339
+destination_planet: Corellia
+arrival_time: 4345
+
+ALL GOOD:
+
+previous_ship_id: 1
+previous_destination_planet: Corellia
+previous_arrival_time: 4345
+
+ship_id: 2
+departure_planet: Corellia
+departure_time: 2175
+destination_planet: Wayland
+arrival_time: 2274
+
+ALL GOOD:
+
+previous_ship_id: 2
+previous_destination_planet: Wayland
+previous_arrival_time: 2274
+
+ship_id: 2
+departure_planet: Wayland
+departure_time: 2278
+destination_planet: Yaga Minor
+arrival_time: 2308
+
+ALL GOOD:
+
+previous_ship_id: 2
+previous_destination_planet: Yaga Minor
+previous_arrival_time: 2308
+
+ship_id: 2
+departure_planet: Yaga Minor
+departure_time: 2312
+destination_planet: Kashyyyk
+arrival_time: 2365
+
+ALL GOOD:
+
+previous_ship_id: 2
+previous_destination_planet: Kashyyyk
+previous_arrival_time: 2365
+
+ship_id: 2
+departure_planet: Kashyyyk
+departure_time: 2369
+destination_planet: Myrkr
+arrival_time: 2424
+
+ALL GOOD:
+
+previous_ship_id: 2
+previous_destination_planet: Myrkr
+previous_arrival_time: 2424
+
+ship_id: 2
+departure_planet: Myrkr
+departure_time: 2428
+destination_planet: Wayland
+arrival_time: 2449
+
+ALL GOOD:
+
+previous_ship_id: 2
+previous_destination_planet: Wayland
+previous_arrival_time: 2449
+
+ship_id: 2
+departure_planet: Wayland
+departure_time: 2453
+destination_planet: Myrkr
+arrival_time: 2474
+
+ALL GOOD:
+
+previous_ship_id: 2
+previous_destination_planet: Myrkr
+previous_arrival_time: 2474
+
+ship_id: 2
+departure_planet: Myrkr
+departure_time: 2478
+destination_planet: Kashyyyk
+arrival_time: 2533
+
+ALL GOOD:
+
+previous_ship_id: 2
+previous_destination_planet: Kashyyyk
+previous_arrival_time: 2533
+
+ship_id: 2
+departure_planet: Kashyyyk
+departure_time: 2537
+destination_planet: Yaga Minor
+arrival_time: 2590
+
+ALL GOOD:
+
+previous_ship_id: 2
+previous_destination_planet: Yaga Minor
+previous_arrival_time: 2590
+
+ship_id: 2
+departure_planet: Yaga Minor
+departure_time: 2594
+destination_planet: Wayland
+arrival_time: 2624
+
+ALL GOOD:
+
+previous_ship_id: 2
+previous_destination_planet: Wayland
+previous_arrival_time: 2624
+
+ship_id: 2
+departure_planet: Wayland
+departure_time: 2628
+destination_planet: Corellia
+arrival_time: 2727
+
+ALL GOOD:
+
+previous_ship_id: 2
+previous_destination_planet: Corellia
+previous_arrival_time: 2727
+
+ship_id: 3
+departure_planet: Corellia
+departure_time: 2175
+destination_planet: Brentaal
+arrival_time: 2178
+
+ALL GOOD:
+
+previous_ship_id: 3
+previous_destination_planet: Brentaal
+previous_arrival_time: 2178
+
+ship_id: 3
+departure_planet: Brentaal
+departure_time: 2182
+destination_planet: Corulag
+arrival_time: 2184
+
+ALL GOOD:
+
+previous_ship_id: 3
+previous_destination_planet: Corulag
+previous_arrival_time: 2184
+
+ship_id: 3
+departure_planet: Corulag
+departure_time: 2188
+destination_planet: Esseles
+arrival_time: 2192
+
+ALL GOOD:
+
+previous_ship_id: 3
+previous_destination_planet: Esseles
+previous_arrival_time: 2192
+
+ship_id: 3
+departure_planet: Esseles
+departure_time: 2196
+destination_planet: Chandrila
+arrival_time: 2199
+
+ALL GOOD:
+
+previous_ship_id: 3
+previous_destination_planet: Chandrila
+previous_arrival_time: 2199
+
+ship_id: 3
+departure_planet: Chandrila
+departure_time: 2203
+destination_planet: Ralltiir
+arrival_time: 2207
+
+ALL GOOD:
+
+previous_ship_id: 3
+previous_destination_planet: Ralltiir
+previous_arrival_time: 2207
+
+ship_id: 3
+departure_planet: Ralltiir
+departure_time: 2211
+destination_planet: Rhinnal
+arrival_time: 2212
+
+ALL GOOD:
+
+previous_ship_id: 3
+previous_destination_planet: Rhinnal
+previous_arrival_time: 2212
+
+ship_id: 3
+departure_planet: Rhinnal
+departure_time: 2216
+destination_planet: Brentaal
+arrival_time: 2221
+
+ALL GOOD:
+
+previous_ship_id: 3
+previous_destination_planet: Brentaal
+previous_arrival_time: 2221
+
+ship_id: 3
+departure_planet: Brentaal
+departure_time: 2225
+destination_planet: Rhinnal
+arrival_time: 2230
+
+ALL GOOD:
+
+previous_ship_id: 3
+previous_destination_planet: Rhinnal
+previous_arrival_time: 2230
+
+ship_id: 3
+departure_planet: Rhinnal
+departure_time: 2234
+destination_planet: Ralltiir
+arrival_time: 2235
+
+ALL GOOD:
+
+previous_ship_id: 3
+previous_destination_planet: Ralltiir
+previous_arrival_time: 2235
+
+ship_id: 3
+departure_planet: Ralltiir
+departure_time: 2239
+destination_planet: Chandrila
+arrival_time: 2243
+
+ALL GOOD:
+
+previous_ship_id: 3
+previous_destination_planet: Chandrila
+previous_arrival_time: 2243
+
+ship_id: 3
+departure_planet: Chandrila
+departure_time: 2247
+destination_planet: Esseles
+arrival_time: 2250
+
+ALL GOOD:
+
+previous_ship_id: 3
+previous_destination_planet: Esseles
+previous_arrival_time: 2250
+
+ship_id: 3
+departure_planet: Esseles
+departure_time: 2254
+destination_planet: Corulag
+arrival_time: 2258
+
+ALL GOOD:
+
+previous_ship_id: 3
+previous_destination_planet: Corulag
+previous_arrival_time: 2258
+
+ship_id: 3
+departure_planet: Corulag
+departure_time: 2262
+destination_planet: Brentaal
+arrival_time: 2264
+
+ALL GOOD:
+
+previous_ship_id: 3
+previous_destination_planet: Brentaal
+previous_arrival_time: 2264
+
+ship_id: 3
+departure_planet: Brentaal
+departure_time: 2268
+destination_planet: Corellia
+arrival_time: 2271
+
+Planets and distances from Alderaan
+Bakura -> 2267
+Bespin -> 1083
+Brentaal -> 2178
+Chandrila -> 2199
+Corellia -> 2170
+Corporate Sector -> 2209
+Corulag -> 2184
+Dagobah -> 891
+Mon Calamari -> 2181
+Dantooine -> 557
+Endor -> 1047
+Esseles -> 2192
+Gamorr -> 1810
+Hapes Cluster -> 2220
+Hoth -> 983
+Kashyyyk -> 2365
+Kessel -> 2236
+Myrkr -> 2424
+Ralltiir -> 2207
+Rhinnal -> 2212
+Sullust -> 1888
+Tatooine -> 923
+Wayland -> 2274
+Yaga Minor -> 2308
+Yavin -> 573
+
 Planets and distances from Bakura
+Alderaan -> 2715
+Bespin -> 2181
+Brentaal -> 2178
+Chandrila -> 2199
 Corellia -> 240
 Corporate Sector -> 202
-Hapes Cluster -> 191
-Kessel -> 175
+Corulag -> 2184
+Dagobah -> 3066
 Mon Calamari -> 118
+Dantooine -> 2732
+Endor -> 3222
+Esseles -> 2192
+Gamorr -> 2531
+Hapes Cluster -> 191
+Hoth -> 3158
+Kashyyyk -> 2365
+Kessel -> 175
+Myrkr -> 2424
+Ralltiir -> 2207
+Rhinnal -> 2212
+Sullust -> 2453
+Tatooine -> 3098
+Wayland -> 2274
+Yaga Minor -> 2308
+Yavin -> 2748
+
+Planets and distances from Bespin
+Alderaan -> 540
+Bakura -> 2267
+Brentaal -> 2178
+Chandrila -> 2199
+Corellia -> 2170
+Corporate Sector -> 2209
+Corulag -> 2184
+Dagobah -> 891
+Mon Calamari -> 2181
+Dantooine -> 557
+Endor -> 1047
+Esseles -> 2192
+Gamorr -> 356
+Hapes Cluster -> 2220
+Hoth -> 983
+Kashyyyk -> 2365
+Kessel -> 2236
+Myrkr -> 2424
+Ralltiir -> 2207
+Rhinnal -> 2212
+Sullust -> 278
+Tatooine -> 923
+Wayland -> 2274
+Yaga Minor -> 2308
+Yavin -> 573
+
+Planets and distances from Brentaal
+Alderaan -> 2715
+Bakura -> 2267
+Bespin -> 2181
+Chandrila -> 24
+Corellia -> 96
+Corporate Sector -> 2209
+Corulag -> 9
+Dagobah -> 3066
+Mon Calamari -> 2181
+Dantooine -> 2732
+Endor -> 3222
+Esseles -> 17
+Gamorr -> 2531
+Hapes Cluster -> 2220
+Hoth -> 3158
+Kashyyyk -> 2365
+Kessel -> 2236
+Myrkr -> 2424
+Ralltiir -> 32
+Rhinnal -> 37
+Sullust -> 2453
+Tatooine -> 3098
+Wayland -> 2274
+Yaga Minor -> 2308
+Yavin -> 2748
+
+Planets and distances from Chandrila
+Alderaan -> 2715
+Bakura -> 2267
+Bespin -> 2181
+Brentaal -> 46
+Corellia -> 96
+Corporate Sector -> 2209
+Corulag -> 83
+Dagobah -> 3066
+Mon Calamari -> 2181
+Dantooine -> 2732
+Endor -> 3222
+Esseles -> 75
+Gamorr -> 2531
+Hapes Cluster -> 2220
+Hoth -> 3158
+Kashyyyk -> 2365
+Kessel -> 2236
+Myrkr -> 2424
+Ralltiir -> 32
+Rhinnal -> 37
+Sullust -> 2453
+Tatooine -> 3098
+Wayland -> 2274
+Yaga Minor -> 2308
+Yavin -> 2748
 
 Planets and distances from Corellia
+Alderaan -> 540
 Bakura -> 92
+Bespin -> 6
+Brentaal -> 3
+Chandrila -> 24
 Corporate Sector -> 34
-Hapes Cluster -> 45
-Kessel -> 61
+Corulag -> 9
+Dagobah -> 891
 Mon Calamari -> 6
+Dantooine -> 557
+Endor -> 1047
+Esseles -> 17
+Gamorr -> 356
+Hapes Cluster -> 45
+Hoth -> 983
+Kashyyyk -> 190
+Kessel -> 61
+Myrkr -> 249
+Ralltiir -> 32
+Rhinnal -> 37
+Sullust -> 278
+Tatooine -> 923
+Wayland -> 99
+Yaga Minor -> 133
+Yavin -> 573
 
 Planets and distances from Corporate Sector
+Alderaan -> 2715
 Bakura -> 92
+Bespin -> 2181
+Brentaal -> 2178
+Chandrila -> 2199
 Corellia -> 240
-Hapes Cluster -> 45
-Kessel -> 61
+Corulag -> 2184
+Dagobah -> 3066
 Mon Calamari -> 118
+Dantooine -> 2732
+Endor -> 3222
+Esseles -> 2192
+Gamorr -> 2531
+Hapes Cluster -> 45
+Hoth -> 3158
+Kashyyyk -> 2365
+Kessel -> 61
+Myrkr -> 2424
+Ralltiir -> 2207
+Rhinnal -> 2212
+Sullust -> 2453
+Tatooine -> 3098
+Wayland -> 2274
+Yaga Minor -> 2308
+Yavin -> 2748
+
+Planets and distances from Corulag
+Alderaan -> 2715
+Bakura -> 2267
+Bespin -> 2181
+Brentaal -> 46
+Chandrila -> 24
+Corellia -> 96
+Corporate Sector -> 2209
+Dagobah -> 3066
+Mon Calamari -> 2181
+Dantooine -> 2732
+Endor -> 3222
+Esseles -> 17
+Gamorr -> 2531
+Hapes Cluster -> 2220
+Hoth -> 3158
+Kashyyyk -> 2365
+Kessel -> 2236
+Myrkr -> 2424
+Ralltiir -> 32
+Rhinnal -> 37
+Sullust -> 2453
+Tatooine -> 3098
+Wayland -> 2274
+Yaga Minor -> 2308
+Yavin -> 2748
+
+Planets and distances from Dagobah
+Alderaan -> 1626
+Bakura -> 2267
+Bespin -> 1083
+Brentaal -> 2178
+Chandrila -> 2199
+Corellia -> 2170
+Corporate Sector -> 2209
+Corulag -> 2184
+Mon Calamari -> 2181
+Dantooine -> 1609
+Endor -> 1047
+Esseles -> 2192
+Gamorr -> 1810
+Hapes Cluster -> 2220
+Hoth -> 983
+Kashyyyk -> 2365
+Kessel -> 2236
+Myrkr -> 2424
+Ralltiir -> 2207
+Rhinnal -> 2212
+Sullust -> 1888
+Tatooine -> 923
+Wayland -> 2274
+Yaga Minor -> 2308
+Yavin -> 1593
+
+Planets and distances from Dantooine
+Alderaan -> 1626
+Bakura -> 2267
+Bespin -> 1083
+Brentaal -> 2178
+Chandrila -> 2199
+Corellia -> 2170
+Corporate Sector -> 2209
+Corulag -> 2184
+Dagobah -> 891
+Mon Calamari -> 2181
+Endor -> 1047
+Esseles -> 2192
+Gamorr -> 1810
+Hapes Cluster -> 2220
+Hoth -> 983
+Kashyyyk -> 2365
+Kessel -> 2236
+Myrkr -> 2424
+Ralltiir -> 2207
+Rhinnal -> 2212
+Sullust -> 1888
+Tatooine -> 923
+Wayland -> 2274
+Yaga Minor -> 2308
+Yavin -> 573
+
+Planets and distances from Endor
+Alderaan -> 1626
+Bakura -> 2267
+Bespin -> 1083
+Brentaal -> 2178
+Chandrila -> 2199
+Corellia -> 2170
+Corporate Sector -> 2209
+Corulag -> 2184
+Dagobah -> 1275
+Mon Calamari -> 2181
+Dantooine -> 1609
+Esseles -> 2192
+Gamorr -> 1810
+Hapes Cluster -> 2220
+Hoth -> 1183
+Kashyyyk -> 2365
+Kessel -> 2236
+Myrkr -> 2424
+Ralltiir -> 2207
+Rhinnal -> 2212
+Sullust -> 1888
+Tatooine -> 1243
+Wayland -> 2274
+Yaga Minor -> 2308
+Yavin -> 1593
+
+Planets and distances from Esseles
+Alderaan -> 2715
+Bakura -> 2267
+Bespin -> 2181
+Brentaal -> 46
+Chandrila -> 24
+Corellia -> 96
+Corporate Sector -> 2209
+Corulag -> 83
+Dagobah -> 3066
+Mon Calamari -> 2181
+Dantooine -> 2732
+Endor -> 3222
+Gamorr -> 2531
+Hapes Cluster -> 2220
+Hoth -> 3158
+Kashyyyk -> 2365
+Kessel -> 2236
+Myrkr -> 2424
+Ralltiir -> 32
+Rhinnal -> 37
+Sullust -> 2453
+Tatooine -> 3098
+Wayland -> 2274
+Yaga Minor -> 2308
+Yavin -> 2748
+
+Planets and distances from Gamorr
+Alderaan -> 540
+Bakura -> 2267
+Bespin -> 1083
+Brentaal -> 2178
+Chandrila -> 2199
+Corellia -> 2170
+Corporate Sector -> 2209
+Corulag -> 2184
+Dagobah -> 891
+Mon Calamari -> 2181
+Dantooine -> 557
+Endor -> 1047
+Esseles -> 2192
+Hapes Cluster -> 2220
+Hoth -> 983
+Kashyyyk -> 2365
+Kessel -> 2236
+Myrkr -> 2424
+Ralltiir -> 2207
+Rhinnal -> 2212
+Sullust -> 1888
+Tatooine -> 923
+Wayland -> 2274
+Yaga Minor -> 2308
+Yavin -> 573
 
 Planets and distances from Hapes Cluster
+Alderaan -> 2715
 Bakura -> 92
+Bespin -> 2181
+Brentaal -> 2178
+Chandrila -> 2199
 Corellia -> 240
 Corporate Sector -> 202
-Kessel -> 61
+Corulag -> 2184
+Dagobah -> 3066
 Mon Calamari -> 118
+Dantooine -> 2732
+Endor -> 3222
+Esseles -> 2192
+Gamorr -> 2531
+Hoth -> 3158
+Kashyyyk -> 2365
+Kessel -> 61
+Myrkr -> 2424
+Ralltiir -> 2207
+Rhinnal -> 2212
+Sullust -> 2453
+Tatooine -> 3098
+Wayland -> 2274
+Yaga Minor -> 2308
+Yavin -> 2748
+
+Planets and distances from Hoth
+Alderaan -> 1626
+Bakura -> 2267
+Bespin -> 1083
+Brentaal -> 2178
+Chandrila -> 2199
+Corellia -> 2170
+Corporate Sector -> 2209
+Corulag -> 2184
+Dagobah -> 1275
+Mon Calamari -> 2181
+Dantooine -> 1609
+Endor -> 1047
+Esseles -> 2192
+Gamorr -> 1810
+Hapes Cluster -> 2220
+Kashyyyk -> 2365
+Kessel -> 2236
+Myrkr -> 2424
+Ralltiir -> 2207
+Rhinnal -> 2212
+Sullust -> 1888
+Tatooine -> 1243
+Wayland -> 2274
+Yaga Minor -> 2308
+Yavin -> 1593
+
+Planets and distances from Kashyyyk
+Alderaan -> 2715
+Bakura -> 2267
+Bespin -> 2181
+Brentaal -> 2178
+Chandrila -> 2199
+Corellia -> 552
+Corporate Sector -> 2209
+Corulag -> 2184
+Dagobah -> 3066
+Mon Calamari -> 2181
+Dantooine -> 2732
+Endor -> 3222
+Esseles -> 2192
+Gamorr -> 2531
+Hapes Cluster -> 2220
+Hoth -> 3158
+Kessel -> 2236
+Myrkr -> 249
+Ralltiir -> 2207
+Rhinnal -> 2212
+Sullust -> 2453
+Tatooine -> 3098
+Wayland -> 274
+Yaga Minor -> 415
+Yavin -> 2748
 
 Planets and distances from Kessel
+Alderaan -> 2715
 Bakura -> 92
+Bespin -> 2181
+Brentaal -> 2178
+Chandrila -> 2199
 Corellia -> 240
 Corporate Sector -> 202
-Hapes Cluster -> 191
+Corulag -> 2184
+Dagobah -> 3066
 Mon Calamari -> 118
+Dantooine -> 2732
+Endor -> 3222
+Esseles -> 2192
+Gamorr -> 2531
+Hapes Cluster -> 191
+Hoth -> 3158
+Kashyyyk -> 2365
+Myrkr -> 2424
+Ralltiir -> 2207
+Rhinnal -> 2212
+Sullust -> 2453
+Tatooine -> 3098
+Wayland -> 2274
+Yaga Minor -> 2308
+Yavin -> 2748
 
 Planets and distances from Mon Calamari
+Alderaan -> 2715
 Bakura -> 92
+Bespin -> 2181
+Brentaal -> 2178
+Chandrila -> 2199
 Corellia -> 240
 Corporate Sector -> 34
+Corulag -> 2184
+Dagobah -> 3066
+Dantooine -> 2732
+Endor -> 3222
+Esseles -> 2192
+Gamorr -> 2531
 Hapes Cluster -> 45
+Hoth -> 3158
+Kashyyyk -> 2365
 Kessel -> 61
+Myrkr -> 2424
+Ralltiir -> 2207
+Rhinnal -> 2212
+Sullust -> 2453
+Tatooine -> 3098
+Wayland -> 2274
+Yaga Minor -> 2308
+Yavin -> 2748
+
+Planets and distances from Myrkr
+Alderaan -> 2715
+Bakura -> 2267
+Bespin -> 2181
+Brentaal -> 2178
+Chandrila -> 2199
+Corellia -> 552
+Corporate Sector -> 2209
+Corulag -> 2184
+Dagobah -> 3066
+Mon Calamari -> 2181
+Dantooine -> 2732
+Endor -> 3222
+Esseles -> 2192
+Gamorr -> 2531
+Hapes Cluster -> 2220
+Hoth -> 3158
+Kashyyyk -> 358
+Kessel -> 2236
+Ralltiir -> 2207
+Rhinnal -> 2212
+Sullust -> 2453
+Tatooine -> 3098
+Wayland -> 274
+Yaga Minor -> 415
+Yavin -> 2748
+
+Planets and distances from Ralltiir
+Alderaan -> 2715
+Bakura -> 2267
+Bespin -> 2181
+Brentaal -> 46
+Chandrila -> 68
+Corellia -> 96
+Corporate Sector -> 2209
+Corulag -> 83
+Dagobah -> 3066
+Mon Calamari -> 2181
+Dantooine -> 2732
+Endor -> 3222
+Esseles -> 75
+Gamorr -> 2531
+Hapes Cluster -> 2220
+Hoth -> 3158
+Kashyyyk -> 2365
+Kessel -> 2236
+Myrkr -> 2424
+Rhinnal -> 37
+Sullust -> 2453
+Tatooine -> 3098
+Wayland -> 2274
+Yaga Minor -> 2308
+Yavin -> 2748
+
+Planets and distances from Rhinnal
+Alderaan -> 2715
+Bakura -> 2267
+Bespin -> 2181
+Brentaal -> 46
+Chandrila -> 68
+Corellia -> 96
+Corporate Sector -> 2209
+Corulag -> 83
+Dagobah -> 3066
+Mon Calamari -> 2181
+Dantooine -> 2732
+Endor -> 3222
+Esseles -> 75
+Gamorr -> 2531
+Hapes Cluster -> 2220
+Hoth -> 3158
+Kashyyyk -> 2365
+Kessel -> 2236
+Myrkr -> 2424
+Ralltiir -> 60
+Sullust -> 2453
+Tatooine -> 3098
+Wayland -> 2274
+Yaga Minor -> 2308
+Yavin -> 2748
+
+Planets and distances from Sullust
+Alderaan -> 540
+Bakura -> 2267
+Bespin -> 1083
+Brentaal -> 2178
+Chandrila -> 2199
+Corellia -> 2170
+Corporate Sector -> 2209
+Corulag -> 2184
+Dagobah -> 891
+Mon Calamari -> 2181
+Dantooine -> 557
+Endor -> 1047
+Esseles -> 2192
+Gamorr -> 356
+Hapes Cluster -> 2220
+Hoth -> 983
+Kashyyyk -> 2365
+Kessel -> 2236
+Myrkr -> 2424
+Ralltiir -> 2207
+Rhinnal -> 2212
+Tatooine -> 923
+Wayland -> 2274
+Yaga Minor -> 2308
+Yavin -> 573
+
+Planets and distances from Tatooine
+Alderaan -> 1626
+Bakura -> 2267
+Bespin -> 1083
+Brentaal -> 2178
+Chandrila -> 2199
+Corellia -> 2170
+Corporate Sector -> 2209
+Corulag -> 2184
+Dagobah -> 1275
+Mon Calamari -> 2181
+Dantooine -> 1609
+Endor -> 1047
+Esseles -> 2192
+Gamorr -> 1810
+Hapes Cluster -> 2220
+Hoth -> 983
+Kashyyyk -> 2365
+Kessel -> 2236
+Myrkr -> 2424
+Ralltiir -> 2207
+Rhinnal -> 2212
+Sullust -> 1888
+Wayland -> 2274
+Yaga Minor -> 2308
+Yavin -> 1593
+
+Planets and distances from Wayland
+Alderaan -> 2715
+Bakura -> 2267
+Bespin -> 2181
+Brentaal -> 2178
+Chandrila -> 2199
+Corellia -> 552
+Corporate Sector -> 2209
+Corulag -> 2184
+Dagobah -> 3066
+Mon Calamari -> 2181
+Dantooine -> 2732
+Endor -> 3222
+Esseles -> 2192
+Gamorr -> 2531
+Hapes Cluster -> 2220
+Hoth -> 3158
+Kashyyyk -> 190
+Kessel -> 2236
+Myrkr -> 249
+Ralltiir -> 2207
+Rhinnal -> 2212
+Sullust -> 2453
+Tatooine -> 3098
+Yaga Minor -> 133
+Yavin -> 2748
+
+Planets and distances from Yaga Minor
+Alderaan -> 2715
+Bakura -> 2267
+Bespin -> 2181
+Brentaal -> 2178
+Chandrila -> 2199
+Corellia -> 552
+Corporate Sector -> 2209
+Corulag -> 2184
+Dagobah -> 3066
+Mon Calamari -> 2181
+Dantooine -> 2732
+Endor -> 3222
+Esseles -> 2192
+Gamorr -> 2531
+Hapes Cluster -> 2220
+Hoth -> 3158
+Kashyyyk -> 190
+Kessel -> 2236
+Myrkr -> 249
+Ralltiir -> 2207
+Rhinnal -> 2212
+Sullust -> 2453
+Tatooine -> 3098
+Wayland -> 274
+Yavin -> 2748
+
+Planets and distances from Yavin
+Alderaan -> 1626
+Bakura -> 2267
+Bespin -> 1083
+Brentaal -> 2178
+Chandrila -> 2199
+Corellia -> 2170
+Corporate Sector -> 2209
+Corulag -> 2184
+Dagobah -> 891
+Mon Calamari -> 2181
+Dantooine -> 1609
+Endor -> 1047
+Esseles -> 2192
+Gamorr -> 1810
+Hapes Cluster -> 2220
+Hoth -> 983
+Kashyyyk -> 2365
+Kessel -> 2236
+Myrkr -> 2424
+Ralltiir -> 2207
+Rhinnal -> 2212
+Sullust -> 1888
+Tatooine -> 923
+Wayland -> 2274
+Yaga Minor -> 2308
 

@@ -1,0 +1,330 @@
+///////////////////////////////////////////////////////////////////
+Bakura
+
+
+Ship1	Bakura	96	Mon Calamari	118
+Ship1	Mon Calamari	234	Corellia	240
+
+-->Corellia
+
+
+
+///////////////////////////////////////////////////////////////////
+Bakura
+
+
+Ship1	Bakura	148	Kessel	175
+Ship1	Kessel	179	Hapes Cluster	191
+Ship1	Hapes Cluster	195	Corporate Sector	202
+
+-->Corporate Sector
+
+
+
+///////////////////////////////////////////////////////////////////
+Bakura
+
+
+Ship1	Bakura	148	Kessel	175
+Ship1	Kessel	179	Hapes Cluster	191
+
+-->Hapes Cluster
+
+
+
+///////////////////////////////////////////////////////////////////
+Bakura
+
+
+Ship1	Bakura	148	Kessel	175
+
+
+
+///////////////////////////////////////////////////////////////////
+Bakura
+
+
+Ship1	Bakura	96	Mon Calamari	118
+
+
+
+///////////////////////////////////////////////////////////////////
+Corellia
+
+
+Ship1	Corellia	0	Mon Calamari	6
+Ship1	Mon Calamari	10	Corporate Sector	34
+Ship1	Corporate Sector	38	Hapes Cluster	45
+Ship1	Hapes Cluster	49	Kessel	61
+Ship1	Kessel	65	Bakura	92
+
+-->Bakura
+
+
+
+///////////////////////////////////////////////////////////////////
+Corellia
+
+
+Ship1	Corellia	0	Mon Calamari	6
+Ship1	Mon Calamari	10	Corporate Sector	34
+
+-->Corporate Sector
+
+
+
+///////////////////////////////////////////////////////////////////
+Corellia
+
+
+Ship1	Corellia	0	Mon Calamari	6
+Ship1	Mon Calamari	10	Corporate Sector	34
+Ship1	Corporate Sector	38	Hapes Cluster	45
+
+-->Hapes Cluster
+
+
+
+///////////////////////////////////////////////////////////////////
+Corellia
+
+
+Ship1	Corellia	0	Mon Calamari	6
+Ship1	Mon Calamari	10	Corporate Sector	34
+Ship1	Corporate Sector	38	Hapes Cluster	45
+Ship1	Hapes Cluster	49	Kessel	61
+
+-->Kessel
+
+
+
+///////////////////////////////////////////////////////////////////
+Corellia
+
+
+Ship1	Corellia	0	Mon Calamari	6
+
+
+
+///////////////////////////////////////////////////////////////////
+Corporate Sector
+
+
+Ship1	Corporate Sector	38	Hapes Cluster	45
+Ship1	Hapes Cluster	49	Kessel	61
+Ship1	Kessel	65	Bakura	92
+
+-->Bakura
+
+
+
+///////////////////////////////////////////////////////////////////
+Corporate Sector
+
+
+Ship1	Corporate Sector	38	Hapes Cluster	45
+Ship1	Hapes Cluster	49	Kessel	61
+Ship1	Kessel	65	Bakura	92
+Ship1	Bakura	96	Mon Calamari	118
+Ship1	Mon Calamari	234	Corellia	240
+
+-->Corellia
+
+
+
+///////////////////////////////////////////////////////////////////
+Corporate Sector
+
+
+Ship1	Corporate Sector	38	Hapes Cluster	45
+
+
+
+///////////////////////////////////////////////////////////////////
+Corporate Sector
+
+
+Ship1	Corporate Sector	38	Hapes Cluster	45
+Ship1	Hapes Cluster	49	Kessel	61
+
+-->Kessel
+
+
+
+///////////////////////////////////////////////////////////////////
+Corporate Sector
+
+
+Ship1	Corporate Sector	38	Hapes Cluster	45
+Ship1	Hapes Cluster	49	Kessel	61
+Ship1	Kessel	65	Bakura	92
+Ship1	Bakura	96	Mon Calamari	118
+
+-->Mon Calamari
+
+
+
+///////////////////////////////////////////////////////////////////
+Hapes Cluster
+
+
+Ship1	Hapes Cluster	49	Kessel	61
+Ship1	Kessel	65	Bakura	92
+
+-->Bakura
+
+
+
+///////////////////////////////////////////////////////////////////
+Hapes Cluster
+
+
+Ship1	Hapes Cluster	49	Kessel	61
+Ship1	Kessel	65	Bakura	92
+Ship1	Bakura	96	Mon Calamari	118
+Ship1	Mon Calamari	234	Corellia	240
+
+-->Corellia
+
+
+
+///////////////////////////////////////////////////////////////////
+Hapes Cluster
+
+
+Ship1	Hapes Cluster	195	Corporate Sector	202
+
+
+
+///////////////////////////////////////////////////////////////////
+Hapes Cluster
+
+
+Ship1	Hapes Cluster	49	Kessel	61
+
+
+
+///////////////////////////////////////////////////////////////////
+Hapes Cluster
+
+
+Ship1	Hapes Cluster	49	Kessel	61
+Ship1	Kessel	65	Bakura	92
+Ship1	Bakura	96	Mon Calamari	118
+
+-->Mon Calamari
+
+
+
+///////////////////////////////////////////////////////////////////
+Kessel
+
+
+Ship1	Kessel	65	Bakura	92
+
+
+
+///////////////////////////////////////////////////////////////////
+Kessel
+
+
+Ship1	Kessel	65	Bakura	92
+Ship1	Bakura	96	Mon Calamari	118
+Ship1	Mon Calamari	234	Corellia	240
+
+-->Corellia
+
+
+
+///////////////////////////////////////////////////////////////////
+Kessel
+
+
+Ship1	Kessel	179	Hapes Cluster	191
+Ship1	Hapes Cluster	195	Corporate Sector	202
+
+-->Corporate Sector
+
+
+
+///////////////////////////////////////////////////////////////////
+Kessel
+
+
+Ship1	Kessel	179	Hapes Cluster	191
+
+
+
+///////////////////////////////////////////////////////////////////
+Kessel
+
+
+Ship1	Kessel	65	Bakura	92
+Ship1	Bakura	96	Mon Calamari	118
+
+-->Mon Calamari
+
+
+
+///////////////////////////////////////////////////////////////////
+Mon Calamari
+
+
+Ship1	Mon Calamari	10	Corporate Sector	34
+Ship1	Corporate Sector	38	Hapes Cluster	45
+Ship1	Hapes Cluster	49	Kessel	61
+Ship1	Kessel	65	Bakura	92
+
+-->Bakura
+
+
+
+///////////////////////////////////////////////////////////////////
+Mon Calamari
+
+
+Ship1	Mon Calamari	234	Corellia	240
+
+
+
+///////////////////////////////////////////////////////////////////
+Mon Calamari
+
+
+Ship1	Mon Calamari	10	Corporate Sector	34
+
+
+
+///////////////////////////////////////////////////////////////////
+Mon Calamari
+
+
+Ship1	Mon Calamari	10	Corporate Sector	34
+Ship1	Corporate Sector	38	Hapes Cluster	45
+
+-->Hapes Cluster
+
+
+
+///////////////////////////////////////////////////////////////////
+Mon Calamari
+
+
+Ship1	Mon Calamari	10	Corporate Sector	34
+Ship1	Corporate Sector	38	Hapes Cluster	45
+Ship1	Hapes Cluster	49	Kessel	61
+
+-->Kessel
+
+
+
+
+Weighted diameter:
+///////////////////////////////////////////////////////////////////
+Corporate Sector
+
+
+Ship1	Corporate Sector	234	Corellia	240
+
+
+

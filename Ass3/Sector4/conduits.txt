@@ -1,0 +1,7 @@
+Brentaal	Corellia	3
+Brentaal	Corulag	2
+Corulag	Esseles	4
+Chandrila	Esseles	3
+Chandrila	Ralltiir	4
+Rhinnal	Ralltiir	1
+Brentaal	Rhinnal	5
