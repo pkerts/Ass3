@@ -278,7 +278,7 @@ inline void Itinerary::print(Fleet& fleet, std::ostream& out) {
 	if (!destinations.empty()) {
 		out << "///////////////////////////////////////////////////////////////////" << std::endl;
 		out << std::uppercase << origin->name << std::nouppercase << std::endl << "\n\n";
-		// out << origin->name << " itinerary to furthest planet:\n\n";
+		out << origin->name << " itinerary to furthest planet:\n\n";
 		std::string og;
 		out << fleet.name(legs.back().id) << '\t' << origin->name << '\t' << legs.back().departure_time << '\t' << destinations.back()->name << '\t' << legs.back().arrival_time << std::endl;
 		og = destinations.back()->name;
@@ -318,7 +318,6 @@ inline Planet* Planet::search(PriorityQueue<Planet, int(*)(Planet*, Planet*)>& q
 		}
 		for (auto e : min->edges) {
 			e->sort();
-			//if (!(visited.count(e->destination))) { // Check make sure neighbor is unvisited
 			for (const auto d : e->departures) {
 				if (min->arrival_time() == 0 || d.departure_time >= min->arrival_time() + 4) {
 					if (d.arrival_time < e->destination->arrival_time()) {
@@ -328,14 +327,6 @@ inline Planet* Planet::search(PriorityQueue<Planet, int(*)(Planet*, Planet*)>& q
 					}
 				}
 			}
-				/*if (min->arrival_time() == 0 || e->departures.front().departure_time >= min->arrival_time() + 4) {
-					if (e->departures.front().arrival_time < e->destination->arrival_time()) {
-						e->destination->best_leg = e->departures.front();
-						e->destination->predecessor = min;
-						queue.reduce(e->destination);
-					}
-				}*/
-			//}
 		}
 		visited.emplace(min);
 		if (min->arrival_time() > furthest_planet->arrival_time()) {
@@ -382,10 +373,10 @@ inline void Galaxy::search() {
 		PriorityQueue<Planet, int(*)(Planet*, Planet*)> pq(Planet::compare);
 		for (auto k : planets) { pq.push_back(k); }
 		auto furthest_planet = i->search(pq);
-		// auto itin = i->make_itinerary(furthest_planet);
-		// itin->print(fleet);
+		auto itin = i->make_itinerary(furthest_planet);
+		itin->print(fleet);
 
-		i->dump(this);
+		// i->dump(this);
 
 		// std::cout << "origin: " << i->name << "\tfarthest planet: " << furthest_planet->name << "\tarrival time: " << furthest_planet->arrival_time() << std::endl;
 		// auto itinerary = i->make_itinerary(furthest_planet);
