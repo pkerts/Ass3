@@ -1,3 +1,8 @@
 awk '{print $1"\t"$2"\t", $3 + 2400, "\t" $4 "\t", $5 + 24000}' route.txt
 
 here you would add a < "outputfile.txt" at the end to output it.
+
+Ship9	Corellia	0	Coruscant	4
+Ship10	Coruscant	2175	Corellia	2179
+
+Corellia	Coruscant	4

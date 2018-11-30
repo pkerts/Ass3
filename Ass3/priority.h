@@ -9,7 +9,6 @@
 #define CSS343_PRIORITY_H
 
 #include <cassert>
-#include <cstdlib>
 #include <vector>
 
 
@@ -22,7 +21,7 @@
 template<typename Thing, typename Compare>
 class PriorityQueue {
 public:
-  PriorityQueue(Compare compare) : compare_(compare) {
+	explicit PriorityQueue(Compare compare) : compare_(compare) {
   }
 
   // Add a new thing to the priority queue.
@@ -65,7 +64,7 @@ void PriorityQueue<Thing, Compare>::sift_up(int n) {
     return;
   }
 
-  int parent = (n + 1) / 2 - 1;
+	auto parent = (n + 1) / 2 - 1;
   if (compare_(data_[parent], data_[n]) > 0) {
     swap(parent, n);
     sift_up(parent);
@@ -79,7 +78,7 @@ void PriorityQueue<Thing, Compare>::sift_down(int n) {
   if (left >= data_.size()) {
     return;
   }
-  unsigned right = left + 1;
+	auto right = left + 1;
 
   if (compare_(data_[n], data_[left]) >= 0) {
     if (right >= data_.size() || compare_(data_[left], data_[right]) <= 0) {
@@ -115,8 +114,8 @@ void PriorityQueue<Thing, Compare>::reduce(Thing* thing) {
 
 template<typename Thing, typename Compare>
 Thing* PriorityQueue<Thing, Compare>::pop() {
-  if (data_.size() == 0) {
-    return NULL;
+  if (data_.empty()) {
+    return nullptr;
   }
   Thing* min = data_[0];
   data_[0] = *data_.rbegin();

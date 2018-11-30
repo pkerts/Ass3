@@ -1,26 +1,28 @@
 #include "Reader.h"
 #include <fstream>
+#include <map>
+#include <string>
 
 using namespace std;
 
 Reader::Reader(std::istream & in, Travel_Times * constraints) : in(in), constraints(constraints)
 {
 	galaxy = load(); // this is all that's done in the constructor. read below
-	// ADD PLANETS TO READER MAP (PLANET NAMES/PLANET OBJS) AND GALAXY VECTOR (PLANETS OBJS..) 
-	// AS WELL ADD SHIPS(to the READER ship names / id's map and also galaxy's FLEET's vector of names. (ships.) ok ,.
+	// ADDS PLANETS TO READER MAP (PLANET NAMES/PLANET OBJS) AND GALAXY VECTOR (PLANETS OBJS..) 
+	// AS WELL ADDS SHIPS(to the READER ship names/ids map and also galaxy's FLEET's vector of names. (ships.) ok ,.
 }
 
 Galaxy* Reader::load() {
-	auto galaxy = new Galaxy(); // create galaxy object
+	auto galaxy = new Galaxy();
 
-	// BEGIN AND END ITERATORS FOR ACCESS TO CONSTRAINTS THE PLANETS MAPP
-	const auto begin = constraints->begin(); // begin iterator for planets map
-	const auto end = constraints->end(); // end iterator for planets map
+	// BEGIN AND END ITERATORS FOR ACCESS TO CONSTRAINTS THE PLANETS MAP
+	const auto begin = constraints->begin();
+	const auto end = constraints->end();
 
 	// FOR LOOP FOR PLANETS MAP TO ADD PLANETS TO GALAXY and also to PLANETS MAP (of planet namezz and Planet objects.)
 	for (auto i = begin; i != end; ++i) { // for loop (looping through planets map in Travel_Times constraints , conduits.txt....
-		auto planet = new Planet(*i); // create planet obj
-		galaxy->add(planet); // add planet to ze galaxy
+		auto planet = new Planet(*i);
+		galaxy->add(planet);
 		planets.emplace(*i, planet); // having our newly created planet object and also access to our planet name strings from the map in Travel_Times
 									 // since we are in the map, we Now create the pairs that go in the Reader's planets map. (planet name & planet object*).
 	}
@@ -37,14 +39,9 @@ Galaxy* Reader::load() {
 	return galaxy; // RETURN
 }
 
-// FUNCTION TO CHECK IF SHIP EXISTS ANYWHERE GIVEN SHIP NAME(STRING)
-bool Reader::contains_ship(const std::string& ship_name) const {
-	return ships.count(ship_name);
-}
-
 // FUNCTION TO DUMP ALL SHIP NAMES PRECEDED BY INDEX
 void Reader::dump_ships() const {
-	int count = 1;
+	auto count = 1;
 	for (auto i : ships) {
 		cout << count << " " << i.first << endl;
 		count++;
@@ -105,31 +102,33 @@ bool Reader::ReadAndVerify() {
 	return true;
 }
 
-void Reader::Dijkstras() {
+void Reader::Dijkstras() const {
 	galaxy->search();
 }
 
 // ACTUALLY EXTRACTS THE CURRENT LINE FROM ROUTE.TXT YOOOOO. and puts ze shit in its correct place. ex. previous_arrival_time etc.
 bool Reader::get_record() {
 	if (getline(in, current_input_line)) {
-		if (arrival_time == 0) previous_ship_id = -1; // if this is our first record,,,,,, set previous ship id to -1
+		if (arrival_time == 0) {
+			previous_ship_id = -1; // if this is our first record,,,,,, set previous ship id to -1
 													  // this is so our validate shit runs properly. it knows if its a new route by comparing current ship id to previous
 													  // currently, everything initializes to 0 (which is fine, yooo) but the start of the route the first ship may be
 													  // id = 0 so sum shit would fail fosho, dig? we set it to -1 i know it's dirty but ah well.
+		}
+		
 		else previous_ship_id = ship_id; // update previous ship id to the previous current ship cuz we about to read a new ship yo.
 		previous_destination_planet = destination_planet; // update previous_destination_planet
 		previous_arrival_time = arrival_time; // update previous_arrival_time
 		
 		
 		string delimiter = "\t"; // tab delimiter because route.txt uses that in between entries
-		size_t pos = 0; // set initial pos (??) ok.
-		string token; // hey. buffer. ok
-		int i = 1; // counter for which variable to save current part of the line as. ex. each line has 5 pieces of information. we loop through the line
+		size_t pos; // set initial pos (??) ok.
+		auto i = 1; // counter for which variable to save current part of the line as. ex. each line has 5 pieces of information. we loop through the line
 				   // we have to know which piece of information to save now
 		while ((pos = current_input_line.find(delimiter)) != string::npos) { // loop for the file
-			token = current_input_line.substr(0, pos); // set our current token
+			string token = current_input_line.substr(0, pos); // set our current token
 			switch (i) { // based on which 5 pieces of information we're on now in the current line, that's what we save
-			case 1: ship_id = ships.find(token)->second; break;
+			case 1:	ship_id = ships.find(token)->second; break;
 			case 2: departure_planet = planets.find(token)->second; break;
 			case 3: departure_time = stoi(token); break;
 			case 4: destination_planet = planets.find(token)->second; break;
@@ -147,7 +146,7 @@ bool Reader::get_record() {
 
 // TAKES THE CURRENT LINE FROM ROUTE.TXT AND RUNS THAT SHIT THRU A VIVID CHECK YOOOOO
 bool Reader::validate() const {
-	if (!(departure_time >= (previous_arrival_time+4))) { // checks to make sure there's a correct layover!
+	if (!(departure_time >= previous_arrival_time+4)) { // checks to make sure there's a correct layover!
 		if (ship_id == previous_ship_id) { // if no layover (4 hours) detected. it must be a new ship then.. check
 			cerr << "\nERROR: Current leg is not a valid continuation of the previous leg / is not the beginning of the route for another ship.\ninfo: " << endl;
 			dump_current_info(); // dump for info

@@ -8,8 +8,8 @@ using namespace std;
 
 void RouteCreator::Create(const Reader& r, const Travel_Times& t) {
 	ofstream route("route.txt");
-	int status = 111;
-	int time, ship, origin, destination = 0;
+	auto status = 111;
+	int time = 0, ship, origin, destination = 0;
 	string origin_name;
 	string destination_name;
 
@@ -45,7 +45,7 @@ void RouteCreator::Create(const Reader& r, const Travel_Times& t) {
 			route << origin_name << '\t' << time << '\t'; // Print origin name planet and current time
 			cout << "Select destination" << endl;
 			cin >> destination; // From previously printed destination list from that origin planet, pick choice
-			auto travel_pair = t.travel_time(origin, destination); // retrieve travel time
+			const auto travel_pair = t.travel_time(origin, destination); // retrieve travel time
 			destination_name = travel_pair.first; // get destination name
 			time += travel_pair.second; // update time
 			route << destination_name << '\t' << time << endl; // print destination name and arrival time
@@ -60,7 +60,7 @@ void RouteCreator::Create(const Reader& r, const Travel_Times& t) {
 			origin = t.obtain_origin_int(origin_name);
 			t.dump(origin); // Print available destinations from new origin
 			cin >> destination; // obtain new destination
-			auto travel_pair = t.travel_time(origin, destination);
+			const auto travel_pair = t.travel_time(origin, destination);
 			destination_name = travel_pair.first; // get destination name
 			time += travel_pair.second; // update time
 			route << destination_name << '\t' << time << endl; // print destination name and arrival time

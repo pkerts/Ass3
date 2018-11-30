@@ -1,0 +1,610 @@
+///////////////////////////////////////////////////////////////////
+Alderaan
+
+
+Alderaan itinerary to furthest planet:
+
+Ship2	Alderaan	544	Dantooine	557
+Ship2	Dantooine	561	Yavin	573
+Ship2	Yavin	577	Dagobah	891
+Ship2	Dagobah	895	Tatooine	923
+Ship2	Tatooine	927	Hoth	983
+Ship2	Hoth	987	Endor	1047
+Ship2	Endor	1051	Bespin	1083
+Ship2	Bespin	2164	Corellia	2170
+Ship3	Corellia	2175	Wayland	2274
+Ship3	Wayland	2278	Yaga Minor	2308
+Ship3	Yaga Minor	2312	Kashyyyk	2365
+Ship3	Kashyyyk	2369	Myrkr	2424
+
+-->Myrkr
+
+
+
+///////////////////////////////////////////////////////////////////
+Bakura
+
+
+Bakura itinerary to furthest planet:
+
+Ship1	Bakura	96	Mon Calamari	118
+Ship1	Mon Calamari	234	Corellia	240
+Ship2	Corellia	2175	Bespin	2181
+Ship2	Bespin	2185	Sullust	2453
+Ship2	Sullust	2457	Gamorr	2531
+Ship2	Gamorr	2535	Alderaan	2715
+Ship2	Alderaan	2719	Dantooine	2732
+Ship2	Dantooine	2736	Yavin	2748
+Ship2	Yavin	2752	Dagobah	3066
+Ship2	Dagobah	3070	Tatooine	3098
+Ship2	Tatooine	3102	Hoth	3158
+Ship2	Hoth	3162	Endor	3222
+
+-->Endor
+
+
+
+///////////////////////////////////////////////////////////////////
+Bespin
+
+
+Bespin itinerary to furthest planet:
+
+Ship2	Bespin	2164	Corellia	2170
+Ship3	Corellia	2175	Wayland	2274
+Ship3	Wayland	2278	Yaga Minor	2308
+Ship3	Yaga Minor	2312	Kashyyyk	2365
+Ship3	Kashyyyk	2369	Myrkr	2424
+
+-->Myrkr
+
+
+
+///////////////////////////////////////////////////////////////////
+Brentaal
+
+
+Brentaal itinerary to furthest planet:
+
+Ship4	Brentaal	93	Corellia	96
+Ship2	Corellia	2175	Bespin	2181
+Ship2	Bespin	2185	Sullust	2453
+Ship2	Sullust	2457	Gamorr	2531
+Ship2	Gamorr	2535	Alderaan	2715
+Ship2	Alderaan	2719	Dantooine	2732
+Ship2	Dantooine	2736	Yavin	2748
+Ship2	Yavin	2752	Dagobah	3066
+Ship2	Dagobah	3070	Tatooine	3098
+Ship2	Tatooine	3102	Hoth	3158
+Ship2	Hoth	3162	Endor	3222
+
+-->Endor
+
+
+
+///////////////////////////////////////////////////////////////////
+Chandrila
+
+
+Chandrila itinerary to furthest planet:
+
+Ship4	Chandrila	28	Ralltiir	32
+Ship4	Ralltiir	36	Rhinnal	37
+Ship4	Rhinnal	41	Brentaal	46
+Ship4	Brentaal	93	Corellia	96
+Ship2	Corellia	2175	Bespin	2181
+Ship2	Bespin	2185	Sullust	2453
+Ship2	Sullust	2457	Gamorr	2531
+Ship2	Gamorr	2535	Alderaan	2715
+Ship2	Alderaan	2719	Dantooine	2732
+Ship2	Dantooine	2736	Yavin	2748
+Ship2	Yavin	2752	Dagobah	3066
+Ship2	Dagobah	3070	Tatooine	3098
+Ship2	Tatooine	3102	Hoth	3158
+Ship2	Hoth	3162	Endor	3222
+
+-->Endor
+
+
+
+///////////////////////////////////////////////////////////////////
+Corellia
+
+
+Corellia itinerary to furthest planet:
+
+Ship2	Corellia	0	Bespin	6
+Ship2	Bespin	10	Sullust	278
+Ship2	Sullust	282	Gamorr	356
+Ship2	Gamorr	360	Alderaan	540
+Ship2	Alderaan	544	Dantooine	557
+Ship2	Dantooine	561	Yavin	573
+Ship2	Yavin	577	Dagobah	891
+Ship2	Dagobah	895	Tatooine	923
+Ship2	Tatooine	927	Hoth	983
+Ship2	Hoth	987	Endor	1047
+
+-->Endor
+
+
+
+///////////////////////////////////////////////////////////////////
+Corporate Sector
+
+
+Corporate Sector itinerary to furthest planet:
+
+Ship1	Corporate Sector	38	Hapes Cluster	45
+Ship1	Hapes Cluster	49	Kessel	61
+Ship1	Kessel	65	Bakura	92
+Ship1	Bakura	96	Mon Calamari	118
+Ship1	Mon Calamari	234	Corellia	240
+Ship2	Corellia	2175	Bespin	2181
+Ship2	Bespin	2185	Sullust	2453
+Ship2	Sullust	2457	Gamorr	2531
+Ship2	Gamorr	2535	Alderaan	2715
+Ship2	Alderaan	2719	Dantooine	2732
+Ship2	Dantooine	2736	Yavin	2748
+Ship2	Yavin	2752	Dagobah	3066
+Ship2	Dagobah	3070	Tatooine	3098
+Ship2	Tatooine	3102	Hoth	3158
+Ship2	Hoth	3162	Endor	3222
+
+-->Endor
+
+
+
+///////////////////////////////////////////////////////////////////
+Corulag
+
+
+Corulag itinerary to furthest planet:
+
+Ship4	Corulag	13	Esseles	17
+Ship4	Esseles	21	Chandrila	24
+Ship4	Chandrila	28	Ralltiir	32
+Ship4	Ralltiir	36	Rhinnal	37
+Ship4	Rhinnal	41	Brentaal	46
+Ship4	Brentaal	93	Corellia	96
+Ship2	Corellia	2175	Bespin	2181
+Ship2	Bespin	2185	Sullust	2453
+Ship2	Sullust	2457	Gamorr	2531
+Ship2	Gamorr	2535	Alderaan	2715
+Ship2	Alderaan	2719	Dantooine	2732
+Ship2	Dantooine	2736	Yavin	2748
+Ship2	Yavin	2752	Dagobah	3066
+Ship2	Dagobah	3070	Tatooine	3098
+Ship2	Tatooine	3102	Hoth	3158
+Ship2	Hoth	3162	Endor	3222
+
+-->Endor
+
+
+
+///////////////////////////////////////////////////////////////////
+Dagobah
+
+
+Dagobah itinerary to furthest planet:
+
+Ship2	Dagobah	895	Tatooine	923
+Ship2	Tatooine	927	Hoth	983
+Ship2	Hoth	987	Endor	1047
+Ship2	Endor	1051	Bespin	1083
+Ship2	Bespin	2164	Corellia	2170
+Ship3	Corellia	2175	Wayland	2274
+Ship3	Wayland	2278	Yaga Minor	2308
+Ship3	Yaga Minor	2312	Kashyyyk	2365
+Ship3	Kashyyyk	2369	Myrkr	2424
+
+-->Myrkr
+
+
+
+///////////////////////////////////////////////////////////////////
+Dantooine
+
+
+Dantooine itinerary to furthest planet:
+
+Ship2	Dantooine	561	Yavin	573
+Ship2	Yavin	577	Dagobah	891
+Ship2	Dagobah	895	Tatooine	923
+Ship2	Tatooine	927	Hoth	983
+Ship2	Hoth	987	Endor	1047
+Ship2	Endor	1051	Bespin	1083
+Ship2	Bespin	2164	Corellia	2170
+Ship3	Corellia	2175	Wayland	2274
+Ship3	Wayland	2278	Yaga Minor	2308
+Ship3	Yaga Minor	2312	Kashyyyk	2365
+Ship3	Kashyyyk	2369	Myrkr	2424
+
+-->Myrkr
+
+
+
+///////////////////////////////////////////////////////////////////
+Endor
+
+
+Endor itinerary to furthest planet:
+
+Ship2	Endor	1051	Bespin	1083
+Ship2	Bespin	2164	Corellia	2170
+Ship3	Corellia	2175	Wayland	2274
+Ship3	Wayland	2278	Yaga Minor	2308
+Ship3	Yaga Minor	2312	Kashyyyk	2365
+Ship3	Kashyyyk	2369	Myrkr	2424
+
+-->Myrkr
+
+
+
+///////////////////////////////////////////////////////////////////
+Esseles
+
+
+Esseles itinerary to furthest planet:
+
+Ship4	Esseles	21	Chandrila	24
+Ship4	Chandrila	28	Ralltiir	32
+Ship4	Ralltiir	36	Rhinnal	37
+Ship4	Rhinnal	41	Brentaal	46
+Ship4	Brentaal	93	Corellia	96
+Ship2	Corellia	2175	Bespin	2181
+Ship2	Bespin	2185	Sullust	2453
+Ship2	Sullust	2457	Gamorr	2531
+Ship2	Gamorr	2535	Alderaan	2715
+Ship2	Alderaan	2719	Dantooine	2732
+Ship2	Dantooine	2736	Yavin	2748
+Ship2	Yavin	2752	Dagobah	3066
+Ship2	Dagobah	3070	Tatooine	3098
+Ship2	Tatooine	3102	Hoth	3158
+Ship2	Hoth	3162	Endor	3222
+
+-->Endor
+
+
+
+///////////////////////////////////////////////////////////////////
+Gamorr
+
+
+Gamorr itinerary to furthest planet:
+
+Ship2	Gamorr	360	Alderaan	540
+Ship2	Alderaan	544	Dantooine	557
+Ship2	Dantooine	561	Yavin	573
+Ship2	Yavin	577	Dagobah	891
+Ship2	Dagobah	895	Tatooine	923
+Ship2	Tatooine	927	Hoth	983
+Ship2	Hoth	987	Endor	1047
+Ship2	Endor	1051	Bespin	1083
+Ship2	Bespin	2164	Corellia	2170
+Ship3	Corellia	2175	Wayland	2274
+Ship3	Wayland	2278	Yaga Minor	2308
+Ship3	Yaga Minor	2312	Kashyyyk	2365
+Ship3	Kashyyyk	2369	Myrkr	2424
+
+-->Myrkr
+
+
+
+///////////////////////////////////////////////////////////////////
+Hapes Cluster
+
+
+Hapes Cluster itinerary to furthest planet:
+
+Ship1	Hapes Cluster	49	Kessel	61
+Ship1	Kessel	65	Bakura	92
+Ship1	Bakura	96	Mon Calamari	118
+Ship1	Mon Calamari	234	Corellia	240
+Ship2	Corellia	2175	Bespin	2181
+Ship2	Bespin	2185	Sullust	2453
+Ship2	Sullust	2457	Gamorr	2531
+Ship2	Gamorr	2535	Alderaan	2715
+Ship2	Alderaan	2719	Dantooine	2732
+Ship2	Dantooine	2736	Yavin	2748
+Ship2	Yavin	2752	Dagobah	3066
+Ship2	Dagobah	3070	Tatooine	3098
+Ship2	Tatooine	3102	Hoth	3158
+Ship2	Hoth	3162	Endor	3222
+
+-->Endor
+
+
+
+///////////////////////////////////////////////////////////////////
+Hoth
+
+
+Hoth itinerary to furthest planet:
+
+Ship2	Hoth	987	Endor	1047
+Ship2	Endor	1051	Bespin	1083
+Ship2	Bespin	2164	Corellia	2170
+Ship3	Corellia	2175	Wayland	2274
+Ship3	Wayland	2278	Yaga Minor	2308
+Ship3	Yaga Minor	2312	Kashyyyk	2365
+Ship3	Kashyyyk	2369	Myrkr	2424
+
+-->Myrkr
+
+
+
+///////////////////////////////////////////////////////////////////
+Kashyyyk
+
+
+Kashyyyk itinerary to furthest planet:
+
+Ship3	Kashyyyk	194	Myrkr	249
+Ship3	Myrkr	253	Wayland	274
+Ship3	Wayland	453	Corellia	552
+Ship2	Corellia	2175	Bespin	2181
+Ship2	Bespin	2185	Sullust	2453
+Ship2	Sullust	2457	Gamorr	2531
+Ship2	Gamorr	2535	Alderaan	2715
+Ship2	Alderaan	2719	Dantooine	2732
+Ship2	Dantooine	2736	Yavin	2748
+Ship2	Yavin	2752	Dagobah	3066
+Ship2	Dagobah	3070	Tatooine	3098
+Ship2	Tatooine	3102	Hoth	3158
+Ship2	Hoth	3162	Endor	3222
+
+-->Endor
+
+
+
+///////////////////////////////////////////////////////////////////
+Kessel
+
+
+Kessel itinerary to furthest planet:
+
+Ship1	Kessel	65	Bakura	92
+Ship1	Bakura	96	Mon Calamari	118
+Ship1	Mon Calamari	234	Corellia	240
+Ship2	Corellia	2175	Bespin	2181
+Ship2	Bespin	2185	Sullust	2453
+Ship2	Sullust	2457	Gamorr	2531
+Ship2	Gamorr	2535	Alderaan	2715
+Ship2	Alderaan	2719	Dantooine	2732
+Ship2	Dantooine	2736	Yavin	2748
+Ship2	Yavin	2752	Dagobah	3066
+Ship2	Dagobah	3070	Tatooine	3098
+Ship2	Tatooine	3102	Hoth	3158
+Ship2	Hoth	3162	Endor	3222
+
+-->Endor
+
+
+
+///////////////////////////////////////////////////////////////////
+Mon Calamari
+
+
+Mon Calamari itinerary to furthest planet:
+
+Ship1	Mon Calamari	234	Corellia	240
+Ship2	Corellia	2175	Bespin	2181
+Ship2	Bespin	2185	Sullust	2453
+Ship2	Sullust	2457	Gamorr	2531
+Ship2	Gamorr	2535	Alderaan	2715
+Ship2	Alderaan	2719	Dantooine	2732
+Ship2	Dantooine	2736	Yavin	2748
+Ship2	Yavin	2752	Dagobah	3066
+Ship2	Dagobah	3070	Tatooine	3098
+Ship2	Tatooine	3102	Hoth	3158
+Ship2	Hoth	3162	Endor	3222
+
+-->Endor
+
+
+
+///////////////////////////////////////////////////////////////////
+Myrkr
+
+
+Myrkr itinerary to furthest planet:
+
+Ship3	Myrkr	253	Wayland	274
+Ship3	Wayland	453	Corellia	552
+Ship2	Corellia	2175	Bespin	2181
+Ship2	Bespin	2185	Sullust	2453
+Ship2	Sullust	2457	Gamorr	2531
+Ship2	Gamorr	2535	Alderaan	2715
+Ship2	Alderaan	2719	Dantooine	2732
+Ship2	Dantooine	2736	Yavin	2748
+Ship2	Yavin	2752	Dagobah	3066
+Ship2	Dagobah	3070	Tatooine	3098
+Ship2	Tatooine	3102	Hoth	3158
+Ship2	Hoth	3162	Endor	3222
+
+-->Endor
+
+
+
+///////////////////////////////////////////////////////////////////
+Ralltiir
+
+
+Ralltiir itinerary to furthest planet:
+
+Ship4	Ralltiir	36	Rhinnal	37
+Ship4	Rhinnal	41	Brentaal	46
+Ship4	Brentaal	93	Corellia	96
+Ship2	Corellia	2175	Bespin	2181
+Ship2	Bespin	2185	Sullust	2453
+Ship2	Sullust	2457	Gamorr	2531
+Ship2	Gamorr	2535	Alderaan	2715
+Ship2	Alderaan	2719	Dantooine	2732
+Ship2	Dantooine	2736	Yavin	2748
+Ship2	Yavin	2752	Dagobah	3066
+Ship2	Dagobah	3070	Tatooine	3098
+Ship2	Tatooine	3102	Hoth	3158
+Ship2	Hoth	3162	Endor	3222
+
+-->Endor
+
+
+
+///////////////////////////////////////////////////////////////////
+Rhinnal
+
+
+Rhinnal itinerary to furthest planet:
+
+Ship4	Rhinnal	41	Brentaal	46
+Ship4	Brentaal	93	Corellia	96
+Ship2	Corellia	2175	Bespin	2181
+Ship2	Bespin	2185	Sullust	2453
+Ship2	Sullust	2457	Gamorr	2531
+Ship2	Gamorr	2535	Alderaan	2715
+Ship2	Alderaan	2719	Dantooine	2732
+Ship2	Dantooine	2736	Yavin	2748
+Ship2	Yavin	2752	Dagobah	3066
+Ship2	Dagobah	3070	Tatooine	3098
+Ship2	Tatooine	3102	Hoth	3158
+Ship2	Hoth	3162	Endor	3222
+
+-->Endor
+
+
+
+///////////////////////////////////////////////////////////////////
+Sullust
+
+
+Sullust itinerary to furthest planet:
+
+Ship2	Sullust	282	Gamorr	356
+Ship2	Gamorr	360	Alderaan	540
+Ship2	Alderaan	544	Dantooine	557
+Ship2	Dantooine	561	Yavin	573
+Ship2	Yavin	577	Dagobah	891
+Ship2	Dagobah	895	Tatooine	923
+Ship2	Tatooine	927	Hoth	983
+Ship2	Hoth	987	Endor	1047
+Ship2	Endor	1051	Bespin	1083
+Ship2	Bespin	2164	Corellia	2170
+Ship3	Corellia	2175	Wayland	2274
+Ship3	Wayland	2278	Yaga Minor	2308
+Ship3	Yaga Minor	2312	Kashyyyk	2365
+Ship3	Kashyyyk	2369	Myrkr	2424
+
+-->Myrkr
+
+
+
+///////////////////////////////////////////////////////////////////
+Tatooine
+
+
+Tatooine itinerary to furthest planet:
+
+Ship2	Tatooine	927	Hoth	983
+Ship2	Hoth	987	Endor	1047
+Ship2	Endor	1051	Bespin	1083
+Ship2	Bespin	2164	Corellia	2170
+Ship3	Corellia	2175	Wayland	2274
+Ship3	Wayland	2278	Yaga Minor	2308
+Ship3	Yaga Minor	2312	Kashyyyk	2365
+Ship3	Kashyyyk	2369	Myrkr	2424
+
+-->Myrkr
+
+
+
+///////////////////////////////////////////////////////////////////
+Wayland
+
+
+Wayland itinerary to furthest planet:
+
+Ship3	Wayland	453	Corellia	552
+Ship2	Corellia	2175	Bespin	2181
+Ship2	Bespin	2185	Sullust	2453
+Ship2	Sullust	2457	Gamorr	2531
+Ship2	Gamorr	2535	Alderaan	2715
+Ship2	Alderaan	2719	Dantooine	2732
+Ship2	Dantooine	2736	Yavin	2748
+Ship2	Yavin	2752	Dagobah	3066
+Ship2	Dagobah	3070	Tatooine	3098
+Ship2	Tatooine	3102	Hoth	3158
+Ship2	Hoth	3162	Endor	3222
+
+-->Endor
+
+
+
+///////////////////////////////////////////////////////////////////
+Yaga Minor
+
+
+Yaga Minor itinerary to furthest planet:
+
+Ship3	Yaga Minor	137	Kashyyyk	190
+Ship3	Kashyyyk	194	Myrkr	249
+Ship3	Myrkr	253	Wayland	274
+Ship3	Wayland	453	Corellia	552
+Ship2	Corellia	2175	Bespin	2181
+Ship2	Bespin	2185	Sullust	2453
+Ship2	Sullust	2457	Gamorr	2531
+Ship2	Gamorr	2535	Alderaan	2715
+Ship2	Alderaan	2719	Dantooine	2732
+Ship2	Dantooine	2736	Yavin	2748
+Ship2	Yavin	2752	Dagobah	3066
+Ship2	Dagobah	3070	Tatooine	3098
+Ship2	Tatooine	3102	Hoth	3158
+Ship2	Hoth	3162	Endor	3222
+
+-->Endor
+
+
+
+///////////////////////////////////////////////////////////////////
+Yavin
+
+
+Yavin itinerary to furthest planet:
+
+Ship2	Yavin	577	Dagobah	891
+Ship2	Dagobah	895	Tatooine	923
+Ship2	Tatooine	927	Hoth	983
+Ship2	Hoth	987	Endor	1047
+Ship2	Endor	1051	Bespin	1083
+Ship2	Bespin	2164	Corellia	2170
+Ship3	Corellia	2175	Wayland	2274
+Ship3	Wayland	2278	Yaga Minor	2308
+Ship3	Yaga Minor	2312	Kashyyyk	2365
+Ship3	Kashyyyk	2369	Myrkr	2424
+
+-->Myrkr
+
+
+
+
+Weighted diameter:
+///////////////////////////////////////////////////////////////////
+Yavin
+
+
+Yavin itinerary to furthest planet:
+
+Ship2	Yavin	577	Dagobah	891
+Ship2	Dagobah	895	Tatooine	923
+Ship2	Tatooine	927	Hoth	983
+Ship2	Hoth	987	Endor	1047
+Ship2	Endor	1051	Bespin	1083
+Ship2	Bespin	2164	Corellia	2170
+Ship3	Corellia	2175	Wayland	2274
+Ship3	Wayland	2278	Yaga Minor	2308
+Ship3	Yaga Minor	2312	Kashyyyk	2365
+Ship3	Kashyyyk	2369	Myrkr	2424
+
+-->Myrkr
+
+
+
