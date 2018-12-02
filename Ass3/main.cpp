@@ -3,7 +3,6 @@
 #include <string>
 #include <vector>
 #include "Reader.h"
-#include <set>
 
 using namespace std;
 
@@ -42,7 +41,8 @@ int main(int argc, char** argv) {
 	Reader r(in, &t); // create a reader w/ route.txt and Travel_Times which we filled with "conduits.txt"
 
 	// TO USE ROUTE CREATOR, (1/2) COMMENT OUT THIS BLOCK (the following four lines)
-	if (!r.ReadAndVerify()) { // 
+	if (!r.ReadAndVerify()) {
+		// 
 		return EXIT_FAILURE;
 	}
 	r.Dijkstras();

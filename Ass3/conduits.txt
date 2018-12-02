@@ -36,3 +36,4 @@ Chandrila	Esseles	3
 Chandrila	Ralltiir	4
 Rhinnal	Ralltiir	1
 Brentaal	Rhinnal	5
+Corellia	Coruscant	4

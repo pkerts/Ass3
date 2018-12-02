@@ -1,3 +1,115 @@
+==1556== Memcheck, a memory error detector
+==1556== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1556== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==1556== Command: ./a.out route.txt
+==1556== 
+--1556-- Valgrind options:
+--1556--    --leak-check=full
+--1556--    -v
+--1556-- Contents of /proc/version:
+--1556--   Linux version 4.4.0-17134-Microsoft (Microsoft@Microsoft.com) (gcc version 5.4.0 (GCC) ) #345-Microsoft Wed Sep 19 17:47:00 PST 2018
+--1556-- 
+--1556-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-avx-avx2-bmi
+--1556-- Page sizes: currently 4096, max supported 4096
+--1556-- Valgrind library directory: /usr/lib/valgrind
+--1556-- Reading syms from /mnt/c/Users/pkerts/source/repos/Ass3/Ass3/a.out
+--1556-- Reading syms from /lib/x86_64-linux-gnu/ld-2.27.so
+--1556--   Considering /lib/x86_64-linux-gnu/ld-2.27.so ..
+--1556--   .. CRC mismatch (computed 1b7c895e wanted 2943108a)
+--1556--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.27.so ..
+--1556--   .. CRC is valid
+--1556-- Reading syms from /usr/lib/valgrind/memcheck-amd64-linux
+--1556--   Considering /usr/lib/valgrind/memcheck-amd64-linux ..
+--1556--   .. CRC mismatch (computed c25f395c wanted 0a9602a8)
+--1556--    object doesn't have a symbol table
+--1556--    object doesn't have a dynamic symbol table
+--1556-- Scheduler: using generic scheduler lock implementation.
+--1556-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==1556== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-1556-by-pkerts-on-???
+==1556== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-1556-by-pkerts-on-???
+==1556== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-1556-by-pkerts-on-???
+==1556== 
+==1556== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==1556== don't want to do, unless you know exactly what you're doing,
+==1556== or are doing some strange experiment):
+==1556==   /usr/lib/valgrind/../../bin/vgdb --pid=1556 ...command...
+==1556== 
+==1556== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==1556==   /path/to/gdb ./a.out
+==1556== and then give GDB the following command
+==1556==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=1556
+==1556== --pid is optional if only one valgrind process is running
+==1556== 
+==1556== error calling PR_SET_PTRACER, vgdb might block
+--1556-- REDIR: 0x401f2f0 (ld-linux-x86-64.so.2:strlen) redirected to 0x58060901 (???)
+--1556-- REDIR: 0x401f0d0 (ld-linux-x86-64.so.2:index) redirected to 0x5806091b (???)
+--1556-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
+--1556--   Considering /usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
+--1556--   .. CRC mismatch (computed 4b63d83e wanted 670599e6)
+--1556--    object doesn't have a symbol table
+--1556-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so
+--1556--   Considering /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so ..
+--1556--   .. CRC mismatch (computed a4b37bee wanted 8ad4dc94)
+--1556--    object doesn't have a symbol table
+==1556== WARNING: new redirection conflicts with existing -- ignoring it
+--1556--     old: 0x0401f2f0 (strlen              ) R-> (0000.0) 0x58060901 ???
+--1556--     new: 0x0401f2f0 (strlen              ) R-> (2007.0) 0x04c32db0 strlen
+--1556-- REDIR: 0x401d360 (ld-linux-x86-64.so.2:strcmp) redirected to 0x4c33ee0 (strcmp)
+--1556-- REDIR: 0x401f830 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4c374f0 (mempcpy)
+--1556-- Reading syms from /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+--1556--    object doesn't have a symbol table
+--1556-- Reading syms from /lib/x86_64-linux-gnu/libgcc_s.so.1
+--1556--    object doesn't have a symbol table
+--1556-- Reading syms from /lib/x86_64-linux-gnu/libc-2.27.so
+--1556--   Considering /lib/x86_64-linux-gnu/libc-2.27.so ..
+--1556--   .. CRC mismatch (computed b1c74187 wanted 042cc048)
+--1556--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.27.so ..
+--1556--   .. CRC is valid
+--1556-- Reading syms from /lib/x86_64-linux-gnu/libm-2.27.so
+--1556--   Considering /lib/x86_64-linux-gnu/libm-2.27.so ..
+--1556--   .. CRC mismatch (computed 7feae033 wanted b29b2508)
+--1556--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libm-2.27.so ..
+--1556--   .. CRC is valid
+--1556-- REDIR: 0x547bc70 (libc.so.6:memmove) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1556-- REDIR: 0x547ad40 (libc.so.6:strncpy) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1556-- REDIR: 0x547bf50 (libc.so.6:strcasecmp) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1556-- REDIR: 0x547a790 (libc.so.6:strcat) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1556-- REDIR: 0x547ad70 (libc.so.6:rindex) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1556-- REDIR: 0x547d7c0 (libc.so.6:rawmemchr) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1556-- REDIR: 0x547bde0 (libc.so.6:mempcpy) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1556-- REDIR: 0x547bc10 (libc.so.6:bcmp) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1556-- REDIR: 0x547ad00 (libc.so.6:strncmp) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1556-- REDIR: 0x547a800 (libc.so.6:strcmp) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1556-- REDIR: 0x547bd40 (libc.so.6:memset) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1556-- REDIR: 0x54990f0 (libc.so.6:wcschr) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1556-- REDIR: 0x547aca0 (libc.so.6:strnlen) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1556-- REDIR: 0x547a870 (libc.so.6:strcspn) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1556-- REDIR: 0x547bfa0 (libc.so.6:strncasecmp) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1556-- REDIR: 0x547a840 (libc.so.6:strcpy) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1556-- REDIR: 0x547c0e0 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1556-- REDIR: 0x547ada0 (libc.so.6:strpbrk) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1556-- REDIR: 0x547a7c0 (libc.so.6:index) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1556-- REDIR: 0x547ac70 (libc.so.6:strlen) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1556-- REDIR: 0x54856c0 (libc.so.6:memrchr) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1556-- REDIR: 0x547bff0 (libc.so.6:strcasecmp_l) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1556-- REDIR: 0x547bbe0 (libc.so.6:memchr) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1556-- REDIR: 0x5499eb0 (libc.so.6:wcslen) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1556-- REDIR: 0x547b050 (libc.so.6:strspn) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1556-- REDIR: 0x547bf20 (libc.so.6:stpncpy) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1556-- REDIR: 0x547bef0 (libc.so.6:stpcpy) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1556-- REDIR: 0x547d7f0 (libc.so.6:strchrnul) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1556-- REDIR: 0x547c040 (libc.so.6:strncasecmp_l) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1556-- REDIR: 0x556b3c0 (libc.so.6:__strrchr_avx2) redirected to 0x4c32730 (rindex)
+--1556-- REDIR: 0x5474070 (libc.so.6:malloc) redirected to 0x4c2faa0 (malloc)
+--1556-- REDIR: 0x556b590 (libc.so.6:__strlen_avx2) redirected to 0x4c32cf0 (strlen)
+--1556-- REDIR: 0x5567ba0 (libc.so.6:__memcmp_avx2_movbe) redirected to 0x4c35e00 (bcmp)
+--1556-- REDIR: 0x5546d60 (libc.so.6:__strcmp_ssse3) redirected to 0x4c33da0 (strcmp)
+--1556-- REDIR: 0x556bad0 (libc.so.6:__memcpy_avx_unaligned_erms) redirected to 0x4c366e0 (memmove)
+--1556-- REDIR: 0x547b590 (libc.so.6:__GI_strstr) redirected to 0x4c37760 (__strstr_sse2)
+--1556-- REDIR: 0x4ecf240 (libstdc++.so.6:operator new[](unsigned long)) redirected to 0x4c30830 (operator new[](unsigned long))
+--1556-- REDIR: 0x5567420 (libc.so.6:__memchr_avx2) redirected to 0x4c33f80 (memchr)
+--1556-- REDIR: 0x4ecf190 (libstdc++.so.6:operator new(unsigned long)) redirected to 0x4c30110 (operator new(unsigned long))
+--1556-- REDIR: 0x4ecd2e0 (libstdc++.so.6:operator delete(void*)) redirected to 0x4c311d0 (operator delete(void*))
 Alderaan
 		Dantooine	13
 		Gamorr	180
@@ -23,6 +135,7 @@ Corellia
 		Bespin	6
 		Brentaal	3
 		Corporate Sector	9
+		Coruscant	4
 		Hapes Cluster	21
 		Mon Calamari	6
 		Myrkr	81
@@ -36,6 +149,8 @@ Corporate Sector
 Corulag
 		Brentaal	2
 		Esseles	4
+Coruscant
+		Corellia	4
 Dagobah
 		Tatooine	28
 		Yavin	314
@@ -100,6 +215,8 @@ Yaga Minor
 Yavin
 		Dagobah	314
 		Dantooine	12
+--1556-- REDIR: 0x4ecd310 (libstdc++.so.6:operator delete[](void*)) redirected to 0x4c316d0 (operator delete[](void*))
+--1556-- REDIR: 0x5474950 (libc.so.6:free) redirected to 0x4c30cd0 (free)
 ALL GOOD:
 
 previous_ship_id: NULL
@@ -1492,705 +1609,37 @@ departure_time: 2276
 destination_planet: Corellia
 arrival_time: 2279
 
-Planets and distances from Alderaan
-Bakura -> 2275
-Bespin -> 1091
-Brentaal -> 2186
-Chandrila -> 2207
-Corellia -> 2178
-Corporate Sector -> 2217
-Corulag -> 2192
-Dagobah -> 899
-Mon Calamari -> 2189
-Dantooine -> 565
-Endor -> 1055
-Esseles -> 2200
-Gamorr -> 1818
-Hapes Cluster -> 2228
-Hoth -> 991
-Kashyyyk -> 2373
-Kessel -> 2244
-Myrkr -> 2432
-Ralltiir -> 2215
-Rhinnal -> 2220
-Sullust -> 1896
-Tatooine -> 931
-Wayland -> 2282
-Yaga Minor -> 2316
-Yavin -> 581
+ALL GOOD:
 
-Planets and distances from Bakura
-Alderaan -> 2723
-Bespin -> 2189
-Brentaal -> 2186
-Chandrila -> 2207
-Corellia -> 248
-Corporate Sector -> 210
-Corulag -> 2192
-Dagobah -> 3074
-Mon Calamari -> 126
-Dantooine -> 2740
-Endor -> 3230
-Esseles -> 2200
-Gamorr -> 2539
-Hapes Cluster -> 199
-Hoth -> 3166
-Kashyyyk -> 2373
-Kessel -> 183
-Myrkr -> 2432
-Ralltiir -> 2215
-Rhinnal -> 2220
-Sullust -> 2461
-Tatooine -> 3106
-Wayland -> 2282
-Yaga Minor -> 2316
-Yavin -> 2756
+previous_ship_id: 7
+previous_destination_planet: Corellia
+previous_arrival_time: 2279
 
-Planets and distances from Bespin
-Alderaan -> 548
-Bakura -> 2275
-Brentaal -> 2186
-Chandrila -> 2207
-Corellia -> 2178
-Corporate Sector -> 2217
-Corulag -> 2192
-Dagobah -> 899
-Mon Calamari -> 2189
-Dantooine -> 565
-Endor -> 1055
-Esseles -> 2200
-Gamorr -> 364
-Hapes Cluster -> 2228
-Hoth -> 991
-Kashyyyk -> 2373
-Kessel -> 2244
-Myrkr -> 2432
-Ralltiir -> 2215
-Rhinnal -> 2220
-Sullust -> 286
-Tatooine -> 931
-Wayland -> 2282
-Yaga Minor -> 2316
-Yavin -> 581
+ship_id: 8
+departure_planet: Coruscant
+departure_time: 0
+destination_planet: Corellia
+arrival_time: 4
 
-Planets and distances from Brentaal
-Alderaan -> 2723
-Bakura -> 2275
-Bespin -> 2189
-Chandrila -> 32
-Corellia -> 104
-Corporate Sector -> 2217
-Corulag -> 17
-Dagobah -> 3074
-Mon Calamari -> 2189
-Dantooine -> 2740
-Endor -> 3230
-Esseles -> 25
-Gamorr -> 2539
-Hapes Cluster -> 2228
-Hoth -> 3166
-Kashyyyk -> 2373
-Kessel -> 2244
-Myrkr -> 2432
-Ralltiir -> 40
-Rhinnal -> 45
-Sullust -> 2461
-Tatooine -> 3106
-Wayland -> 2282
-Yaga Minor -> 2316
-Yavin -> 2756
+ALL GOOD:
 
-Planets and distances from Chandrila
-Alderaan -> 2723
-Bakura -> 2275
-Bespin -> 2189
-Brentaal -> 54
-Corellia -> 104
-Corporate Sector -> 2217
-Corulag -> 91
-Dagobah -> 3074
-Mon Calamari -> 2189
-Dantooine -> 2740
-Endor -> 3230
-Esseles -> 83
-Gamorr -> 2539
-Hapes Cluster -> 2228
-Hoth -> 3166
-Kashyyyk -> 2373
-Kessel -> 2244
-Myrkr -> 2432
-Ralltiir -> 40
-Rhinnal -> 45
-Sullust -> 2461
-Tatooine -> 3106
-Wayland -> 2282
-Yaga Minor -> 2316
-Yavin -> 2756
+previous_ship_id: 8
+previous_destination_planet: Corellia
+previous_arrival_time: 4
 
-Planets and distances from Corellia
-Alderaan -> 548
-Bakura -> 100
-Bespin -> 14
-Brentaal -> 11
-Chandrila -> 32
-Corporate Sector -> 42
-Corulag -> 17
-Dagobah -> 899
-Mon Calamari -> 14
-Dantooine -> 565
-Endor -> 1055
-Esseles -> 25
-Gamorr -> 364
-Hapes Cluster -> 53
-Hoth -> 991
-Kashyyyk -> 198
-Kessel -> 69
-Myrkr -> 257
-Ralltiir -> 40
-Rhinnal -> 45
-Sullust -> 286
-Tatooine -> 931
-Wayland -> 107
-Yaga Minor -> 141
-Yavin -> 581
+ship_id: 9
+departure_planet: Corellia
+departure_time: 2183
+destination_planet: Coruscant
+arrival_time: 2187
 
-Planets and distances from Corporate Sector
-Alderaan -> 2723
-Bakura -> 100
-Bespin -> 2189
-Brentaal -> 2186
-Chandrila -> 2207
-Corellia -> 248
-Corulag -> 2192
-Dagobah -> 3074
-Mon Calamari -> 126
-Dantooine -> 2740
-Endor -> 3230
-Esseles -> 2200
-Gamorr -> 2539
-Hapes Cluster -> 53
-Hoth -> 3166
-Kashyyyk -> 2373
-Kessel -> 69
-Myrkr -> 2432
-Ralltiir -> 2215
-Rhinnal -> 2220
-Sullust -> 2461
-Tatooine -> 3106
-Wayland -> 2282
-Yaga Minor -> 2316
-Yavin -> 2756
-
-Planets and distances from Corulag
-Alderaan -> 2723
-Bakura -> 2275
-Bespin -> 2189
-Brentaal -> 54
-Chandrila -> 32
-Corellia -> 104
-Corporate Sector -> 2217
-Dagobah -> 3074
-Mon Calamari -> 2189
-Dantooine -> 2740
-Endor -> 3230
-Esseles -> 25
-Gamorr -> 2539
-Hapes Cluster -> 2228
-Hoth -> 3166
-Kashyyyk -> 2373
-Kessel -> 2244
-Myrkr -> 2432
-Ralltiir -> 40
-Rhinnal -> 45
-Sullust -> 2461
-Tatooine -> 3106
-Wayland -> 2282
-Yaga Minor -> 2316
-Yavin -> 2756
-
-Planets and distances from Dagobah
-Alderaan -> 1634
-Bakura -> 2275
-Bespin -> 1091
-Brentaal -> 2186
-Chandrila -> 2207
-Corellia -> 2178
-Corporate Sector -> 2217
-Corulag -> 2192
-Mon Calamari -> 2189
-Dantooine -> 1617
-Endor -> 1055
-Esseles -> 2200
-Gamorr -> 1818
-Hapes Cluster -> 2228
-Hoth -> 991
-Kashyyyk -> 2373
-Kessel -> 2244
-Myrkr -> 2432
-Ralltiir -> 2215
-Rhinnal -> 2220
-Sullust -> 1896
-Tatooine -> 931
-Wayland -> 2282
-Yaga Minor -> 2316
-Yavin -> 1601
-
-Planets and distances from Dantooine
-Alderaan -> 1634
-Bakura -> 2275
-Bespin -> 1091
-Brentaal -> 2186
-Chandrila -> 2207
-Corellia -> 2178
-Corporate Sector -> 2217
-Corulag -> 2192
-Dagobah -> 899
-Mon Calamari -> 2189
-Endor -> 1055
-Esseles -> 2200
-Gamorr -> 1818
-Hapes Cluster -> 2228
-Hoth -> 991
-Kashyyyk -> 2373
-Kessel -> 2244
-Myrkr -> 2432
-Ralltiir -> 2215
-Rhinnal -> 2220
-Sullust -> 1896
-Tatooine -> 931
-Wayland -> 2282
-Yaga Minor -> 2316
-Yavin -> 581
-
-Planets and distances from Endor
-Alderaan -> 1634
-Bakura -> 2275
-Bespin -> 1091
-Brentaal -> 2186
-Chandrila -> 2207
-Corellia -> 2178
-Corporate Sector -> 2217
-Corulag -> 2192
-Dagobah -> 1283
-Mon Calamari -> 2189
-Dantooine -> 1617
-Esseles -> 2200
-Gamorr -> 1818
-Hapes Cluster -> 2228
-Hoth -> 1191
-Kashyyyk -> 2373
-Kessel -> 2244
-Myrkr -> 2432
-Ralltiir -> 2215
-Rhinnal -> 2220
-Sullust -> 1896
-Tatooine -> 1251
-Wayland -> 2282
-Yaga Minor -> 2316
-Yavin -> 1601
-
-Planets and distances from Esseles
-Alderaan -> 2723
-Bakura -> 2275
-Bespin -> 2189
-Brentaal -> 54
-Chandrila -> 32
-Corellia -> 104
-Corporate Sector -> 2217
-Corulag -> 91
-Dagobah -> 3074
-Mon Calamari -> 2189
-Dantooine -> 2740
-Endor -> 3230
-Gamorr -> 2539
-Hapes Cluster -> 2228
-Hoth -> 3166
-Kashyyyk -> 2373
-Kessel -> 2244
-Myrkr -> 2432
-Ralltiir -> 40
-Rhinnal -> 45
-Sullust -> 2461
-Tatooine -> 3106
-Wayland -> 2282
-Yaga Minor -> 2316
-Yavin -> 2756
-
-Planets and distances from Gamorr
-Alderaan -> 548
-Bakura -> 2275
-Bespin -> 1091
-Brentaal -> 2186
-Chandrila -> 2207
-Corellia -> 2178
-Corporate Sector -> 2217
-Corulag -> 2192
-Dagobah -> 899
-Mon Calamari -> 2189
-Dantooine -> 565
-Endor -> 1055
-Esseles -> 2200
-Hapes Cluster -> 2228
-Hoth -> 991
-Kashyyyk -> 2373
-Kessel -> 2244
-Myrkr -> 2432
-Ralltiir -> 2215
-Rhinnal -> 2220
-Sullust -> 1896
-Tatooine -> 931
-Wayland -> 2282
-Yaga Minor -> 2316
-Yavin -> 581
-
-Planets and distances from Hapes Cluster
-Alderaan -> 2723
-Bakura -> 100
-Bespin -> 2189
-Brentaal -> 2186
-Chandrila -> 2207
-Corellia -> 248
-Corporate Sector -> 210
-Corulag -> 2192
-Dagobah -> 3074
-Mon Calamari -> 126
-Dantooine -> 2740
-Endor -> 3230
-Esseles -> 2200
-Gamorr -> 2539
-Hoth -> 3166
-Kashyyyk -> 2373
-Kessel -> 69
-Myrkr -> 2432
-Ralltiir -> 2215
-Rhinnal -> 2220
-Sullust -> 2461
-Tatooine -> 3106
-Wayland -> 2282
-Yaga Minor -> 2316
-Yavin -> 2756
-
-Planets and distances from Hoth
-Alderaan -> 1634
-Bakura -> 2275
-Bespin -> 1091
-Brentaal -> 2186
-Chandrila -> 2207
-Corellia -> 2178
-Corporate Sector -> 2217
-Corulag -> 2192
-Dagobah -> 1283
-Mon Calamari -> 2189
-Dantooine -> 1617
-Endor -> 1055
-Esseles -> 2200
-Gamorr -> 1818
-Hapes Cluster -> 2228
-Kashyyyk -> 2373
-Kessel -> 2244
-Myrkr -> 2432
-Ralltiir -> 2215
-Rhinnal -> 2220
-Sullust -> 1896
-Tatooine -> 1251
-Wayland -> 2282
-Yaga Minor -> 2316
-Yavin -> 1601
-
-Planets and distances from Kashyyyk
-Alderaan -> 2723
-Bakura -> 2275
-Bespin -> 2189
-Brentaal -> 2186
-Chandrila -> 2207
-Corellia -> 560
-Corporate Sector -> 2217
-Corulag -> 2192
-Dagobah -> 3074
-Mon Calamari -> 2189
-Dantooine -> 2740
-Endor -> 3230
-Esseles -> 2200
-Gamorr -> 2539
-Hapes Cluster -> 2228
-Hoth -> 3166
-Kessel -> 2244
-Myrkr -> 257
-Ralltiir -> 2215
-Rhinnal -> 2220
-Sullust -> 2461
-Tatooine -> 3106
-Wayland -> 282
-Yaga Minor -> 423
-Yavin -> 2756
-
-Planets and distances from Kessel
-Alderaan -> 2723
-Bakura -> 100
-Bespin -> 2189
-Brentaal -> 2186
-Chandrila -> 2207
-Corellia -> 248
-Corporate Sector -> 210
-Corulag -> 2192
-Dagobah -> 3074
-Mon Calamari -> 126
-Dantooine -> 2740
-Endor -> 3230
-Esseles -> 2200
-Gamorr -> 2539
-Hapes Cluster -> 199
-Hoth -> 3166
-Kashyyyk -> 2373
-Myrkr -> 2432
-Ralltiir -> 2215
-Rhinnal -> 2220
-Sullust -> 2461
-Tatooine -> 3106
-Wayland -> 2282
-Yaga Minor -> 2316
-Yavin -> 2756
-
-Planets and distances from Mon Calamari
-Alderaan -> 2723
-Bakura -> 100
-Bespin -> 2189
-Brentaal -> 2186
-Chandrila -> 2207
-Corellia -> 248
-Corporate Sector -> 42
-Corulag -> 2192
-Dagobah -> 3074
-Dantooine -> 2740
-Endor -> 3230
-Esseles -> 2200
-Gamorr -> 2539
-Hapes Cluster -> 53
-Hoth -> 3166
-Kashyyyk -> 2373
-Kessel -> 69
-Myrkr -> 2432
-Ralltiir -> 2215
-Rhinnal -> 2220
-Sullust -> 2461
-Tatooine -> 3106
-Wayland -> 2282
-Yaga Minor -> 2316
-Yavin -> 2756
-
-Planets and distances from Myrkr
-Alderaan -> 2723
-Bakura -> 2275
-Bespin -> 2189
-Brentaal -> 2186
-Chandrila -> 2207
-Corellia -> 560
-Corporate Sector -> 2217
-Corulag -> 2192
-Dagobah -> 3074
-Mon Calamari -> 2189
-Dantooine -> 2740
-Endor -> 3230
-Esseles -> 2200
-Gamorr -> 2539
-Hapes Cluster -> 2228
-Hoth -> 3166
-Kashyyyk -> 366
-Kessel -> 2244
-Ralltiir -> 2215
-Rhinnal -> 2220
-Sullust -> 2461
-Tatooine -> 3106
-Wayland -> 282
-Yaga Minor -> 423
-Yavin -> 2756
-
-Planets and distances from Ralltiir
-Alderaan -> 2723
-Bakura -> 2275
-Bespin -> 2189
-Brentaal -> 54
-Chandrila -> 76
-Corellia -> 104
-Corporate Sector -> 2217
-Corulag -> 91
-Dagobah -> 3074
-Mon Calamari -> 2189
-Dantooine -> 2740
-Endor -> 3230
-Esseles -> 83
-Gamorr -> 2539
-Hapes Cluster -> 2228
-Hoth -> 3166
-Kashyyyk -> 2373
-Kessel -> 2244
-Myrkr -> 2432
-Rhinnal -> 45
-Sullust -> 2461
-Tatooine -> 3106
-Wayland -> 2282
-Yaga Minor -> 2316
-Yavin -> 2756
-
-Planets and distances from Rhinnal
-Alderaan -> 2723
-Bakura -> 2275
-Bespin -> 2189
-Brentaal -> 54
-Chandrila -> 76
-Corellia -> 104
-Corporate Sector -> 2217
-Corulag -> 91
-Dagobah -> 3074
-Mon Calamari -> 2189
-Dantooine -> 2740
-Endor -> 3230
-Esseles -> 83
-Gamorr -> 2539
-Hapes Cluster -> 2228
-Hoth -> 3166
-Kashyyyk -> 2373
-Kessel -> 2244
-Myrkr -> 2432
-Ralltiir -> 68
-Sullust -> 2461
-Tatooine -> 3106
-Wayland -> 2282
-Yaga Minor -> 2316
-Yavin -> 2756
-
-Planets and distances from Sullust
-Alderaan -> 548
-Bakura -> 2275
-Bespin -> 1091
-Brentaal -> 2186
-Chandrila -> 2207
-Corellia -> 2178
-Corporate Sector -> 2217
-Corulag -> 2192
-Dagobah -> 899
-Mon Calamari -> 2189
-Dantooine -> 565
-Endor -> 1055
-Esseles -> 2200
-Gamorr -> 364
-Hapes Cluster -> 2228
-Hoth -> 991
-Kashyyyk -> 2373
-Kessel -> 2244
-Myrkr -> 2432
-Ralltiir -> 2215
-Rhinnal -> 2220
-Tatooine -> 931
-Wayland -> 2282
-Yaga Minor -> 2316
-Yavin -> 581
-
-Planets and distances from Tatooine
-Alderaan -> 1634
-Bakura -> 2275
-Bespin -> 1091
-Brentaal -> 2186
-Chandrila -> 2207
-Corellia -> 2178
-Corporate Sector -> 2217
-Corulag -> 2192
-Dagobah -> 1283
-Mon Calamari -> 2189
-Dantooine -> 1617
-Endor -> 1055
-Esseles -> 2200
-Gamorr -> 1818
-Hapes Cluster -> 2228
-Hoth -> 991
-Kashyyyk -> 2373
-Kessel -> 2244
-Myrkr -> 2432
-Ralltiir -> 2215
-Rhinnal -> 2220
-Sullust -> 1896
-Wayland -> 2282
-Yaga Minor -> 2316
-Yavin -> 1601
-
-Planets and distances from Wayland
-Alderaan -> 2723
-Bakura -> 2275
-Bespin -> 2189
-Brentaal -> 2186
-Chandrila -> 2207
-Corellia -> 560
-Corporate Sector -> 2217
-Corulag -> 2192
-Dagobah -> 3074
-Mon Calamari -> 2189
-Dantooine -> 2740
-Endor -> 3230
-Esseles -> 2200
-Gamorr -> 2539
-Hapes Cluster -> 2228
-Hoth -> 3166
-Kashyyyk -> 198
-Kessel -> 2244
-Myrkr -> 257
-Ralltiir -> 2215
-Rhinnal -> 2220
-Sullust -> 2461
-Tatooine -> 3106
-Yaga Minor -> 141
-Yavin -> 2756
-
-Planets and distances from Yaga Minor
-Alderaan -> 2723
-Bakura -> 2275
-Bespin -> 2189
-Brentaal -> 2186
-Chandrila -> 2207
-Corellia -> 560
-Corporate Sector -> 2217
-Corulag -> 2192
-Dagobah -> 3074
-Mon Calamari -> 2189
-Dantooine -> 2740
-Endor -> 3230
-Esseles -> 2200
-Gamorr -> 2539
-Hapes Cluster -> 2228
-Hoth -> 3166
-Kashyyyk -> 198
-Kessel -> 2244
-Myrkr -> 257
-Ralltiir -> 2215
-Rhinnal -> 2220
-Sullust -> 2461
-Tatooine -> 3106
-Wayland -> 282
-Yavin -> 2756
-
-Planets and distances from Yavin
-Alderaan -> 1634
-Bakura -> 2275
-Bespin -> 1091
-Brentaal -> 2186
-Chandrila -> 2207
-Corellia -> 2178
-Corporate Sector -> 2217
-Corulag -> 2192
-Dagobah -> 899
-Mon Calamari -> 2189
-Dantooine -> 1617
-Endor -> 1055
-Esseles -> 2200
-Gamorr -> 1818
-Hapes Cluster -> 2228
-Hoth -> 991
-Kashyyyk -> 2373
-Kessel -> 2244
-Myrkr -> 2432
-Ralltiir -> 2215
-Rhinnal -> 2220
-Sullust -> 1896
-Tatooine -> 931
-Wayland -> 2282
-Yaga Minor -> 2316
-
+--1556-- REDIR: 0x556bab0 (libc.so.6:__mempcpy_avx_unaligned_erms) redirected to 0x4c37130 (mempcpy)
+==1556== 
+==1556== HEAP SUMMARY:
+==1556==     in use at exit: 0 bytes in 0 blocks
+==1556==   total heap usage: 1,029 allocs, 1,029 frees, 158,211 bytes allocated
+==1556== 
+==1556== All heap blocks were freed -- no leaks are possible
+==1556== 
+==1556== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==1556== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

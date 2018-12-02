@@ -113,18 +113,7 @@ Corellia
 
 Corellia itinerary to furthest planet:
 
-Ship2	Corellia	8	Bespin	14
-Ship2	Bespin	18	Sullust	286
-Ship2	Sullust	290	Gamorr	364
-Ship2	Gamorr	368	Alderaan	548
-Ship2	Alderaan	552	Dantooine	565
-Ship2	Dantooine	569	Yavin	581
-Ship2	Yavin	585	Dagobah	899
-Ship2	Dagobah	903	Tatooine	931
-Ship2	Tatooine	935	Hoth	991
-Ship2	Hoth	995	Endor	1055
-
--->Endor
+Ship10	Corellia	2183	Coruscant	2187
 
 
 
@@ -176,6 +165,28 @@ Ship6	Yavin	2760	Dagobah	3074
 Ship6	Dagobah	3078	Tatooine	3106
 Ship6	Tatooine	3110	Hoth	3166
 Ship6	Hoth	3170	Endor	3230
+
+-->Endor
+
+
+
+///////////////////////////////////////////////////////////////////
+Coruscant
+
+
+Coruscant itinerary to furthest planet:
+
+Ship9	Coruscant	0	Corellia	4
+Ship2	Corellia	8	Bespin	14
+Ship2	Bespin	18	Sullust	286
+Ship2	Sullust	290	Gamorr	364
+Ship2	Gamorr	368	Alderaan	548
+Ship2	Alderaan	552	Dantooine	565
+Ship2	Dantooine	569	Yavin	581
+Ship2	Yavin	585	Dagobah	899
+Ship2	Dagobah	903	Tatooine	931
+Ship2	Tatooine	935	Hoth	991
+Ship2	Hoth	995	Endor	1055
 
 -->Endor
 
@@ -588,23 +599,25 @@ Ship7	Kashyyyk	2377	Myrkr	2432
 
 Weighted diameter:
 ///////////////////////////////////////////////////////////////////
-Yavin
+Bakura
 
 
-Yavin itinerary to furthest planet:
+Bakura itinerary to furthest planet:
 
-Ship2	Yavin	585	Dagobah	899
-Ship2	Dagobah	903	Tatooine	931
-Ship2	Tatooine	935	Hoth	991
-Ship2	Hoth	995	Endor	1055
-Ship2	Endor	1059	Bespin	1091
-Ship2	Bespin	2172	Corellia	2178
-Ship7	Corellia	2183	Wayland	2282
-Ship7	Wayland	2286	Yaga Minor	2316
-Ship7	Yaga Minor	2320	Kashyyyk	2373
-Ship7	Kashyyyk	2377	Myrkr	2432
+Ship1	Bakura	104	Mon Calamari	126
+Ship1	Mon Calamari	242	Corellia	248
+Ship6	Corellia	2183	Bespin	2189
+Ship6	Bespin	2193	Sullust	2461
+Ship6	Sullust	2465	Gamorr	2539
+Ship6	Gamorr	2543	Alderaan	2723
+Ship6	Alderaan	2727	Dantooine	2740
+Ship6	Dantooine	2744	Yavin	2756
+Ship6	Yavin	2760	Dagobah	3074
+Ship6	Dagobah	3078	Tatooine	3106
+Ship6	Tatooine	3110	Hoth	3166
+Ship6	Hoth	3170	Endor	3230
 
--->Myrkr
+-->Endor
 
 
 

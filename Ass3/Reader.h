@@ -6,6 +6,7 @@
 class Reader {
 public:
 	Reader(std::istream& in, Travel_Times* constraints);
+	~Reader() { delete galaxy; }
 	Galaxy* load();
 	void dump_ships() const;
 	void dump_current_info() const;
@@ -45,7 +46,7 @@ private:
 	std::map<std::string, Planet*> planets;
 
 	// Planet-name pair to edge object
-	std::map<const Planet*, std::map<const Planet*, Edge*> > edges;
+	std::map<const Planet*, std::map<const Planet*, Edge*>> edges;
 
 	// Ship name to id.
 	std::map<std::string, Ship_ID> ships;

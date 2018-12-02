@@ -114,3 +114,5 @@ Ship8	Chandrila	 2255 	Esseles	 2258
 Ship8	Esseles	 2262 	Corulag	 2266
 Ship8	Corulag	 2270 	Brentaal	 2272
 Ship8	Brentaal	 2276 	Corellia	 2279
+Ship9	Coruscant	0	Corellia	4
+Ship10	Corellia	2183	Coruscant	2187
