@@ -4,18 +4,18 @@ Alderaan
 
 Alderaan itinerary to furthest planet:
 
-Ship2	Alderaan	552	Dantooine	565
-Ship2	Dantooine	569	Yavin	581
-Ship2	Yavin	585	Dagobah	899
-Ship2	Dagobah	903	Tatooine	931
-Ship2	Tatooine	935	Hoth	991
-Ship2	Hoth	995	Endor	1055
-Ship2	Endor	1059	Bespin	1091
-Ship2	Bespin	2172	Corellia	2178
-Ship7	Corellia	2183	Wayland	2282
-Ship7	Wayland	2286	Yaga Minor	2316
-Ship7	Yaga Minor	2320	Kashyyyk	2373
-Ship7	Kashyyyk	2377	Myrkr	2432
+USSC Discovery One	Alderaan	552	Dantooine	565
+USSC Discovery One	Dantooine	569	Yavin	581
+USSC Discovery One	Yavin	585	Dagobah	899
+USSC Discovery One	Dagobah	903	Tatooine	931
+USSC Discovery One	Tatooine	935	Hoth	991
+USSC Discovery One	Hoth	995	Endor	1055
+USSC Discovery One	Endor	1059	Bespin	1091
+USSC Discovery One	Bespin	2172	Corellia	2178
+NSEA Protector	Corellia	2183	Wayland	2282
+NSEA Protector	Wayland	2286	Yaga Minor	2316
+NSEA Protector	Yaga Minor	2320	Kashyyyk	2373
+NSEA Protector	Kashyyyk	2377	Myrkr	2432
 
 -->Myrkr
 
@@ -27,18 +27,18 @@ Bakura
 
 Bakura itinerary to furthest planet:
 
-Ship1	Bakura	104	Mon Calamari	126
-Ship1	Mon Calamari	242	Corellia	248
-Ship6	Corellia	2183	Bespin	2189
-Ship6	Bespin	2193	Sullust	2461
-Ship6	Sullust	2465	Gamorr	2539
-Ship6	Gamorr	2543	Alderaan	2723
-Ship6	Alderaan	2727	Dantooine	2740
-Ship6	Dantooine	2744	Yavin	2756
-Ship6	Yavin	2760	Dagobah	3074
-Ship6	Dagobah	3078	Tatooine	3106
-Ship6	Tatooine	3110	Hoth	3166
-Ship6	Hoth	3170	Endor	3230
+Andromeda Ascendant	Bakura	104	Mon Calamari	126
+Andromeda Ascendant	Mon Calamari	242	Corellia	248
+Moya	Corellia	2183	Bespin	2189
+Moya	Bespin	2193	Sullust	2461
+Moya	Sullust	2465	Gamorr	2539
+Moya	Gamorr	2543	Alderaan	2723
+Moya	Alderaan	2727	Dantooine	2740
+Moya	Dantooine	2744	Yavin	2756
+Moya	Yavin	2760	Dagobah	3074
+Moya	Dagobah	3078	Tatooine	3106
+Moya	Tatooine	3110	Hoth	3166
+Moya	Hoth	3170	Endor	3230
 
 -->Endor
 
@@ -50,11 +50,11 @@ Bespin
 
 Bespin itinerary to furthest planet:
 
-Ship2	Bespin	2172	Corellia	2178
-Ship7	Corellia	2183	Wayland	2282
-Ship7	Wayland	2286	Yaga Minor	2316
-Ship7	Yaga Minor	2320	Kashyyyk	2373
-Ship7	Kashyyyk	2377	Myrkr	2432
+USSC Discovery One	Bespin	2172	Corellia	2178
+NSEA Protector	Corellia	2183	Wayland	2282
+NSEA Protector	Wayland	2286	Yaga Minor	2316
+NSEA Protector	Yaga Minor	2320	Kashyyyk	2373
+NSEA Protector	Kashyyyk	2377	Myrkr	2432
 
 -->Myrkr
 
@@ -66,17 +66,17 @@ Brentaal
 
 Brentaal itinerary to furthest planet:
 
-Ship4	Brentaal	101	Corellia	104
-Ship6	Corellia	2183	Bespin	2189
-Ship6	Bespin	2193	Sullust	2461
-Ship6	Sullust	2465	Gamorr	2539
-Ship6	Gamorr	2543	Alderaan	2723
-Ship6	Alderaan	2727	Dantooine	2740
-Ship6	Dantooine	2744	Yavin	2756
-Ship6	Yavin	2760	Dagobah	3074
-Ship6	Dagobah	3078	Tatooine	3106
-Ship6	Tatooine	3110	Hoth	3166
-Ship6	Hoth	3170	Endor	3230
+Heart of Gold	Brentaal	101	Corellia	104
+Moya	Corellia	2183	Bespin	2189
+Moya	Bespin	2193	Sullust	2461
+Moya	Sullust	2465	Gamorr	2539
+Moya	Gamorr	2543	Alderaan	2723
+Moya	Alderaan	2727	Dantooine	2740
+Moya	Dantooine	2744	Yavin	2756
+Moya	Yavin	2760	Dagobah	3074
+Moya	Dagobah	3078	Tatooine	3106
+Moya	Tatooine	3110	Hoth	3166
+Moya	Hoth	3170	Endor	3230
 
 -->Endor
 
@@ -88,20 +88,20 @@ Chandrila
 
 Chandrila itinerary to furthest planet:
 
-Ship4	Chandrila	36	Ralltiir	40
-Ship4	Ralltiir	44	Rhinnal	45
-Ship4	Rhinnal	49	Brentaal	54
-Ship4	Brentaal	101	Corellia	104
-Ship6	Corellia	2183	Bespin	2189
-Ship6	Bespin	2193	Sullust	2461
-Ship6	Sullust	2465	Gamorr	2539
-Ship6	Gamorr	2543	Alderaan	2723
-Ship6	Alderaan	2727	Dantooine	2740
-Ship6	Dantooine	2744	Yavin	2756
-Ship6	Yavin	2760	Dagobah	3074
-Ship6	Dagobah	3078	Tatooine	3106
-Ship6	Tatooine	3110	Hoth	3166
-Ship6	Hoth	3170	Endor	3230
+Heart of Gold	Chandrila	36	Ralltiir	40
+Heart of Gold	Ralltiir	44	Rhinnal	45
+Heart of Gold	Rhinnal	49	Brentaal	54
+Heart of Gold	Brentaal	101	Corellia	104
+Moya	Corellia	2183	Bespin	2189
+Moya	Bespin	2193	Sullust	2461
+Moya	Sullust	2465	Gamorr	2539
+Moya	Gamorr	2543	Alderaan	2723
+Moya	Alderaan	2727	Dantooine	2740
+Moya	Dantooine	2744	Yavin	2756
+Moya	Yavin	2760	Dagobah	3074
+Moya	Dagobah	3078	Tatooine	3106
+Moya	Tatooine	3110	Hoth	3166
+Moya	Hoth	3170	Endor	3230
 
 -->Endor
 
@@ -113,7 +113,7 @@ Corellia
 
 Corellia itinerary to furthest planet:
 
-Ship10	Corellia	2183	Coruscant	2187
+USS Enterprise	Corellia	2183	Coruscant	2187
 
 
 
@@ -123,21 +123,21 @@ Corporate Sector
 
 Corporate Sector itinerary to furthest planet:
 
-Ship1	Corporate Sector	46	Hapes Cluster	53
-Ship1	Hapes Cluster	57	Kessel	69
-Ship1	Kessel	73	Bakura	100
-Ship1	Bakura	104	Mon Calamari	126
-Ship1	Mon Calamari	242	Corellia	248
-Ship6	Corellia	2183	Bespin	2189
-Ship6	Bespin	2193	Sullust	2461
-Ship6	Sullust	2465	Gamorr	2539
-Ship6	Gamorr	2543	Alderaan	2723
-Ship6	Alderaan	2727	Dantooine	2740
-Ship6	Dantooine	2744	Yavin	2756
-Ship6	Yavin	2760	Dagobah	3074
-Ship6	Dagobah	3078	Tatooine	3106
-Ship6	Tatooine	3110	Hoth	3166
-Ship6	Hoth	3170	Endor	3230
+Andromeda Ascendant	Corporate Sector	46	Hapes Cluster	53
+Andromeda Ascendant	Hapes Cluster	57	Kessel	69
+Andromeda Ascendant	Kessel	73	Bakura	100
+Andromeda Ascendant	Bakura	104	Mon Calamari	126
+Andromeda Ascendant	Mon Calamari	242	Corellia	248
+Moya	Corellia	2183	Bespin	2189
+Moya	Bespin	2193	Sullust	2461
+Moya	Sullust	2465	Gamorr	2539
+Moya	Gamorr	2543	Alderaan	2723
+Moya	Alderaan	2727	Dantooine	2740
+Moya	Dantooine	2744	Yavin	2756
+Moya	Yavin	2760	Dagobah	3074
+Moya	Dagobah	3078	Tatooine	3106
+Moya	Tatooine	3110	Hoth	3166
+Moya	Hoth	3170	Endor	3230
 
 -->Endor
 
@@ -149,22 +149,22 @@ Corulag
 
 Corulag itinerary to furthest planet:
 
-Ship4	Corulag	21	Esseles	25
-Ship4	Esseles	29	Chandrila	32
-Ship4	Chandrila	36	Ralltiir	40
-Ship4	Ralltiir	44	Rhinnal	45
-Ship4	Rhinnal	49	Brentaal	54
-Ship4	Brentaal	101	Corellia	104
-Ship6	Corellia	2183	Bespin	2189
-Ship6	Bespin	2193	Sullust	2461
-Ship6	Sullust	2465	Gamorr	2539
-Ship6	Gamorr	2543	Alderaan	2723
-Ship6	Alderaan	2727	Dantooine	2740
-Ship6	Dantooine	2744	Yavin	2756
-Ship6	Yavin	2760	Dagobah	3074
-Ship6	Dagobah	3078	Tatooine	3106
-Ship6	Tatooine	3110	Hoth	3166
-Ship6	Hoth	3170	Endor	3230
+Heart of Gold	Corulag	21	Esseles	25
+Heart of Gold	Esseles	29	Chandrila	32
+Heart of Gold	Chandrila	36	Ralltiir	40
+Heart of Gold	Ralltiir	44	Rhinnal	45
+Heart of Gold	Rhinnal	49	Brentaal	54
+Heart of Gold	Brentaal	101	Corellia	104
+Moya	Corellia	2183	Bespin	2189
+Moya	Bespin	2193	Sullust	2461
+Moya	Sullust	2465	Gamorr	2539
+Moya	Gamorr	2543	Alderaan	2723
+Moya	Alderaan	2727	Dantooine	2740
+Moya	Dantooine	2744	Yavin	2756
+Moya	Yavin	2760	Dagobah	3074
+Moya	Dagobah	3078	Tatooine	3106
+Moya	Tatooine	3110	Hoth	3166
+Moya	Hoth	3170	Endor	3230
 
 -->Endor
 
@@ -176,17 +176,17 @@ Coruscant
 
 Coruscant itinerary to furthest planet:
 
-Ship9	Coruscant	0	Corellia	4
-Ship2	Corellia	8	Bespin	14
-Ship2	Bespin	18	Sullust	286
-Ship2	Sullust	290	Gamorr	364
-Ship2	Gamorr	368	Alderaan	548
-Ship2	Alderaan	552	Dantooine	565
-Ship2	Dantooine	569	Yavin	581
-Ship2	Yavin	585	Dagobah	899
-Ship2	Dagobah	903	Tatooine	931
-Ship2	Tatooine	935	Hoth	991
-Ship2	Hoth	995	Endor	1055
+Serenity	Coruscant	0	Corellia	4
+USSC Discovery One	Corellia	8	Bespin	14
+USSC Discovery One	Bespin	18	Sullust	286
+USSC Discovery One	Sullust	290	Gamorr	364
+USSC Discovery One	Gamorr	368	Alderaan	548
+USSC Discovery One	Alderaan	552	Dantooine	565
+USSC Discovery One	Dantooine	569	Yavin	581
+USSC Discovery One	Yavin	585	Dagobah	899
+USSC Discovery One	Dagobah	903	Tatooine	931
+USSC Discovery One	Tatooine	935	Hoth	991
+USSC Discovery One	Hoth	995	Endor	1055
 
 -->Endor
 
@@ -198,15 +198,15 @@ Dagobah
 
 Dagobah itinerary to furthest planet:
 
-Ship2	Dagobah	903	Tatooine	931
-Ship2	Tatooine	935	Hoth	991
-Ship2	Hoth	995	Endor	1055
-Ship2	Endor	1059	Bespin	1091
-Ship2	Bespin	2172	Corellia	2178
-Ship7	Corellia	2183	Wayland	2282
-Ship7	Wayland	2286	Yaga Minor	2316
-Ship7	Yaga Minor	2320	Kashyyyk	2373
-Ship7	Kashyyyk	2377	Myrkr	2432
+USSC Discovery One	Dagobah	903	Tatooine	931
+USSC Discovery One	Tatooine	935	Hoth	991
+USSC Discovery One	Hoth	995	Endor	1055
+USSC Discovery One	Endor	1059	Bespin	1091
+USSC Discovery One	Bespin	2172	Corellia	2178
+NSEA Protector	Corellia	2183	Wayland	2282
+NSEA Protector	Wayland	2286	Yaga Minor	2316
+NSEA Protector	Yaga Minor	2320	Kashyyyk	2373
+NSEA Protector	Kashyyyk	2377	Myrkr	2432
 
 -->Myrkr
 
@@ -218,17 +218,17 @@ Dantooine
 
 Dantooine itinerary to furthest planet:
 
-Ship2	Dantooine	569	Yavin	581
-Ship2	Yavin	585	Dagobah	899
-Ship2	Dagobah	903	Tatooine	931
-Ship2	Tatooine	935	Hoth	991
-Ship2	Hoth	995	Endor	1055
-Ship2	Endor	1059	Bespin	1091
-Ship2	Bespin	2172	Corellia	2178
-Ship7	Corellia	2183	Wayland	2282
-Ship7	Wayland	2286	Yaga Minor	2316
-Ship7	Yaga Minor	2320	Kashyyyk	2373
-Ship7	Kashyyyk	2377	Myrkr	2432
+USSC Discovery One	Dantooine	569	Yavin	581
+USSC Discovery One	Yavin	585	Dagobah	899
+USSC Discovery One	Dagobah	903	Tatooine	931
+USSC Discovery One	Tatooine	935	Hoth	991
+USSC Discovery One	Hoth	995	Endor	1055
+USSC Discovery One	Endor	1059	Bespin	1091
+USSC Discovery One	Bespin	2172	Corellia	2178
+NSEA Protector	Corellia	2183	Wayland	2282
+NSEA Protector	Wayland	2286	Yaga Minor	2316
+NSEA Protector	Yaga Minor	2320	Kashyyyk	2373
+NSEA Protector	Kashyyyk	2377	Myrkr	2432
 
 -->Myrkr
 
@@ -240,12 +240,12 @@ Endor
 
 Endor itinerary to furthest planet:
 
-Ship2	Endor	1059	Bespin	1091
-Ship2	Bespin	2172	Corellia	2178
-Ship7	Corellia	2183	Wayland	2282
-Ship7	Wayland	2286	Yaga Minor	2316
-Ship7	Yaga Minor	2320	Kashyyyk	2373
-Ship7	Kashyyyk	2377	Myrkr	2432
+USSC Discovery One	Endor	1059	Bespin	1091
+USSC Discovery One	Bespin	2172	Corellia	2178
+NSEA Protector	Corellia	2183	Wayland	2282
+NSEA Protector	Wayland	2286	Yaga Minor	2316
+NSEA Protector	Yaga Minor	2320	Kashyyyk	2373
+NSEA Protector	Kashyyyk	2377	Myrkr	2432
 
 -->Myrkr
 
@@ -257,21 +257,21 @@ Esseles
 
 Esseles itinerary to furthest planet:
 
-Ship4	Esseles	29	Chandrila	32
-Ship4	Chandrila	36	Ralltiir	40
-Ship4	Ralltiir	44	Rhinnal	45
-Ship4	Rhinnal	49	Brentaal	54
-Ship4	Brentaal	101	Corellia	104
-Ship6	Corellia	2183	Bespin	2189
-Ship6	Bespin	2193	Sullust	2461
-Ship6	Sullust	2465	Gamorr	2539
-Ship6	Gamorr	2543	Alderaan	2723
-Ship6	Alderaan	2727	Dantooine	2740
-Ship6	Dantooine	2744	Yavin	2756
-Ship6	Yavin	2760	Dagobah	3074
-Ship6	Dagobah	3078	Tatooine	3106
-Ship6	Tatooine	3110	Hoth	3166
-Ship6	Hoth	3170	Endor	3230
+Heart of Gold	Esseles	29	Chandrila	32
+Heart of Gold	Chandrila	36	Ralltiir	40
+Heart of Gold	Ralltiir	44	Rhinnal	45
+Heart of Gold	Rhinnal	49	Brentaal	54
+Heart of Gold	Brentaal	101	Corellia	104
+Moya	Corellia	2183	Bespin	2189
+Moya	Bespin	2193	Sullust	2461
+Moya	Sullust	2465	Gamorr	2539
+Moya	Gamorr	2543	Alderaan	2723
+Moya	Alderaan	2727	Dantooine	2740
+Moya	Dantooine	2744	Yavin	2756
+Moya	Yavin	2760	Dagobah	3074
+Moya	Dagobah	3078	Tatooine	3106
+Moya	Tatooine	3110	Hoth	3166
+Moya	Hoth	3170	Endor	3230
 
 -->Endor
 
@@ -283,19 +283,19 @@ Gamorr
 
 Gamorr itinerary to furthest planet:
 
-Ship2	Gamorr	368	Alderaan	548
-Ship2	Alderaan	552	Dantooine	565
-Ship2	Dantooine	569	Yavin	581
-Ship2	Yavin	585	Dagobah	899
-Ship2	Dagobah	903	Tatooine	931
-Ship2	Tatooine	935	Hoth	991
-Ship2	Hoth	995	Endor	1055
-Ship2	Endor	1059	Bespin	1091
-Ship2	Bespin	2172	Corellia	2178
-Ship7	Corellia	2183	Wayland	2282
-Ship7	Wayland	2286	Yaga Minor	2316
-Ship7	Yaga Minor	2320	Kashyyyk	2373
-Ship7	Kashyyyk	2377	Myrkr	2432
+USSC Discovery One	Gamorr	368	Alderaan	548
+USSC Discovery One	Alderaan	552	Dantooine	565
+USSC Discovery One	Dantooine	569	Yavin	581
+USSC Discovery One	Yavin	585	Dagobah	899
+USSC Discovery One	Dagobah	903	Tatooine	931
+USSC Discovery One	Tatooine	935	Hoth	991
+USSC Discovery One	Hoth	995	Endor	1055
+USSC Discovery One	Endor	1059	Bespin	1091
+USSC Discovery One	Bespin	2172	Corellia	2178
+NSEA Protector	Corellia	2183	Wayland	2282
+NSEA Protector	Wayland	2286	Yaga Minor	2316
+NSEA Protector	Yaga Minor	2320	Kashyyyk	2373
+NSEA Protector	Kashyyyk	2377	Myrkr	2432
 
 -->Myrkr
 
@@ -307,20 +307,20 @@ Hapes Cluster
 
 Hapes Cluster itinerary to furthest planet:
 
-Ship1	Hapes Cluster	57	Kessel	69
-Ship1	Kessel	73	Bakura	100
-Ship1	Bakura	104	Mon Calamari	126
-Ship1	Mon Calamari	242	Corellia	248
-Ship6	Corellia	2183	Bespin	2189
-Ship6	Bespin	2193	Sullust	2461
-Ship6	Sullust	2465	Gamorr	2539
-Ship6	Gamorr	2543	Alderaan	2723
-Ship6	Alderaan	2727	Dantooine	2740
-Ship6	Dantooine	2744	Yavin	2756
-Ship6	Yavin	2760	Dagobah	3074
-Ship6	Dagobah	3078	Tatooine	3106
-Ship6	Tatooine	3110	Hoth	3166
-Ship6	Hoth	3170	Endor	3230
+Andromeda Ascendant	Hapes Cluster	57	Kessel	69
+Andromeda Ascendant	Kessel	73	Bakura	100
+Andromeda Ascendant	Bakura	104	Mon Calamari	126
+Andromeda Ascendant	Mon Calamari	242	Corellia	248
+Moya	Corellia	2183	Bespin	2189
+Moya	Bespin	2193	Sullust	2461
+Moya	Sullust	2465	Gamorr	2539
+Moya	Gamorr	2543	Alderaan	2723
+Moya	Alderaan	2727	Dantooine	2740
+Moya	Dantooine	2744	Yavin	2756
+Moya	Yavin	2760	Dagobah	3074
+Moya	Dagobah	3078	Tatooine	3106
+Moya	Tatooine	3110	Hoth	3166
+Moya	Hoth	3170	Endor	3230
 
 -->Endor
 
@@ -332,13 +332,13 @@ Hoth
 
 Hoth itinerary to furthest planet:
 
-Ship2	Hoth	995	Endor	1055
-Ship2	Endor	1059	Bespin	1091
-Ship2	Bespin	2172	Corellia	2178
-Ship7	Corellia	2183	Wayland	2282
-Ship7	Wayland	2286	Yaga Minor	2316
-Ship7	Yaga Minor	2320	Kashyyyk	2373
-Ship7	Kashyyyk	2377	Myrkr	2432
+USSC Discovery One	Hoth	995	Endor	1055
+USSC Discovery One	Endor	1059	Bespin	1091
+USSC Discovery One	Bespin	2172	Corellia	2178
+NSEA Protector	Corellia	2183	Wayland	2282
+NSEA Protector	Wayland	2286	Yaga Minor	2316
+NSEA Protector	Yaga Minor	2320	Kashyyyk	2373
+NSEA Protector	Kashyyyk	2377	Myrkr	2432
 
 -->Myrkr
 
@@ -350,19 +350,19 @@ Kashyyyk
 
 Kashyyyk itinerary to furthest planet:
 
-Ship3	Kashyyyk	202	Myrkr	257
-Ship3	Myrkr	261	Wayland	282
-Ship3	Wayland	461	Corellia	560
-Ship6	Corellia	2183	Bespin	2189
-Ship6	Bespin	2193	Sullust	2461
-Ship6	Sullust	2465	Gamorr	2539
-Ship6	Gamorr	2543	Alderaan	2723
-Ship6	Alderaan	2727	Dantooine	2740
-Ship6	Dantooine	2744	Yavin	2756
-Ship6	Yavin	2760	Dagobah	3074
-Ship6	Dagobah	3078	Tatooine	3106
-Ship6	Tatooine	3110	Hoth	3166
-Ship6	Hoth	3170	Endor	3230
+Galactica	Kashyyyk	202	Myrkr	257
+Galactica	Myrkr	261	Wayland	282
+Galactica	Wayland	461	Corellia	560
+Moya	Corellia	2183	Bespin	2189
+Moya	Bespin	2193	Sullust	2461
+Moya	Sullust	2465	Gamorr	2539
+Moya	Gamorr	2543	Alderaan	2723
+Moya	Alderaan	2727	Dantooine	2740
+Moya	Dantooine	2744	Yavin	2756
+Moya	Yavin	2760	Dagobah	3074
+Moya	Dagobah	3078	Tatooine	3106
+Moya	Tatooine	3110	Hoth	3166
+Moya	Hoth	3170	Endor	3230
 
 -->Endor
 
@@ -374,19 +374,19 @@ Kessel
 
 Kessel itinerary to furthest planet:
 
-Ship1	Kessel	73	Bakura	100
-Ship1	Bakura	104	Mon Calamari	126
-Ship1	Mon Calamari	242	Corellia	248
-Ship6	Corellia	2183	Bespin	2189
-Ship6	Bespin	2193	Sullust	2461
-Ship6	Sullust	2465	Gamorr	2539
-Ship6	Gamorr	2543	Alderaan	2723
-Ship6	Alderaan	2727	Dantooine	2740
-Ship6	Dantooine	2744	Yavin	2756
-Ship6	Yavin	2760	Dagobah	3074
-Ship6	Dagobah	3078	Tatooine	3106
-Ship6	Tatooine	3110	Hoth	3166
-Ship6	Hoth	3170	Endor	3230
+Andromeda Ascendant	Kessel	73	Bakura	100
+Andromeda Ascendant	Bakura	104	Mon Calamari	126
+Andromeda Ascendant	Mon Calamari	242	Corellia	248
+Moya	Corellia	2183	Bespin	2189
+Moya	Bespin	2193	Sullust	2461
+Moya	Sullust	2465	Gamorr	2539
+Moya	Gamorr	2543	Alderaan	2723
+Moya	Alderaan	2727	Dantooine	2740
+Moya	Dantooine	2744	Yavin	2756
+Moya	Yavin	2760	Dagobah	3074
+Moya	Dagobah	3078	Tatooine	3106
+Moya	Tatooine	3110	Hoth	3166
+Moya	Hoth	3170	Endor	3230
 
 -->Endor
 
@@ -398,17 +398,17 @@ Mon Calamari
 
 Mon Calamari itinerary to furthest planet:
 
-Ship1	Mon Calamari	242	Corellia	248
-Ship6	Corellia	2183	Bespin	2189
-Ship6	Bespin	2193	Sullust	2461
-Ship6	Sullust	2465	Gamorr	2539
-Ship6	Gamorr	2543	Alderaan	2723
-Ship6	Alderaan	2727	Dantooine	2740
-Ship6	Dantooine	2744	Yavin	2756
-Ship6	Yavin	2760	Dagobah	3074
-Ship6	Dagobah	3078	Tatooine	3106
-Ship6	Tatooine	3110	Hoth	3166
-Ship6	Hoth	3170	Endor	3230
+Andromeda Ascendant	Mon Calamari	242	Corellia	248
+Moya	Corellia	2183	Bespin	2189
+Moya	Bespin	2193	Sullust	2461
+Moya	Sullust	2465	Gamorr	2539
+Moya	Gamorr	2543	Alderaan	2723
+Moya	Alderaan	2727	Dantooine	2740
+Moya	Dantooine	2744	Yavin	2756
+Moya	Yavin	2760	Dagobah	3074
+Moya	Dagobah	3078	Tatooine	3106
+Moya	Tatooine	3110	Hoth	3166
+Moya	Hoth	3170	Endor	3230
 
 -->Endor
 
@@ -420,18 +420,18 @@ Myrkr
 
 Myrkr itinerary to furthest planet:
 
-Ship3	Myrkr	261	Wayland	282
-Ship3	Wayland	461	Corellia	560
-Ship6	Corellia	2183	Bespin	2189
-Ship6	Bespin	2193	Sullust	2461
-Ship6	Sullust	2465	Gamorr	2539
-Ship6	Gamorr	2543	Alderaan	2723
-Ship6	Alderaan	2727	Dantooine	2740
-Ship6	Dantooine	2744	Yavin	2756
-Ship6	Yavin	2760	Dagobah	3074
-Ship6	Dagobah	3078	Tatooine	3106
-Ship6	Tatooine	3110	Hoth	3166
-Ship6	Hoth	3170	Endor	3230
+Galactica	Myrkr	261	Wayland	282
+Galactica	Wayland	461	Corellia	560
+Moya	Corellia	2183	Bespin	2189
+Moya	Bespin	2193	Sullust	2461
+Moya	Sullust	2465	Gamorr	2539
+Moya	Gamorr	2543	Alderaan	2723
+Moya	Alderaan	2727	Dantooine	2740
+Moya	Dantooine	2744	Yavin	2756
+Moya	Yavin	2760	Dagobah	3074
+Moya	Dagobah	3078	Tatooine	3106
+Moya	Tatooine	3110	Hoth	3166
+Moya	Hoth	3170	Endor	3230
 
 -->Endor
 
@@ -443,19 +443,19 @@ Ralltiir
 
 Ralltiir itinerary to furthest planet:
 
-Ship4	Ralltiir	44	Rhinnal	45
-Ship4	Rhinnal	49	Brentaal	54
-Ship4	Brentaal	101	Corellia	104
-Ship6	Corellia	2183	Bespin	2189
-Ship6	Bespin	2193	Sullust	2461
-Ship6	Sullust	2465	Gamorr	2539
-Ship6	Gamorr	2543	Alderaan	2723
-Ship6	Alderaan	2727	Dantooine	2740
-Ship6	Dantooine	2744	Yavin	2756
-Ship6	Yavin	2760	Dagobah	3074
-Ship6	Dagobah	3078	Tatooine	3106
-Ship6	Tatooine	3110	Hoth	3166
-Ship6	Hoth	3170	Endor	3230
+Heart of Gold	Ralltiir	44	Rhinnal	45
+Heart of Gold	Rhinnal	49	Brentaal	54
+Heart of Gold	Brentaal	101	Corellia	104
+Moya	Corellia	2183	Bespin	2189
+Moya	Bespin	2193	Sullust	2461
+Moya	Sullust	2465	Gamorr	2539
+Moya	Gamorr	2543	Alderaan	2723
+Moya	Alderaan	2727	Dantooine	2740
+Moya	Dantooine	2744	Yavin	2756
+Moya	Yavin	2760	Dagobah	3074
+Moya	Dagobah	3078	Tatooine	3106
+Moya	Tatooine	3110	Hoth	3166
+Moya	Hoth	3170	Endor	3230
 
 -->Endor
 
@@ -467,18 +467,18 @@ Rhinnal
 
 Rhinnal itinerary to furthest planet:
 
-Ship4	Rhinnal	49	Brentaal	54
-Ship4	Brentaal	101	Corellia	104
-Ship6	Corellia	2183	Bespin	2189
-Ship6	Bespin	2193	Sullust	2461
-Ship6	Sullust	2465	Gamorr	2539
-Ship6	Gamorr	2543	Alderaan	2723
-Ship6	Alderaan	2727	Dantooine	2740
-Ship6	Dantooine	2744	Yavin	2756
-Ship6	Yavin	2760	Dagobah	3074
-Ship6	Dagobah	3078	Tatooine	3106
-Ship6	Tatooine	3110	Hoth	3166
-Ship6	Hoth	3170	Endor	3230
+Heart of Gold	Rhinnal	49	Brentaal	54
+Heart of Gold	Brentaal	101	Corellia	104
+Moya	Corellia	2183	Bespin	2189
+Moya	Bespin	2193	Sullust	2461
+Moya	Sullust	2465	Gamorr	2539
+Moya	Gamorr	2543	Alderaan	2723
+Moya	Alderaan	2727	Dantooine	2740
+Moya	Dantooine	2744	Yavin	2756
+Moya	Yavin	2760	Dagobah	3074
+Moya	Dagobah	3078	Tatooine	3106
+Moya	Tatooine	3110	Hoth	3166
+Moya	Hoth	3170	Endor	3230
 
 -->Endor
 
@@ -490,20 +490,20 @@ Sullust
 
 Sullust itinerary to furthest planet:
 
-Ship2	Sullust	290	Gamorr	364
-Ship2	Gamorr	368	Alderaan	548
-Ship2	Alderaan	552	Dantooine	565
-Ship2	Dantooine	569	Yavin	581
-Ship2	Yavin	585	Dagobah	899
-Ship2	Dagobah	903	Tatooine	931
-Ship2	Tatooine	935	Hoth	991
-Ship2	Hoth	995	Endor	1055
-Ship2	Endor	1059	Bespin	1091
-Ship2	Bespin	2172	Corellia	2178
-Ship7	Corellia	2183	Wayland	2282
-Ship7	Wayland	2286	Yaga Minor	2316
-Ship7	Yaga Minor	2320	Kashyyyk	2373
-Ship7	Kashyyyk	2377	Myrkr	2432
+USSC Discovery One	Sullust	290	Gamorr	364
+USSC Discovery One	Gamorr	368	Alderaan	548
+USSC Discovery One	Alderaan	552	Dantooine	565
+USSC Discovery One	Dantooine	569	Yavin	581
+USSC Discovery One	Yavin	585	Dagobah	899
+USSC Discovery One	Dagobah	903	Tatooine	931
+USSC Discovery One	Tatooine	935	Hoth	991
+USSC Discovery One	Hoth	995	Endor	1055
+USSC Discovery One	Endor	1059	Bespin	1091
+USSC Discovery One	Bespin	2172	Corellia	2178
+NSEA Protector	Corellia	2183	Wayland	2282
+NSEA Protector	Wayland	2286	Yaga Minor	2316
+NSEA Protector	Yaga Minor	2320	Kashyyyk	2373
+NSEA Protector	Kashyyyk	2377	Myrkr	2432
 
 -->Myrkr
 
@@ -515,14 +515,14 @@ Tatooine
 
 Tatooine itinerary to furthest planet:
 
-Ship2	Tatooine	935	Hoth	991
-Ship2	Hoth	995	Endor	1055
-Ship2	Endor	1059	Bespin	1091
-Ship2	Bespin	2172	Corellia	2178
-Ship7	Corellia	2183	Wayland	2282
-Ship7	Wayland	2286	Yaga Minor	2316
-Ship7	Yaga Minor	2320	Kashyyyk	2373
-Ship7	Kashyyyk	2377	Myrkr	2432
+USSC Discovery One	Tatooine	935	Hoth	991
+USSC Discovery One	Hoth	995	Endor	1055
+USSC Discovery One	Endor	1059	Bespin	1091
+USSC Discovery One	Bespin	2172	Corellia	2178
+NSEA Protector	Corellia	2183	Wayland	2282
+NSEA Protector	Wayland	2286	Yaga Minor	2316
+NSEA Protector	Yaga Minor	2320	Kashyyyk	2373
+NSEA Protector	Kashyyyk	2377	Myrkr	2432
 
 -->Myrkr
 
@@ -534,17 +534,17 @@ Wayland
 
 Wayland itinerary to furthest planet:
 
-Ship3	Wayland	461	Corellia	560
-Ship6	Corellia	2183	Bespin	2189
-Ship6	Bespin	2193	Sullust	2461
-Ship6	Sullust	2465	Gamorr	2539
-Ship6	Gamorr	2543	Alderaan	2723
-Ship6	Alderaan	2727	Dantooine	2740
-Ship6	Dantooine	2744	Yavin	2756
-Ship6	Yavin	2760	Dagobah	3074
-Ship6	Dagobah	3078	Tatooine	3106
-Ship6	Tatooine	3110	Hoth	3166
-Ship6	Hoth	3170	Endor	3230
+Galactica	Wayland	461	Corellia	560
+Moya	Corellia	2183	Bespin	2189
+Moya	Bespin	2193	Sullust	2461
+Moya	Sullust	2465	Gamorr	2539
+Moya	Gamorr	2543	Alderaan	2723
+Moya	Alderaan	2727	Dantooine	2740
+Moya	Dantooine	2744	Yavin	2756
+Moya	Yavin	2760	Dagobah	3074
+Moya	Dagobah	3078	Tatooine	3106
+Moya	Tatooine	3110	Hoth	3166
+Moya	Hoth	3170	Endor	3230
 
 -->Endor
 
@@ -556,20 +556,20 @@ Yaga Minor
 
 Yaga Minor itinerary to furthest planet:
 
-Ship3	Yaga Minor	145	Kashyyyk	198
-Ship3	Kashyyyk	202	Myrkr	257
-Ship3	Myrkr	261	Wayland	282
-Ship3	Wayland	461	Corellia	560
-Ship6	Corellia	2183	Bespin	2189
-Ship6	Bespin	2193	Sullust	2461
-Ship6	Sullust	2465	Gamorr	2539
-Ship6	Gamorr	2543	Alderaan	2723
-Ship6	Alderaan	2727	Dantooine	2740
-Ship6	Dantooine	2744	Yavin	2756
-Ship6	Yavin	2760	Dagobah	3074
-Ship6	Dagobah	3078	Tatooine	3106
-Ship6	Tatooine	3110	Hoth	3166
-Ship6	Hoth	3170	Endor	3230
+Galactica	Yaga Minor	145	Kashyyyk	198
+Galactica	Kashyyyk	202	Myrkr	257
+Galactica	Myrkr	261	Wayland	282
+Galactica	Wayland	461	Corellia	560
+Moya	Corellia	2183	Bespin	2189
+Moya	Bespin	2193	Sullust	2461
+Moya	Sullust	2465	Gamorr	2539
+Moya	Gamorr	2543	Alderaan	2723
+Moya	Alderaan	2727	Dantooine	2740
+Moya	Dantooine	2744	Yavin	2756
+Moya	Yavin	2760	Dagobah	3074
+Moya	Dagobah	3078	Tatooine	3106
+Moya	Tatooine	3110	Hoth	3166
+Moya	Hoth	3170	Endor	3230
 
 -->Endor
 
@@ -581,16 +581,16 @@ Yavin
 
 Yavin itinerary to furthest planet:
 
-Ship2	Yavin	585	Dagobah	899
-Ship2	Dagobah	903	Tatooine	931
-Ship2	Tatooine	935	Hoth	991
-Ship2	Hoth	995	Endor	1055
-Ship2	Endor	1059	Bespin	1091
-Ship2	Bespin	2172	Corellia	2178
-Ship7	Corellia	2183	Wayland	2282
-Ship7	Wayland	2286	Yaga Minor	2316
-Ship7	Yaga Minor	2320	Kashyyyk	2373
-Ship7	Kashyyyk	2377	Myrkr	2432
+USSC Discovery One	Yavin	585	Dagobah	899
+USSC Discovery One	Dagobah	903	Tatooine	931
+USSC Discovery One	Tatooine	935	Hoth	991
+USSC Discovery One	Hoth	995	Endor	1055
+USSC Discovery One	Endor	1059	Bespin	1091
+USSC Discovery One	Bespin	2172	Corellia	2178
+NSEA Protector	Corellia	2183	Wayland	2282
+NSEA Protector	Wayland	2286	Yaga Minor	2316
+NSEA Protector	Yaga Minor	2320	Kashyyyk	2373
+NSEA Protector	Kashyyyk	2377	Myrkr	2432
 
 -->Myrkr
 
@@ -604,18 +604,18 @@ Bakura
 
 Bakura itinerary to furthest planet:
 
-Ship1	Bakura	104	Mon Calamari	126
-Ship1	Mon Calamari	242	Corellia	248
-Ship6	Corellia	2183	Bespin	2189
-Ship6	Bespin	2193	Sullust	2461
-Ship6	Sullust	2465	Gamorr	2539
-Ship6	Gamorr	2543	Alderaan	2723
-Ship6	Alderaan	2727	Dantooine	2740
-Ship6	Dantooine	2744	Yavin	2756
-Ship6	Yavin	2760	Dagobah	3074
-Ship6	Dagobah	3078	Tatooine	3106
-Ship6	Tatooine	3110	Hoth	3166
-Ship6	Hoth	3170	Endor	3230
+Andromeda Ascendant	Bakura	104	Mon Calamari	126
+Andromeda Ascendant	Mon Calamari	242	Corellia	248
+Moya	Corellia	2183	Bespin	2189
+Moya	Bespin	2193	Sullust	2461
+Moya	Sullust	2465	Gamorr	2539
+Moya	Gamorr	2543	Alderaan	2723
+Moya	Alderaan	2727	Dantooine	2740
+Moya	Dantooine	2744	Yavin	2756
+Moya	Yavin	2760	Dagobah	3074
+Moya	Dagobah	3078	Tatooine	3106
+Moya	Tatooine	3110	Hoth	3166
+Moya	Hoth	3170	Endor	3230
 
 -->Endor
 

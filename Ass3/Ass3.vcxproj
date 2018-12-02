@@ -121,6 +121,7 @@
     <ClInclude Include="route_creator.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="galaxy.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Reader.cpp" />
     <ClCompile Include="route_creator.cpp" />

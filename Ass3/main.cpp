@@ -6,13 +6,6 @@
 
 using namespace std;
 
-
-struct Data {
-	string name;
-};
-
-vector<int> times;
-
 istream& operator>>(istream& is, Travel_Times& t) {
 	string origin;
 	string destination;
@@ -39,16 +32,10 @@ int main(int argc, char** argv) {
 
 	// READER
 	Reader r(in, &t); // create a reader w/ route.txt and Travel_Times which we filled with "conduits.txt"
-
-	// TO USE ROUTE CREATOR, (1/2) COMMENT OUT THIS BLOCK (the following four lines)
 	if (!r.ReadAndVerify()) {
-		// 
 		return EXIT_FAILURE;
 	}
 	r.Dijkstras();
 
-	// CREATOR. TO USE ROUTE CREATOR, (2/2) UNCOMMENT THIS BLOCK (the following two lines)
-	// RouteCreator c;
-	// c.Create(r, t);
 	return 0;
 }

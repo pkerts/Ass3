@@ -54,36 +54,14 @@ public:
 		}
 	}
 
-	std::map<std::basic_string<char>, std::map<std::basic_string<char>, int>>::const_iterator
-	immediate_neighbors(const std::string& planet) const { return times.find(planet); }
-
 	Time transit_time(const std::string& origin, const std::string& destination) {
 		return times.find(origin)->second.find(destination)->second;
 	}
 
-	int obtain_origin_int(const std::string& origin_name) const {
-		auto i = 1;
-		for (const auto& k : times) {
-			if (k.first == origin_name) return i;
-			i++;
-		}
-		return 0;
-	}
+	std::set<std::string>::iterator begin() { return planet_names.begin(); }
+	std::set<std::string>::iterator end() { return planet_names.end(); }
 
-	int obtain_destination_int(const int origin_int, const std::string& destination_name) const {
-		auto i = 1;
-		for (const auto& k : times) {
-			if (i == origin_int) {
-				i = 1;
-				for (const auto& j : k.second) {
-					if (j.first == destination_name) return i;
-					i++;
-				}
-			}
-		}
-		return 0;
-	}
-
+	// For route creator:
 	std::string dump(const int number) const {
 		auto i = 1;
 		if (number == 0) {
@@ -106,7 +84,6 @@ public:
 		}
 		return "END OF STD::STRING DUMP(INT NUMBER) CONST";
 	}
-
 	std::pair<std::string, int> travel_time(const int origin, const int destination) const {
 		auto counter = 1;
 		for (const auto& i : times) {
@@ -123,23 +100,24 @@ public:
 		}
 		return std::make_pair("", 0);
 	}
+	int obtain_origin_int(const std::string& origin_name) const {
+		auto i = 1;
+		for (const auto& k : times) {
+			if (k.first == origin_name) return i;
+			i++;
+		}
+		return 0;
+	}
 
-	std::set<std::string>::iterator begin() { return planet_names.begin(); }
-	std::set<std::string>::iterator end() { return planet_names.end(); }
 private:
-	std::set<std::string> planet_names; // Should I just make this public as opposed to the above vector? or what?
+	std::set<std::string> planet_names;
 	std::map<std::string, std::map<std::string, Time>> times;
 };
 
 // Class Fleet maps internal ship ID to the ship's name .
 class Fleet {
 public:
-	Ship_ID add(const std::string& name) {
-		names.push_back(name);
-		const auto return_value = static_cast<int>(names.size() - 1);
-		return return_value;
-	}
-
+	Ship_ID add(const std::string& name) { names.push_back(name); return names.size() - 1; }
 	const std::string& name(const Ship_ID id) const { return names[id]; }
 
 private:
@@ -158,8 +136,6 @@ public:
 
 	Leg(const Ship_ID id, const Time departure_time, const Time arrival_time)
 		: id(id), departure_time(departure_time), arrival_time(arrival_time) { }
-
-	~Leg() = default;
 
 	// Return negative, zero, or positive for left leg arriving before,
 	// same time, or after the right leg (respectively
@@ -204,11 +180,7 @@ class Planet {
 public:
 	explicit Planet(std::string name): name(std::move(name)), predecessor(nullptr), priority(0) {}
 
-	~Planet() {
-		for (auto& edge : edges) {
-			delete edge;
-		}
-	};
+	~Planet() {for (auto& edge : edges) {delete edge;}}
 	void add(Edge* e) { edges.push_back(e); }
 
 	// reset() clears the fields set by Dijkstra's algorithm so the
@@ -257,9 +229,6 @@ private:
 	Planet* predecessor;
 	Leg best_leg;
 	int priority;
-
-	// For debug
-	// std::set<Planet*> visited;
 };
 
 // Class Itinerary is a sequence of legs with a parallel sequence of
@@ -287,11 +256,7 @@ public:
 // adding edges to the planet objects.
 class Galaxy {
 public:
-	~Galaxy() {
-		for (auto& planet : planets) {
-			delete planet;
-		}
-	}
+	~Galaxy() {for (auto& planet : planets) {delete planet;}}
 
 	void add(Planet* planet) { planets.push_back(planet); }
 
@@ -310,131 +275,5 @@ public:
 	Fleet fleet;
 	std::vector<Planet*> planets;
 };
-
-inline void Itinerary::print(Fleet& fleet, std::ostream& out) {
-	if (!destinations.empty()) {
-		out << "///////////////////////////////////////////////////////////////////" << std::endl;
-		out << std::uppercase << origin->name << std::nouppercase << std::endl << "\n\n";
-		out << origin->name << " itinerary to furthest planet:\n\n";
-		out << fleet.name(legs.back().id) << '\t' << origin->name << '\t' << legs.back().departure_time << '\t' <<
-			destinations.back()->name << '\t' << legs.back().arrival_time << std::endl;
-		auto og = destinations.back()->name;
-		legs.pop_back();
-		destinations.pop_back();
-		while (!destinations.empty()) {
-			out << fleet.name(legs.back().id) << '\t' << og << '\t' << legs.back().departure_time << '\t' <<
-				destinations.back()->name << '\t' << legs.back().arrival_time << std::endl;
-			og = destinations.back()->name;
-			legs.pop_back();
-			destinations.pop_back();
-			if (destinations.empty()) {
-				out << "\n-->" << std::uppercase << og << std::nouppercase << std::endl;
-			}
-		}
-		out << "\n\n" << std::endl;
-	}
-}
-
-inline void Edge::sort() {
-	std::sort(departures.begin(), departures.end(), Leg::less_than);
-}
-
-inline Planet* Planet::search(PriorityQueue<Planet, int(*)(Planet*, Planet*)>& queue) {
-	// std::set<Planet*> visited;
-
-	best_leg.departure_time = 0;
-	best_leg.arrival_time = 0;
-	queue.reduce(this);
-
-	auto furthest_planet = this;
-
-	while (!queue.empty()) {
-		auto min = queue.pop();
-		if (min->arrival_time() == INT_MAX) {
-			std::cerr << "Graph not adequate." << std::endl;
-			return nullptr;
-		}
-		for (auto e : min->edges) {
-			e->sort();
-			for (const auto d : e->departures) {
-				if (min->arrival_time() == 0 || d.departure_time >= min->arrival_time() + 4) {
-					if (d.arrival_time < e->destination->arrival_time()) {
-						e->destination->best_leg = d;
-						e->destination->predecessor = min;
-						queue.reduce(e->destination);
-					}
-				}
-			}
-		}
-		// visited.emplace(min);
-		if (min->arrival_time() > furthest_planet->arrival_time()) {
-			furthest_planet = min;
-		}
-	}
-
-	/*std::cerr << "Planets and distances from " << name << std::endl;
-	for (auto i : visited) {
-		if (i != this) {
-			std::cerr << i->name << " -> " << i->arrival_time() << std::endl;
-		}
-	}
-	std::cerr << std::endl;
-	this->visited = visited;*/
-	return furthest_planet;
-}
-
-inline Itinerary* Planet::make_itinerary(Planet* destination) {
-	auto* itin = new Itinerary(this);
-	auto curr{destination};
-	while (curr->predecessor) {
-		itin->destinations.push_back(curr);
-		itin->legs.push_back(curr->best_leg);
-		curr = curr->predecessor;
-	}
-
-
-	return itin;
-}
-
-//inline void Planet::dump(Galaxy* galaxy) {
-//	assert(!visited.empty());
-//	for (auto i : visited) {
-//		auto itin = make_itinerary(i);
-//		itin->print(galaxy->fleet);
-//	}
-//}
-
-inline void Galaxy::search() {
-	assert(!planets.empty());
-
-	Time diameter_arrival_time{}; // Save the diameter arrival time so we can compare it in between resets
-	Itinerary* diameter_itinerary{};
-
-	for (auto i : planets) {
-		// For each planet, reset then create and fill a priority queue
-		reset();
-		PriorityQueue<Planet, int(*)(Planet*, Planet*)> pq(Planet::compare);
-		for (auto k : planets) { pq.push_back(k); }
-
-		const auto furthest_planet = i->search(pq); // Search
-
-		// Print itinerary
-		auto itin = i->make_itinerary(furthest_planet);
-		itin->print(fleet);
-		delete itin;
-
-		// Check against furthest planet arrival time and update diameter if needed
-		if (furthest_planet->arrival_time() > diameter_arrival_time) {
-			diameter_arrival_time = furthest_planet->arrival_time();
-			delete diameter_itinerary;
-			diameter_itinerary = i->make_itinerary(furthest_planet);
-		}
-	}
-
-	std::cout << "\nWeighted diameter:" << std::endl;
-	diameter_itinerary->print(fleet);
-	delete diameter_itinerary;
-	// reset();
-}
 
 #endif

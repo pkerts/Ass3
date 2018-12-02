@@ -8,12 +8,15 @@ public:
 	Reader(std::istream& in, Travel_Times* constraints);
 	~Reader() { delete galaxy; }
 	Galaxy* load();
-	void dump_ships() const;
 	void dump_current_info() const;
 	bool ReadAndVerify();
 	void Dijkstras() const;
+
+	// For route creator:
+	void dump_ships() const;
+
 private:
-	static const int MIN_LAYOVER_TIME;
+	static const int MIN_LAYOVER_TIME = TRANSFER_TIME;
 
 	// Read next leg of ship's route
 	bool get_record();

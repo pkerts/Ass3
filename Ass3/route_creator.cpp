@@ -3,8 +3,19 @@
 #include <string>
 #include <fstream>
 
-
 using namespace std;
+
+istream& operator>>(istream& is, Travel_Times& t) {
+	string origin;
+	string destination;
+	string time;
+	if (getline(is, origin, '\t') &&
+		getline(is, destination, '\t') &&
+		getline(is, time)) {
+		t.add(origin, destination, time);
+	}
+	return is;
+}
 
 void RouteCreator::Create(const Reader& r, const Travel_Times& t) {
 	ofstream route("route.txt");
@@ -23,21 +34,21 @@ void RouteCreator::Create(const Reader& r, const Travel_Times& t) {
 		}
 
 		switch (ship) {
-		case 1: route << "Ship1\t";
+		case 1: route << "Andromeda Ascendant\t";
 			break;
-		case 2: route << "Ship2\t";
+		case 2: route << "Galactica\t";
 			break;
-		case 3: route << "Ship3\t";
+		case 3: route << "Heart of Gold\t";
 			break;
-		case 4: route << "Ship4\t";
+		case 4: route << "Millenium Falcon\t";
 			break;
-		case 5: route << "Ship5\t";
+		case 5: route << "Moya\t";
 			break;
-		case 6: route << "Ship6\t";
+		case 6: route << "NSEA Protector\t";
 			break;
-		case 7: route << "Ship7\t";
+		case 7: route << "Red Dwarf\t";
 			break;
-		case 8: route << "Ship8\t";
+		case 8: route << "Serenity\t";
 			break;
 		case 9: route << "USS Enterprise\t";
 			break;
@@ -79,4 +90,25 @@ void RouteCreator::Create(const Reader& r, const Travel_Times& t) {
 		cout << "type 0 to halt, type 1 for another ship, type 2 to continue with same ship" << endl;
 		cin >> status;
 	}
+}
+
+int main(int argc, char** argv) {
+	const string filename = argv[1]; // argument passed. this is route.txt
+	fstream in(filename); // fstream created w/ route.txt
+
+
+	// TRAVEL TIMES
+	fstream conduits("conduits.txt"); // fstream for conduits.txt
+	Travel_Times t; // TravelTimes object created
+	while (conduits >> t) {} // Fill TravelTimes w conduits.txt
+	t.dump(); // dump it for validation (std::cerr)
+
+
+	// READER
+	const Reader r(in, &t); // create a reader w/ route.txt and Travel_Times which we filled with "conduits.txt"
+
+	// ROUTE CREATOR
+	RouteCreator::Create(r, t);
+
+	return 0;
 }

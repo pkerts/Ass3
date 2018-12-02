@@ -1,0 +1,39 @@
+Corporate Sector	Hapes Cluster	7
+Hapes Cluster	Mon Calamari	18
+Bakura	Hapes Cluster	11
+Hapes Cluster	Kessel	12
+Corellia	Hapes Cluster	21
+Corporate Sector	Mon Calamari	24
+Bakura	Corporate Sector	60
+Corporate Sector	Kessel	9
+Corellia	Corporate Sector	9
+Bakura	Mon Calamari	22
+Kessel	Mon Calamari	9
+Corellia	Mon Calamari	6
+Bakura	Kessel	27
+Bakura	Corellia	52
+Bespin	Corellia	6
+Bespin	Sullust	268
+Gamorr	Sullust	74
+Alderaan	Gamorr	180
+Alderaan	Dantooine	13
+Dantooine	Yavin	12
+Dagobah	Tatooine	28
+Hoth	Tatooine	56
+Endor	Hoth	60
+Bespin	Endor	32
+Dagobah	Yavin	314
+Corellia	Wayland	99
+Wayland	Yaga Minor	30
+Kashyyyk	Myrkr	55
+Corellia	Myrkr	81
+Kashyyyk	Yaga Minor	53
+Myrkr	Wayland	21
+Brentaal	Corellia	3
+Brentaal	Corulag	2
+Corulag	Esseles	4
+Chandrila	Esseles	3
+Chandrila	Ralltiir	4
+Rhinnal	Ralltiir	1
+Brentaal	Rhinnal	5
+Corellia	Coruscant	4

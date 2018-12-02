@@ -1,1645 +1,425 @@
-==1556== Memcheck, a memory error detector
-==1556== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==1556== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
-==1556== Command: ./a.out route.txt
-==1556== 
---1556-- Valgrind options:
---1556--    --leak-check=full
---1556--    -v
---1556-- Contents of /proc/version:
---1556--   Linux version 4.4.0-17134-Microsoft (Microsoft@Microsoft.com) (gcc version 5.4.0 (GCC) ) #345-Microsoft Wed Sep 19 17:47:00 PST 2018
---1556-- 
---1556-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-avx-avx2-bmi
---1556-- Page sizes: currently 4096, max supported 4096
---1556-- Valgrind library directory: /usr/lib/valgrind
---1556-- Reading syms from /mnt/c/Users/pkerts/source/repos/Ass3/Ass3/a.out
---1556-- Reading syms from /lib/x86_64-linux-gnu/ld-2.27.so
---1556--   Considering /lib/x86_64-linux-gnu/ld-2.27.so ..
---1556--   .. CRC mismatch (computed 1b7c895e wanted 2943108a)
---1556--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.27.so ..
---1556--   .. CRC is valid
---1556-- Reading syms from /usr/lib/valgrind/memcheck-amd64-linux
---1556--   Considering /usr/lib/valgrind/memcheck-amd64-linux ..
---1556--   .. CRC mismatch (computed c25f395c wanted 0a9602a8)
---1556--    object doesn't have a symbol table
---1556--    object doesn't have a dynamic symbol table
---1556-- Scheduler: using generic scheduler lock implementation.
---1556-- Reading suppressions file: /usr/lib/valgrind/default.supp
-==1556== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-1556-by-pkerts-on-???
-==1556== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-1556-by-pkerts-on-???
-==1556== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-1556-by-pkerts-on-???
-==1556== 
-==1556== TO CONTROL THIS PROCESS USING vgdb (which you probably
-==1556== don't want to do, unless you know exactly what you're doing,
-==1556== or are doing some strange experiment):
-==1556==   /usr/lib/valgrind/../../bin/vgdb --pid=1556 ...command...
-==1556== 
-==1556== TO DEBUG THIS PROCESS USING GDB: start GDB like this
-==1556==   /path/to/gdb ./a.out
-==1556== and then give GDB the following command
-==1556==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=1556
-==1556== --pid is optional if only one valgrind process is running
-==1556== 
-==1556== error calling PR_SET_PTRACER, vgdb might block
---1556-- REDIR: 0x401f2f0 (ld-linux-x86-64.so.2:strlen) redirected to 0x58060901 (???)
---1556-- REDIR: 0x401f0d0 (ld-linux-x86-64.so.2:index) redirected to 0x5806091b (???)
---1556-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
---1556--   Considering /usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
---1556--   .. CRC mismatch (computed 4b63d83e wanted 670599e6)
---1556--    object doesn't have a symbol table
---1556-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so
---1556--   Considering /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so ..
---1556--   .. CRC mismatch (computed a4b37bee wanted 8ad4dc94)
---1556--    object doesn't have a symbol table
-==1556== WARNING: new redirection conflicts with existing -- ignoring it
---1556--     old: 0x0401f2f0 (strlen              ) R-> (0000.0) 0x58060901 ???
---1556--     new: 0x0401f2f0 (strlen              ) R-> (2007.0) 0x04c32db0 strlen
---1556-- REDIR: 0x401d360 (ld-linux-x86-64.so.2:strcmp) redirected to 0x4c33ee0 (strcmp)
---1556-- REDIR: 0x401f830 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4c374f0 (mempcpy)
---1556-- Reading syms from /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
---1556--    object doesn't have a symbol table
---1556-- Reading syms from /lib/x86_64-linux-gnu/libgcc_s.so.1
---1556--    object doesn't have a symbol table
---1556-- Reading syms from /lib/x86_64-linux-gnu/libc-2.27.so
---1556--   Considering /lib/x86_64-linux-gnu/libc-2.27.so ..
---1556--   .. CRC mismatch (computed b1c74187 wanted 042cc048)
---1556--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.27.so ..
---1556--   .. CRC is valid
---1556-- Reading syms from /lib/x86_64-linux-gnu/libm-2.27.so
---1556--   Considering /lib/x86_64-linux-gnu/libm-2.27.so ..
---1556--   .. CRC mismatch (computed 7feae033 wanted b29b2508)
---1556--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libm-2.27.so ..
---1556--   .. CRC is valid
---1556-- REDIR: 0x547bc70 (libc.so.6:memmove) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
---1556-- REDIR: 0x547ad40 (libc.so.6:strncpy) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
---1556-- REDIR: 0x547bf50 (libc.so.6:strcasecmp) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
---1556-- REDIR: 0x547a790 (libc.so.6:strcat) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
---1556-- REDIR: 0x547ad70 (libc.so.6:rindex) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
---1556-- REDIR: 0x547d7c0 (libc.so.6:rawmemchr) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
---1556-- REDIR: 0x547bde0 (libc.so.6:mempcpy) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
---1556-- REDIR: 0x547bc10 (libc.so.6:bcmp) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
---1556-- REDIR: 0x547ad00 (libc.so.6:strncmp) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
---1556-- REDIR: 0x547a800 (libc.so.6:strcmp) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
---1556-- REDIR: 0x547bd40 (libc.so.6:memset) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
---1556-- REDIR: 0x54990f0 (libc.so.6:wcschr) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
---1556-- REDIR: 0x547aca0 (libc.so.6:strnlen) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
---1556-- REDIR: 0x547a870 (libc.so.6:strcspn) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
---1556-- REDIR: 0x547bfa0 (libc.so.6:strncasecmp) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
---1556-- REDIR: 0x547a840 (libc.so.6:strcpy) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
---1556-- REDIR: 0x547c0e0 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
---1556-- REDIR: 0x547ada0 (libc.so.6:strpbrk) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
---1556-- REDIR: 0x547a7c0 (libc.so.6:index) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
---1556-- REDIR: 0x547ac70 (libc.so.6:strlen) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
---1556-- REDIR: 0x54856c0 (libc.so.6:memrchr) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
---1556-- REDIR: 0x547bff0 (libc.so.6:strcasecmp_l) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
---1556-- REDIR: 0x547bbe0 (libc.so.6:memchr) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
---1556-- REDIR: 0x5499eb0 (libc.so.6:wcslen) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
---1556-- REDIR: 0x547b050 (libc.so.6:strspn) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
---1556-- REDIR: 0x547bf20 (libc.so.6:stpncpy) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
---1556-- REDIR: 0x547bef0 (libc.so.6:stpcpy) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
---1556-- REDIR: 0x547d7f0 (libc.so.6:strchrnul) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
---1556-- REDIR: 0x547c040 (libc.so.6:strncasecmp_l) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
---1556-- REDIR: 0x556b3c0 (libc.so.6:__strrchr_avx2) redirected to 0x4c32730 (rindex)
---1556-- REDIR: 0x5474070 (libc.so.6:malloc) redirected to 0x4c2faa0 (malloc)
---1556-- REDIR: 0x556b590 (libc.so.6:__strlen_avx2) redirected to 0x4c32cf0 (strlen)
---1556-- REDIR: 0x5567ba0 (libc.so.6:__memcmp_avx2_movbe) redirected to 0x4c35e00 (bcmp)
---1556-- REDIR: 0x5546d60 (libc.so.6:__strcmp_ssse3) redirected to 0x4c33da0 (strcmp)
---1556-- REDIR: 0x556bad0 (libc.so.6:__memcpy_avx_unaligned_erms) redirected to 0x4c366e0 (memmove)
---1556-- REDIR: 0x547b590 (libc.so.6:__GI_strstr) redirected to 0x4c37760 (__strstr_sse2)
---1556-- REDIR: 0x4ecf240 (libstdc++.so.6:operator new[](unsigned long)) redirected to 0x4c30830 (operator new[](unsigned long))
---1556-- REDIR: 0x5567420 (libc.so.6:__memchr_avx2) redirected to 0x4c33f80 (memchr)
---1556-- REDIR: 0x4ecf190 (libstdc++.so.6:operator new(unsigned long)) redirected to 0x4c30110 (operator new(unsigned long))
---1556-- REDIR: 0x4ecd2e0 (libstdc++.so.6:operator delete(void*)) redirected to 0x4c311d0 (operator delete(void*))
+==1711== Memcheck, a memory error detector
+==1711== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1711== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==1711== Command: ./a.out route.txt
+==1711== 
+--1711-- Valgrind options:
+--1711--    --leak-check=full
+--1711--    -v
+--1711-- Contents of /proc/version:
+--1711--   Linux version 4.4.0-17134-Microsoft (Microsoft@Microsoft.com) (gcc version 5.4.0 (GCC) ) #345-Microsoft Wed Sep 19 17:47:00 PST 2018
+--1711-- 
+--1711-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-avx-avx2-bmi
+--1711-- Page sizes: currently 4096, max supported 4096
+--1711-- Valgrind library directory: /usr/lib/valgrind
+--1711-- Reading syms from /mnt/c/Users/pkerts/source/repos/Ass3/Ass3/a.out
+--1711-- Reading syms from /lib/x86_64-linux-gnu/ld-2.27.so
+--1711--   Considering /lib/x86_64-linux-gnu/ld-2.27.so ..
+--1711--   .. CRC mismatch (computed 1b7c895e wanted 2943108a)
+--1711--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.27.so ..
+--1711--   .. CRC is valid
+--1711-- Reading syms from /usr/lib/valgrind/memcheck-amd64-linux
+--1711--   Considering /usr/lib/valgrind/memcheck-amd64-linux ..
+--1711--   .. CRC mismatch (computed c25f395c wanted 0a9602a8)
+--1711--    object doesn't have a symbol table
+--1711--    object doesn't have a dynamic symbol table
+--1711-- Scheduler: using generic scheduler lock implementation.
+--1711-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==1711== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-1711-by-pkerts-on-???
+==1711== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-1711-by-pkerts-on-???
+==1711== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-1711-by-pkerts-on-???
+==1711== 
+==1711== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==1711== don't want to do, unless you know exactly what you're doing,
+==1711== or are doing some strange experiment):
+==1711==   /usr/lib/valgrind/../../bin/vgdb --pid=1711 ...command...
+==1711== 
+==1711== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==1711==   /path/to/gdb ./a.out
+==1711== and then give GDB the following command
+==1711==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=1711
+==1711== --pid is optional if only one valgrind process is running
+==1711== 
+==1711== error calling PR_SET_PTRACER, vgdb might block
+--1711-- REDIR: 0x401f2f0 (ld-linux-x86-64.so.2:strlen) redirected to 0x58060901 (???)
+--1711-- REDIR: 0x401f0d0 (ld-linux-x86-64.so.2:index) redirected to 0x5806091b (???)
+--1711-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
+--1711--   Considering /usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
+--1711--   .. CRC mismatch (computed 4b63d83e wanted 670599e6)
+--1711--    object doesn't have a symbol table
+--1711-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so
+--1711--   Considering /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so ..
+--1711--   .. CRC mismatch (computed a4b37bee wanted 8ad4dc94)
+--1711--    object doesn't have a symbol table
+==1711== WARNING: new redirection conflicts with existing -- ignoring it
+--1711--     old: 0x0401f2f0 (strlen              ) R-> (0000.0) 0x58060901 ???
+--1711--     new: 0x0401f2f0 (strlen              ) R-> (2007.0) 0x04c32db0 strlen
+--1711-- REDIR: 0x401d360 (ld-linux-x86-64.so.2:strcmp) redirected to 0x4c33ee0 (strcmp)
+--1711-- REDIR: 0x401f830 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4c374f0 (mempcpy)
+--1711-- Reading syms from /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+--1711--    object doesn't have a symbol table
+--1711-- Reading syms from /lib/x86_64-linux-gnu/libgcc_s.so.1
+--1711--    object doesn't have a symbol table
+--1711-- Reading syms from /lib/x86_64-linux-gnu/libc-2.27.so
+--1711--   Considering /lib/x86_64-linux-gnu/libc-2.27.so ..
+--1711--   .. CRC mismatch (computed b1c74187 wanted 042cc048)
+--1711--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.27.so ..
+--1711--   .. CRC is valid
+--1711-- Reading syms from /lib/x86_64-linux-gnu/libm-2.27.so
+--1711--   Considering /lib/x86_64-linux-gnu/libm-2.27.so ..
+--1711--   .. CRC mismatch (computed 7feae033 wanted b29b2508)
+--1711--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libm-2.27.so ..
+--1711--   .. CRC is valid
+--1711-- REDIR: 0x547bc70 (libc.so.6:memmove) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1711-- REDIR: 0x547ad40 (libc.so.6:strncpy) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1711-- REDIR: 0x547bf50 (libc.so.6:strcasecmp) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1711-- REDIR: 0x547a790 (libc.so.6:strcat) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1711-- REDIR: 0x547ad70 (libc.so.6:rindex) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1711-- REDIR: 0x547d7c0 (libc.so.6:rawmemchr) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1711-- REDIR: 0x547bde0 (libc.so.6:mempcpy) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1711-- REDIR: 0x547bc10 (libc.so.6:bcmp) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1711-- REDIR: 0x547ad00 (libc.so.6:strncmp) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1711-- REDIR: 0x547a800 (libc.so.6:strcmp) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1711-- REDIR: 0x547bd40 (libc.so.6:memset) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1711-- REDIR: 0x54990f0 (libc.so.6:wcschr) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1711-- REDIR: 0x547aca0 (libc.so.6:strnlen) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1711-- REDIR: 0x547a870 (libc.so.6:strcspn) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1711-- REDIR: 0x547bfa0 (libc.so.6:strncasecmp) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1711-- REDIR: 0x547a840 (libc.so.6:strcpy) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1711-- REDIR: 0x547c0e0 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1711-- REDIR: 0x547ada0 (libc.so.6:strpbrk) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1711-- REDIR: 0x547a7c0 (libc.so.6:index) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1711-- REDIR: 0x547ac70 (libc.so.6:strlen) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1711-- REDIR: 0x54856c0 (libc.so.6:memrchr) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1711-- REDIR: 0x547bff0 (libc.so.6:strcasecmp_l) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1711-- REDIR: 0x547bbe0 (libc.so.6:memchr) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1711-- REDIR: 0x5499eb0 (libc.so.6:wcslen) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1711-- REDIR: 0x547b050 (libc.so.6:strspn) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1711-- REDIR: 0x547bf20 (libc.so.6:stpncpy) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1711-- REDIR: 0x547bef0 (libc.so.6:stpcpy) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1711-- REDIR: 0x547d7f0 (libc.so.6:strchrnul) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1711-- REDIR: 0x547c040 (libc.so.6:strncasecmp_l) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--1711-- REDIR: 0x556b3c0 (libc.so.6:__strrchr_avx2) redirected to 0x4c32730 (rindex)
+--1711-- REDIR: 0x5474070 (libc.so.6:malloc) redirected to 0x4c2faa0 (malloc)
+--1711-- REDIR: 0x556b590 (libc.so.6:__strlen_avx2) redirected to 0x4c32cf0 (strlen)
+--1711-- REDIR: 0x5567ba0 (libc.so.6:__memcmp_avx2_movbe) redirected to 0x4c35e00 (bcmp)
+--1711-- REDIR: 0x5546d60 (libc.so.6:__strcmp_ssse3) redirected to 0x4c33da0 (strcmp)
+--1711-- REDIR: 0x556bad0 (libc.so.6:__memcpy_avx_unaligned_erms) redirected to 0x4c366e0 (memmove)
+--1711-- REDIR: 0x547b590 (libc.so.6:__GI_strstr) redirected to 0x4c37760 (__strstr_sse2)
+--1711-- REDIR: 0x4ecf240 (libstdc++.so.6:operator new[](unsigned long)) redirected to 0x4c30830 (operator new[](unsigned long))
+--1711-- REDIR: 0x5567420 (libc.so.6:__memchr_avx2) redirected to 0x4c33f80 (memchr)
+--1711-- REDIR: 0x4ecf190 (libstdc++.so.6:operator new(unsigned long)) redirected to 0x4c30110 (operator new(unsigned long))
+--1711-- REDIR: 0x4ecd2e0 (libstdc++.so.6:operator delete(void*)) redirected to 0x4c311d0 (operator delete(void*))
 Alderaan
+		Bespin	8
+		Corellia	6
+		Coruscant	16
+		Dagobah	30
 		Dantooine	13
+		Endor	18
 		Gamorr	180
+		Hoth	27
+		Sullust	213
+		Tatooine	7
+		Yavin	5
 Bakura
 		Corellia	52
 		Corporate Sector	60
+		Coruscant	77
 		Hapes Cluster	11
 		Kessel	27
 		Mon Calamari	22
 Bespin
+		Alderaan	8
 		Corellia	6
+		Coruscant	158
+		Dagobah	27
+		Dantooine	22
 		Endor	32
+		Gamorr	75
+		Hoth	4
 		Sullust	268
+		Tatooine	16
+		Yavin	11
 Brentaal
+		Chandrila	1
 		Corellia	3
 		Corulag	2
+		Coruscant	7
+		Esseles	2
+		Ralltiir	7
 		Rhinnal	5
 Chandrila
+		Brentaal	1
+		Corellia	2
+		Corulag	1
+		Coruscant	5
 		Esseles	3
 		Ralltiir	4
+		Rhinnal	2
 Corellia
+		Alderaan	6
 		Bakura	52
 		Bespin	6
 		Brentaal	3
+		Chandrila	2
 		Corporate Sector	9
+		Corulag	1
 		Coruscant	4
+		Dagobah	31
+		Dantooine	12
+		Endor	17
+		Esseles	4
+		Gamorr	254
 		Hapes Cluster	21
+		Hoth	21
+		Kashyyyk	36
+		Kessel	10
 		Mon Calamari	6
 		Myrkr	81
+		Ralltiir	9
+		Rhinnal	7
+		Sullust	19
+		Tatooine	4
 		Wayland	99
+		Yaga Minor	12
+		Yavin	15
 Corporate Sector
 		Bakura	60
 		Corellia	9
+		Coruscant	15
 		Hapes Cluster	7
 		Kessel	9
 		Mon Calamari	24
 Corulag
 		Brentaal	2
+		Chandrila	1
+		Corellia	1
+		Coruscant	6
 		Esseles	4
+		Ralltiir	11
+		Rhinnal	8
 Coruscant
+		Alderaan	16
+		Bakura	77
+		Bespin	158
+		Brentaal	7
+		Chandrila	5
 		Corellia	4
+		Corporate Sector	15
+		Corulag	6
+		Dagobah	302
+		Dantooine	19
+		Endor	156
+		Esseles	8
+		Gamorr	387
+		Hapes Cluster	39
+		Hoth	81
+		Kashyyyk	43
+		Kessel	27
+		Mon Calamari	13
+		Myrkr	108
+		Ralltiir	12
+		Rhinnal	10
+		Sullust	194
+		Tatooine	542
+		Wayland	58
+		Yaga Minor	15
+		Yavin	128
 Dagobah
+		Alderaan	30
+		Bespin	27
+		Corellia	31
+		Coruscant	302
+		Dantooine	32
+		Endor	97
+		Gamorr	656
+		Hoth	89
+		Sullust	78
 		Tatooine	28
 		Yavin	314
 Dantooine
 		Alderaan	13
+		Bespin	22
+		Corellia	12
+		Coruscant	19
+		Dagobah	32
+		Endor	21
+		Gamorr	86
+		Hoth	28
+		Sullust	126
+		Tatooine	20
 		Yavin	12
 Endor
+		Alderaan	18
 		Bespin	32
+		Corellia	17
+		Coruscant	156
+		Dagobah	97
+		Dantooine	21
+		Gamorr	341
 		Hoth	60
+		Sullust	19
+		Tatooine	24
+		Yavin	10
 Esseles
+		Brentaal	2
 		Chandrila	3
+		Corellia	4
 		Corulag	4
+		Coruscant	8
+		Ralltiir	4
+		Rhinnal	2
 Gamorr
 		Alderaan	180
+		Bespin	75
+		Corellia	254
+		Coruscant	387
+		Dagobah	656
+		Dantooine	86
+		Endor	341
+		Hoth	346
 		Sullust	74
+		Tatooine	40
+		Yavin	55
 Hapes Cluster
 		Bakura	11
 		Corellia	21
 		Corporate Sector	7
+		Coruscant	39
 		Kessel	12
 		Mon Calamari	18
 Hoth
+		Alderaan	27
+		Bespin	4
+		Corellia	21
+		Coruscant	81
+		Dagobah	89
+		Dantooine	28
 		Endor	60
+		Gamorr	346
+		Sullust	22
 		Tatooine	56
+		Yavin	39
 Kashyyyk
+		Corellia	36
+		Coruscant	43
 		Myrkr	55
+		Wayland	54
 		Yaga Minor	53
 Kessel
 		Bakura	27
+		Corellia	10
 		Corporate Sector	9
+		Coruscant	27
 		Hapes Cluster	12
 		Mon Calamari	9
 Mon Calamari
 		Bakura	22
 		Corellia	6
 		Corporate Sector	24
+		Coruscant	13
 		Hapes Cluster	18
 		Kessel	9
 Myrkr
 		Corellia	81
+		Coruscant	108
 		Kashyyyk	55
 		Wayland	21
+		Yaga Minor	55
 Ralltiir
+		Brentaal	7
 		Chandrila	4
+		Corellia	9
+		Corulag	11
+		Coruscant	12
+		Esseles	4
 		Rhinnal	1
 Rhinnal
 		Brentaal	5
+		Chandrila	2
+		Corellia	7
+		Corulag	8
+		Coruscant	10
+		Esseles	2
 		Ralltiir	1
 Sullust
+		Alderaan	213
 		Bespin	268
+		Corellia	19
+		Coruscant	194
+		Dagobah	78
+		Dantooine	126
+		Endor	19
 		Gamorr	74
+		Hoth	22
+		Tatooine	38
+		Yavin	17
 Tatooine
+		Alderaan	7
+		Bespin	16
+		Corellia	4
+		Coruscant	542
 		Dagobah	28
+		Dantooine	20
+		Endor	24
+		Gamorr	40
 		Hoth	56
+		Sullust	38
+		Yavin	15
 Wayland
 		Corellia	99
+		Coruscant	58
+		Kashyyyk	54
 		Myrkr	21
 		Yaga Minor	30
 Yaga Minor
+		Corellia	12
+		Coruscant	15
 		Kashyyyk	53
+		Myrkr	55
 		Wayland	30
 Yavin
+		Alderaan	5
+		Bespin	11
+		Corellia	15
+		Coruscant	128
 		Dagobah	314
 		Dantooine	12
---1556-- REDIR: 0x4ecd310 (libstdc++.so.6:operator delete[](void*)) redirected to 0x4c316d0 (operator delete[](void*))
---1556-- REDIR: 0x5474950 (libc.so.6:free) redirected to 0x4c30cd0 (free)
-ALL GOOD:
-
-previous_ship_id: NULL
-previous_destination_planet: NULL
-previous_arrival_time: NULL
-
-ship_id: 0
-departure_planet: Corellia
-departure_time: 8
-destination_planet: Mon Calamari
-arrival_time: 14
-
-ALL GOOD:
-
-previous_ship_id: 0
-previous_destination_planet: Mon Calamari
-previous_arrival_time: 14
-
-ship_id: 0
-departure_planet: Mon Calamari
-departure_time: 18
-destination_planet: Corporate Sector
-arrival_time: 42
-
-ALL GOOD:
-
-previous_ship_id: 0
-previous_destination_planet: Corporate Sector
-previous_arrival_time: 42
-
-ship_id: 0
-departure_planet: Corporate Sector
-departure_time: 46
-destination_planet: Hapes Cluster
-arrival_time: 53
-
-ALL GOOD:
-
-previous_ship_id: 0
-previous_destination_planet: Hapes Cluster
-previous_arrival_time: 53
-
-ship_id: 0
-departure_planet: Hapes Cluster
-departure_time: 57
-destination_planet: Kessel
-arrival_time: 69
-
-ALL GOOD:
-
-previous_ship_id: 0
-previous_destination_planet: Kessel
-previous_arrival_time: 69
-
-ship_id: 0
-departure_planet: Kessel
-departure_time: 73
-destination_planet: Bakura
-arrival_time: 100
-
-ALL GOOD:
-
-previous_ship_id: 0
-previous_destination_planet: Bakura
-previous_arrival_time: 100
-
-ship_id: 0
-departure_planet: Bakura
-departure_time: 104
-destination_planet: Mon Calamari
-arrival_time: 126
-
-ALL GOOD:
-
-previous_ship_id: 0
-previous_destination_planet: Mon Calamari
-previous_arrival_time: 126
-
-ship_id: 0
-departure_planet: Mon Calamari
-departure_time: 130
-destination_planet: Bakura
-arrival_time: 152
-
-ALL GOOD:
-
-previous_ship_id: 0
-previous_destination_planet: Bakura
-previous_arrival_time: 152
-
-ship_id: 0
-departure_planet: Bakura
-departure_time: 156
-destination_planet: Kessel
-arrival_time: 183
-
-ALL GOOD:
-
-previous_ship_id: 0
-previous_destination_planet: Kessel
-previous_arrival_time: 183
-
-ship_id: 0
-departure_planet: Kessel
-departure_time: 187
-destination_planet: Hapes Cluster
-arrival_time: 199
-
-ALL GOOD:
-
-previous_ship_id: 0
-previous_destination_planet: Hapes Cluster
-previous_arrival_time: 199
-
-ship_id: 0
-departure_planet: Hapes Cluster
-departure_time: 203
-destination_planet: Corporate Sector
-arrival_time: 210
-
-ALL GOOD:
-
-previous_ship_id: 0
-previous_destination_planet: Corporate Sector
-previous_arrival_time: 210
-
-ship_id: 0
-departure_planet: Corporate Sector
-departure_time: 214
-destination_planet: Mon Calamari
-arrival_time: 238
-
-ALL GOOD:
-
-previous_ship_id: 0
-previous_destination_planet: Mon Calamari
-previous_arrival_time: 238
-
-ship_id: 0
-departure_planet: Mon Calamari
-departure_time: 242
-destination_planet: Corellia
-arrival_time: 248
-
-ALL GOOD:
-
-previous_ship_id: 0
-previous_destination_planet: Corellia
-previous_arrival_time: 248
-
-ship_id: 1
-departure_planet: Corellia
-departure_time: 8
-destination_planet: Bespin
-arrival_time: 14
-
-ALL GOOD:
-
-previous_ship_id: 1
-previous_destination_planet: Bespin
-previous_arrival_time: 14
-
-ship_id: 1
-departure_planet: Bespin
-departure_time: 18
-destination_planet: Sullust
-arrival_time: 286
-
-ALL GOOD:
-
-previous_ship_id: 1
-previous_destination_planet: Sullust
-previous_arrival_time: 286
-
-ship_id: 1
-departure_planet: Sullust
-departure_time: 290
-destination_planet: Gamorr
-arrival_time: 364
-
-ALL GOOD:
-
-previous_ship_id: 1
-previous_destination_planet: Gamorr
-previous_arrival_time: 364
-
-ship_id: 1
-departure_planet: Gamorr
-departure_time: 368
-destination_planet: Alderaan
-arrival_time: 548
-
-ALL GOOD:
-
-previous_ship_id: 1
-previous_destination_planet: Alderaan
-previous_arrival_time: 548
-
-ship_id: 1
-departure_planet: Alderaan
-departure_time: 552
-destination_planet: Dantooine
-arrival_time: 565
-
-ALL GOOD:
-
-previous_ship_id: 1
-previous_destination_planet: Dantooine
-previous_arrival_time: 565
-
-ship_id: 1
-departure_planet: Dantooine
-departure_time: 569
-destination_planet: Yavin
-arrival_time: 581
-
-ALL GOOD:
-
-previous_ship_id: 1
-previous_destination_planet: Yavin
-previous_arrival_time: 581
-
-ship_id: 1
-departure_planet: Yavin
-departure_time: 585
-destination_planet: Dagobah
-arrival_time: 899
-
-ALL GOOD:
-
-previous_ship_id: 1
-previous_destination_planet: Dagobah
-previous_arrival_time: 899
-
-ship_id: 1
-departure_planet: Dagobah
-departure_time: 903
-destination_planet: Tatooine
-arrival_time: 931
-
-ALL GOOD:
-
-previous_ship_id: 1
-previous_destination_planet: Tatooine
-previous_arrival_time: 931
-
-ship_id: 1
-departure_planet: Tatooine
-departure_time: 935
-destination_planet: Hoth
-arrival_time: 991
-
-ALL GOOD:
-
-previous_ship_id: 1
-previous_destination_planet: Hoth
-previous_arrival_time: 991
-
-ship_id: 1
-departure_planet: Hoth
-departure_time: 995
-destination_planet: Endor
-arrival_time: 1055
-
-ALL GOOD:
-
-previous_ship_id: 1
-previous_destination_planet: Endor
-previous_arrival_time: 1055
-
-ship_id: 1
-departure_planet: Endor
-departure_time: 1059
-destination_planet: Bespin
-arrival_time: 1091
-
-ALL GOOD:
-
-previous_ship_id: 1
-previous_destination_planet: Bespin
-previous_arrival_time: 1091
-
-ship_id: 1
-departure_planet: Bespin
-departure_time: 1095
-destination_planet: Endor
-arrival_time: 1127
-
-ALL GOOD:
-
-previous_ship_id: 1
-previous_destination_planet: Endor
-previous_arrival_time: 1127
-
-ship_id: 1
-departure_planet: Endor
-departure_time: 1131
-destination_planet: Hoth
-arrival_time: 1191
-
-ALL GOOD:
-
-previous_ship_id: 1
-previous_destination_planet: Hoth
-previous_arrival_time: 1191
-
-ship_id: 1
-departure_planet: Hoth
-departure_time: 1195
-destination_planet: Tatooine
-arrival_time: 1251
-
-ALL GOOD:
-
-previous_ship_id: 1
-previous_destination_planet: Tatooine
-previous_arrival_time: 1251
-
-ship_id: 1
-departure_planet: Tatooine
-departure_time: 1255
-destination_planet: Dagobah
-arrival_time: 1283
-
-ALL GOOD:
-
-previous_ship_id: 1
-previous_destination_planet: Dagobah
-previous_arrival_time: 1283
-
-ship_id: 1
-departure_planet: Dagobah
-departure_time: 1287
-destination_planet: Yavin
-arrival_time: 1601
-
-ALL GOOD:
-
-previous_ship_id: 1
-previous_destination_planet: Yavin
-previous_arrival_time: 1601
-
-ship_id: 1
-departure_planet: Yavin
-departure_time: 1605
-destination_planet: Dantooine
-arrival_time: 1617
-
-ALL GOOD:
-
-previous_ship_id: 1
-previous_destination_planet: Dantooine
-previous_arrival_time: 1617
-
-ship_id: 1
-departure_planet: Dantooine
-departure_time: 1621
-destination_planet: Alderaan
-arrival_time: 1634
-
-ALL GOOD:
-
-previous_ship_id: 1
-previous_destination_planet: Alderaan
-previous_arrival_time: 1634
-
-ship_id: 1
-departure_planet: Alderaan
-departure_time: 1638
-destination_planet: Gamorr
-arrival_time: 1818
-
-ALL GOOD:
-
-previous_ship_id: 1
-previous_destination_planet: Gamorr
-previous_arrival_time: 1818
-
-ship_id: 1
-departure_planet: Gamorr
-departure_time: 1822
-destination_planet: Sullust
-arrival_time: 1896
-
-ALL GOOD:
-
-previous_ship_id: 1
-previous_destination_planet: Sullust
-previous_arrival_time: 1896
-
-ship_id: 1
-departure_planet: Sullust
-departure_time: 1900
-destination_planet: Bespin
-arrival_time: 2168
-
-ALL GOOD:
-
-previous_ship_id: 1
-previous_destination_planet: Bespin
-previous_arrival_time: 2168
-
-ship_id: 1
-departure_planet: Bespin
-departure_time: 2172
-destination_planet: Corellia
-arrival_time: 2178
-
-ALL GOOD:
-
-previous_ship_id: 1
-previous_destination_planet: Corellia
-previous_arrival_time: 2178
-
-ship_id: 2
-departure_planet: Corellia
-departure_time: 8
-destination_planet: Wayland
-arrival_time: 107
-
-ALL GOOD:
-
-previous_ship_id: 2
-previous_destination_planet: Wayland
-previous_arrival_time: 107
-
-ship_id: 2
-departure_planet: Wayland
-departure_time: 111
-destination_planet: Yaga Minor
-arrival_time: 141
-
-ALL GOOD:
-
-previous_ship_id: 2
-previous_destination_planet: Yaga Minor
-previous_arrival_time: 141
-
-ship_id: 2
-departure_planet: Yaga Minor
-departure_time: 145
-destination_planet: Kashyyyk
-arrival_time: 198
-
-ALL GOOD:
-
-previous_ship_id: 2
-previous_destination_planet: Kashyyyk
-previous_arrival_time: 198
-
-ship_id: 2
-departure_planet: Kashyyyk
-departure_time: 202
-destination_planet: Myrkr
-arrival_time: 257
-
-ALL GOOD:
-
-previous_ship_id: 2
-previous_destination_planet: Myrkr
-previous_arrival_time: 257
-
-ship_id: 2
-departure_planet: Myrkr
-departure_time: 261
-destination_planet: Wayland
-arrival_time: 282
-
-ALL GOOD:
-
-previous_ship_id: 2
-previous_destination_planet: Wayland
-previous_arrival_time: 282
-
-ship_id: 2
-departure_planet: Wayland
-departure_time: 286
-destination_planet: Myrkr
-arrival_time: 307
-
-ALL GOOD:
-
-previous_ship_id: 2
-previous_destination_planet: Myrkr
-previous_arrival_time: 307
-
-ship_id: 2
-departure_planet: Myrkr
-departure_time: 311
-destination_planet: Kashyyyk
-arrival_time: 366
-
-ALL GOOD:
-
-previous_ship_id: 2
-previous_destination_planet: Kashyyyk
-previous_arrival_time: 366
-
-ship_id: 2
-departure_planet: Kashyyyk
-departure_time: 370
-destination_planet: Yaga Minor
-arrival_time: 423
-
-ALL GOOD:
-
-previous_ship_id: 2
-previous_destination_planet: Yaga Minor
-previous_arrival_time: 423
-
-ship_id: 2
-departure_planet: Yaga Minor
-departure_time: 427
-destination_planet: Wayland
-arrival_time: 457
-
-ALL GOOD:
-
-previous_ship_id: 2
-previous_destination_planet: Wayland
-previous_arrival_time: 457
-
-ship_id: 2
-departure_planet: Wayland
-departure_time: 461
-destination_planet: Corellia
-arrival_time: 560
-
-ALL GOOD:
-
-previous_ship_id: 2
-previous_destination_planet: Corellia
-previous_arrival_time: 560
-
-ship_id: 3
-departure_planet: Corellia
-departure_time: 8
-destination_planet: Brentaal
-arrival_time: 11
-
-ALL GOOD:
-
-previous_ship_id: 3
-previous_destination_planet: Brentaal
-previous_arrival_time: 11
-
-ship_id: 3
-departure_planet: Brentaal
-departure_time: 15
-destination_planet: Corulag
-arrival_time: 17
-
-ALL GOOD:
-
-previous_ship_id: 3
-previous_destination_planet: Corulag
-previous_arrival_time: 17
-
-ship_id: 3
-departure_planet: Corulag
-departure_time: 21
-destination_planet: Esseles
-arrival_time: 25
-
-ALL GOOD:
-
-previous_ship_id: 3
-previous_destination_planet: Esseles
-previous_arrival_time: 25
-
-ship_id: 3
-departure_planet: Esseles
-departure_time: 29
-destination_planet: Chandrila
-arrival_time: 32
-
-ALL GOOD:
-
-previous_ship_id: 3
-previous_destination_planet: Chandrila
-previous_arrival_time: 32
-
-ship_id: 3
-departure_planet: Chandrila
-departure_time: 36
-destination_planet: Ralltiir
-arrival_time: 40
-
-ALL GOOD:
-
-previous_ship_id: 3
-previous_destination_planet: Ralltiir
-previous_arrival_time: 40
-
-ship_id: 3
-departure_planet: Ralltiir
-departure_time: 44
-destination_planet: Rhinnal
-arrival_time: 45
-
-ALL GOOD:
-
-previous_ship_id: 3
-previous_destination_planet: Rhinnal
-previous_arrival_time: 45
-
-ship_id: 3
-departure_planet: Rhinnal
-departure_time: 49
-destination_planet: Brentaal
-arrival_time: 54
-
-ALL GOOD:
-
-previous_ship_id: 3
-previous_destination_planet: Brentaal
-previous_arrival_time: 54
-
-ship_id: 3
-departure_planet: Brentaal
-departure_time: 58
-destination_planet: Rhinnal
-arrival_time: 63
-
-ALL GOOD:
-
-previous_ship_id: 3
-previous_destination_planet: Rhinnal
-previous_arrival_time: 63
-
-ship_id: 3
-departure_planet: Rhinnal
-departure_time: 67
-destination_planet: Ralltiir
-arrival_time: 68
-
-ALL GOOD:
-
-previous_ship_id: 3
-previous_destination_planet: Ralltiir
-previous_arrival_time: 68
-
-ship_id: 3
-departure_planet: Ralltiir
-departure_time: 72
-destination_planet: Chandrila
-arrival_time: 76
-
-ALL GOOD:
-
-previous_ship_id: 3
-previous_destination_planet: Chandrila
-previous_arrival_time: 76
-
-ship_id: 3
-departure_planet: Chandrila
-departure_time: 80
-destination_planet: Esseles
-arrival_time: 83
-
-ALL GOOD:
-
-previous_ship_id: 3
-previous_destination_planet: Esseles
-previous_arrival_time: 83
-
-ship_id: 3
-departure_planet: Esseles
-departure_time: 87
-destination_planet: Corulag
-arrival_time: 91
-
-ALL GOOD:
-
-previous_ship_id: 3
-previous_destination_planet: Corulag
-previous_arrival_time: 91
-
-ship_id: 3
-departure_planet: Corulag
-departure_time: 95
-destination_planet: Brentaal
-arrival_time: 97
-
-ALL GOOD:
-
-previous_ship_id: 3
-previous_destination_planet: Brentaal
-previous_arrival_time: 97
-
-ship_id: 3
-departure_planet: Brentaal
-departure_time: 101
-destination_planet: Corellia
-arrival_time: 104
-
-ALL GOOD:
-
-previous_ship_id: 3
-previous_destination_planet: Corellia
-previous_arrival_time: 104
-
-ship_id: 4
-departure_planet: Corellia
-departure_time: 2183
-destination_planet: Mon Calamari
-arrival_time: 2189
-
-ALL GOOD:
-
-previous_ship_id: 4
-previous_destination_planet: Mon Calamari
-previous_arrival_time: 2189
-
-ship_id: 4
-departure_planet: Mon Calamari
-departure_time: 2193
-destination_planet: Corporate Sector
-arrival_time: 2217
-
-ALL GOOD:
-
-previous_ship_id: 4
-previous_destination_planet: Corporate Sector
-previous_arrival_time: 2217
-
-ship_id: 4
-departure_planet: Corporate Sector
-departure_time: 2221
-destination_planet: Hapes Cluster
-arrival_time: 2228
-
-ALL GOOD:
-
-previous_ship_id: 4
-previous_destination_planet: Hapes Cluster
-previous_arrival_time: 2228
-
-ship_id: 4
-departure_planet: Hapes Cluster
-departure_time: 2232
-destination_planet: Kessel
-arrival_time: 2244
-
-ALL GOOD:
-
-previous_ship_id: 4
-previous_destination_planet: Kessel
-previous_arrival_time: 2244
-
-ship_id: 4
-departure_planet: Kessel
-departure_time: 2248
-destination_planet: Bakura
-arrival_time: 2275
-
-ALL GOOD:
-
-previous_ship_id: 4
-previous_destination_planet: Bakura
-previous_arrival_time: 2275
-
-ship_id: 4
-departure_planet: Bakura
-departure_time: 2279
-destination_planet: Mon Calamari
-arrival_time: 2301
-
-ALL GOOD:
-
-previous_ship_id: 4
-previous_destination_planet: Mon Calamari
-previous_arrival_time: 2301
-
-ship_id: 4
-departure_planet: Mon Calamari
-departure_time: 2305
-destination_planet: Bakura
-arrival_time: 2327
-
-ALL GOOD:
-
-previous_ship_id: 4
-previous_destination_planet: Bakura
-previous_arrival_time: 2327
-
-ship_id: 4
-departure_planet: Bakura
-departure_time: 2331
-destination_planet: Kessel
-arrival_time: 2358
-
-ALL GOOD:
-
-previous_ship_id: 4
-previous_destination_planet: Kessel
-previous_arrival_time: 2358
-
-ship_id: 4
-departure_planet: Kessel
-departure_time: 2362
-destination_planet: Hapes Cluster
-arrival_time: 2374
-
-ALL GOOD:
-
-previous_ship_id: 4
-previous_destination_planet: Hapes Cluster
-previous_arrival_time: 2374
-
-ship_id: 4
-departure_planet: Hapes Cluster
-departure_time: 2378
-destination_planet: Corporate Sector
-arrival_time: 2385
-
-ALL GOOD:
-
-previous_ship_id: 4
-previous_destination_planet: Corporate Sector
-previous_arrival_time: 2385
-
-ship_id: 4
-departure_planet: Corporate Sector
-departure_time: 2389
-destination_planet: Mon Calamari
-arrival_time: 2413
-
-ALL GOOD:
-
-previous_ship_id: 4
-previous_destination_planet: Mon Calamari
-previous_arrival_time: 2413
-
-ship_id: 4
-departure_planet: Mon Calamari
-departure_time: 2417
-destination_planet: Corellia
-arrival_time: 2423
-
-ALL GOOD:
-
-previous_ship_id: 4
-previous_destination_planet: Corellia
-previous_arrival_time: 2423
-
-ship_id: 5
-departure_planet: Corellia
-departure_time: 2183
-destination_planet: Bespin
-arrival_time: 2189
-
-ALL GOOD:
-
-previous_ship_id: 5
-previous_destination_planet: Bespin
-previous_arrival_time: 2189
-
-ship_id: 5
-departure_planet: Bespin
-departure_time: 2193
-destination_planet: Sullust
-arrival_time: 2461
-
-ALL GOOD:
-
-previous_ship_id: 5
-previous_destination_planet: Sullust
-previous_arrival_time: 2461
-
-ship_id: 5
-departure_planet: Sullust
-departure_time: 2465
-destination_planet: Gamorr
-arrival_time: 2539
-
-ALL GOOD:
-
-previous_ship_id: 5
-previous_destination_planet: Gamorr
-previous_arrival_time: 2539
-
-ship_id: 5
-departure_planet: Gamorr
-departure_time: 2543
-destination_planet: Alderaan
-arrival_time: 2723
-
-ALL GOOD:
-
-previous_ship_id: 5
-previous_destination_planet: Alderaan
-previous_arrival_time: 2723
-
-ship_id: 5
-departure_planet: Alderaan
-departure_time: 2727
-destination_planet: Dantooine
-arrival_time: 2740
-
-ALL GOOD:
-
-previous_ship_id: 5
-previous_destination_planet: Dantooine
-previous_arrival_time: 2740
-
-ship_id: 5
-departure_planet: Dantooine
-departure_time: 2744
-destination_planet: Yavin
-arrival_time: 2756
-
-ALL GOOD:
-
-previous_ship_id: 5
-previous_destination_planet: Yavin
-previous_arrival_time: 2756
-
-ship_id: 5
-departure_planet: Yavin
-departure_time: 2760
-destination_planet: Dagobah
-arrival_time: 3074
-
-ALL GOOD:
-
-previous_ship_id: 5
-previous_destination_planet: Dagobah
-previous_arrival_time: 3074
-
-ship_id: 5
-departure_planet: Dagobah
-departure_time: 3078
-destination_planet: Tatooine
-arrival_time: 3106
-
-ALL GOOD:
-
-previous_ship_id: 5
-previous_destination_planet: Tatooine
-previous_arrival_time: 3106
-
-ship_id: 5
-departure_planet: Tatooine
-departure_time: 3110
-destination_planet: Hoth
-arrival_time: 3166
-
-ALL GOOD:
-
-previous_ship_id: 5
-previous_destination_planet: Hoth
-previous_arrival_time: 3166
-
-ship_id: 5
-departure_planet: Hoth
-departure_time: 3170
-destination_planet: Endor
-arrival_time: 3230
-
-ALL GOOD:
-
-previous_ship_id: 5
-previous_destination_planet: Endor
-previous_arrival_time: 3230
-
-ship_id: 5
-departure_planet: Endor
-departure_time: 3234
-destination_planet: Bespin
-arrival_time: 3266
-
-ALL GOOD:
-
-previous_ship_id: 5
-previous_destination_planet: Bespin
-previous_arrival_time: 3266
-
-ship_id: 5
-departure_planet: Bespin
-departure_time: 3270
-destination_planet: Endor
-arrival_time: 3302
-
-ALL GOOD:
-
-previous_ship_id: 5
-previous_destination_planet: Endor
-previous_arrival_time: 3302
-
-ship_id: 5
-departure_planet: Endor
-departure_time: 3306
-destination_planet: Hoth
-arrival_time: 3366
-
-ALL GOOD:
-
-previous_ship_id: 5
-previous_destination_planet: Hoth
-previous_arrival_time: 3366
-
-ship_id: 5
-departure_planet: Hoth
-departure_time: 3370
-destination_planet: Tatooine
-arrival_time: 3426
-
-ALL GOOD:
-
-previous_ship_id: 5
-previous_destination_planet: Tatooine
-previous_arrival_time: 3426
-
-ship_id: 5
-departure_planet: Tatooine
-departure_time: 3430
-destination_planet: Dagobah
-arrival_time: 3458
-
-ALL GOOD:
-
-previous_ship_id: 5
-previous_destination_planet: Dagobah
-previous_arrival_time: 3458
-
-ship_id: 5
-departure_planet: Dagobah
-departure_time: 3462
-destination_planet: Yavin
-arrival_time: 3776
-
-ALL GOOD:
-
-previous_ship_id: 5
-previous_destination_planet: Yavin
-previous_arrival_time: 3776
-
-ship_id: 5
-departure_planet: Yavin
-departure_time: 3780
-destination_planet: Dantooine
-arrival_time: 3792
-
-ALL GOOD:
-
-previous_ship_id: 5
-previous_destination_planet: Dantooine
-previous_arrival_time: 3792
-
-ship_id: 5
-departure_planet: Dantooine
-departure_time: 3796
-destination_planet: Alderaan
-arrival_time: 3809
-
-ALL GOOD:
-
-previous_ship_id: 5
-previous_destination_planet: Alderaan
-previous_arrival_time: 3809
-
-ship_id: 5
-departure_planet: Alderaan
-departure_time: 3813
-destination_planet: Gamorr
-arrival_time: 3993
-
-ALL GOOD:
-
-previous_ship_id: 5
-previous_destination_planet: Gamorr
-previous_arrival_time: 3993
-
-ship_id: 5
-departure_planet: Gamorr
-departure_time: 3997
-destination_planet: Sullust
-arrival_time: 4071
-
-ALL GOOD:
-
-previous_ship_id: 5
-previous_destination_planet: Sullust
-previous_arrival_time: 4071
-
-ship_id: 5
-departure_planet: Sullust
-departure_time: 4075
-destination_planet: Bespin
-arrival_time: 4343
-
-ALL GOOD:
-
-previous_ship_id: 5
-previous_destination_planet: Bespin
-previous_arrival_time: 4343
-
-ship_id: 5
-departure_planet: Bespin
-departure_time: 4347
-destination_planet: Corellia
-arrival_time: 4353
-
-ALL GOOD:
-
-previous_ship_id: 5
-previous_destination_planet: Corellia
-previous_arrival_time: 4353
-
-ship_id: 6
-departure_planet: Corellia
-departure_time: 2183
-destination_planet: Wayland
-arrival_time: 2282
-
-ALL GOOD:
-
-previous_ship_id: 6
-previous_destination_planet: Wayland
-previous_arrival_time: 2282
-
-ship_id: 6
-departure_planet: Wayland
-departure_time: 2286
-destination_planet: Yaga Minor
-arrival_time: 2316
-
-ALL GOOD:
-
-previous_ship_id: 6
-previous_destination_planet: Yaga Minor
-previous_arrival_time: 2316
-
-ship_id: 6
-departure_planet: Yaga Minor
-departure_time: 2320
-destination_planet: Kashyyyk
-arrival_time: 2373
-
-ALL GOOD:
-
-previous_ship_id: 6
-previous_destination_planet: Kashyyyk
-previous_arrival_time: 2373
-
-ship_id: 6
-departure_planet: Kashyyyk
-departure_time: 2377
-destination_planet: Myrkr
-arrival_time: 2432
-
-ALL GOOD:
-
-previous_ship_id: 6
-previous_destination_planet: Myrkr
-previous_arrival_time: 2432
-
-ship_id: 6
-departure_planet: Myrkr
-departure_time: 2436
-destination_planet: Wayland
-arrival_time: 2457
-
-ALL GOOD:
-
-previous_ship_id: 6
-previous_destination_planet: Wayland
-previous_arrival_time: 2457
-
-ship_id: 6
-departure_planet: Wayland
-departure_time: 2461
-destination_planet: Myrkr
-arrival_time: 2482
-
-ALL GOOD:
-
-previous_ship_id: 6
-previous_destination_planet: Myrkr
-previous_arrival_time: 2482
-
-ship_id: 6
-departure_planet: Myrkr
-departure_time: 2486
-destination_planet: Kashyyyk
-arrival_time: 2541
-
-ALL GOOD:
-
-previous_ship_id: 6
-previous_destination_planet: Kashyyyk
-previous_arrival_time: 2541
-
-ship_id: 6
-departure_planet: Kashyyyk
-departure_time: 2545
-destination_planet: Yaga Minor
-arrival_time: 2598
-
-ALL GOOD:
-
-previous_ship_id: 6
-previous_destination_planet: Yaga Minor
-previous_arrival_time: 2598
-
-ship_id: 6
-departure_planet: Yaga Minor
-departure_time: 2602
-destination_planet: Wayland
-arrival_time: 2632
-
-ALL GOOD:
-
-previous_ship_id: 6
-previous_destination_planet: Wayland
-previous_arrival_time: 2632
-
-ship_id: 6
-departure_planet: Wayland
-departure_time: 2636
-destination_planet: Corellia
-arrival_time: 2735
-
-ALL GOOD:
-
-previous_ship_id: 6
-previous_destination_planet: Corellia
-previous_arrival_time: 2735
-
-ship_id: 7
-departure_planet: Corellia
-departure_time: 2183
-destination_planet: Brentaal
-arrival_time: 2186
-
-ALL GOOD:
-
-previous_ship_id: 7
-previous_destination_planet: Brentaal
-previous_arrival_time: 2186
-
-ship_id: 7
-departure_planet: Brentaal
-departure_time: 2190
-destination_planet: Corulag
-arrival_time: 2192
-
-ALL GOOD:
-
-previous_ship_id: 7
-previous_destination_planet: Corulag
-previous_arrival_time: 2192
-
-ship_id: 7
-departure_planet: Corulag
-departure_time: 2196
-destination_planet: Esseles
-arrival_time: 2200
-
-ALL GOOD:
-
-previous_ship_id: 7
-previous_destination_planet: Esseles
-previous_arrival_time: 2200
-
-ship_id: 7
-departure_planet: Esseles
-departure_time: 2204
-destination_planet: Chandrila
-arrival_time: 2207
-
-ALL GOOD:
-
-previous_ship_id: 7
-previous_destination_planet: Chandrila
-previous_arrival_time: 2207
-
-ship_id: 7
-departure_planet: Chandrila
-departure_time: 2211
-destination_planet: Ralltiir
-arrival_time: 2215
-
-ALL GOOD:
-
-previous_ship_id: 7
-previous_destination_planet: Ralltiir
-previous_arrival_time: 2215
-
-ship_id: 7
-departure_planet: Ralltiir
-departure_time: 2219
-destination_planet: Rhinnal
-arrival_time: 2220
-
-ALL GOOD:
-
-previous_ship_id: 7
-previous_destination_planet: Rhinnal
-previous_arrival_time: 2220
-
-ship_id: 7
-departure_planet: Rhinnal
-departure_time: 2224
-destination_planet: Brentaal
-arrival_time: 2229
-
-ALL GOOD:
-
-previous_ship_id: 7
-previous_destination_planet: Brentaal
-previous_arrival_time: 2229
-
-ship_id: 7
-departure_planet: Brentaal
-departure_time: 2233
-destination_planet: Rhinnal
-arrival_time: 2238
-
-ALL GOOD:
-
-previous_ship_id: 7
-previous_destination_planet: Rhinnal
-previous_arrival_time: 2238
-
-ship_id: 7
-departure_planet: Rhinnal
-departure_time: 2242
-destination_planet: Ralltiir
-arrival_time: 2243
-
-ALL GOOD:
-
-previous_ship_id: 7
-previous_destination_planet: Ralltiir
-previous_arrival_time: 2243
-
-ship_id: 7
-departure_planet: Ralltiir
-departure_time: 2247
-destination_planet: Chandrila
-arrival_time: 2251
-
-ALL GOOD:
-
-previous_ship_id: 7
-previous_destination_planet: Chandrila
-previous_arrival_time: 2251
-
-ship_id: 7
-departure_planet: Chandrila
-departure_time: 2255
-destination_planet: Esseles
-arrival_time: 2258
-
-ALL GOOD:
-
-previous_ship_id: 7
-previous_destination_planet: Esseles
-previous_arrival_time: 2258
-
-ship_id: 7
-departure_planet: Esseles
-departure_time: 2262
-destination_planet: Corulag
-arrival_time: 2266
-
-ALL GOOD:
-
-previous_ship_id: 7
-previous_destination_planet: Corulag
-previous_arrival_time: 2266
-
-ship_id: 7
-departure_planet: Corulag
-departure_time: 2270
-destination_planet: Brentaal
-arrival_time: 2272
-
-ALL GOOD:
-
-previous_ship_id: 7
-previous_destination_planet: Brentaal
-previous_arrival_time: 2272
-
-ship_id: 7
-departure_planet: Brentaal
-departure_time: 2276
-destination_planet: Corellia
-arrival_time: 2279
-
-ALL GOOD:
-
-previous_ship_id: 7
-previous_destination_planet: Corellia
-previous_arrival_time: 2279
-
-ship_id: 8
-departure_planet: Coruscant
-departure_time: 0
-destination_planet: Corellia
-arrival_time: 4
-
-ALL GOOD:
-
-previous_ship_id: 8
-previous_destination_planet: Corellia
-previous_arrival_time: 4
-
-ship_id: 9
-departure_planet: Corellia
-departure_time: 2183
-destination_planet: Coruscant
-arrival_time: 2187
-
---1556-- REDIR: 0x556bab0 (libc.so.6:__mempcpy_avx_unaligned_erms) redirected to 0x4c37130 (mempcpy)
-==1556== 
-==1556== HEAP SUMMARY:
-==1556==     in use at exit: 0 bytes in 0 blocks
-==1556==   total heap usage: 1,029 allocs, 1,029 frees, 158,211 bytes allocated
-==1556== 
-==1556== All heap blocks were freed -- no leaks are possible
-==1556== 
-==1556== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-==1556== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+		Endor	10
+		Gamorr	55
+		Hoth	39
+		Sullust	17
+		Tatooine	15
+--1711-- REDIR: 0x4ecd310 (libstdc++.so.6:operator delete[](void*)) redirected to 0x4c316d0 (operator delete[](void*))
+--1711-- REDIR: 0x5474950 (libc.so.6:free) redirected to 0x4c30cd0 (free)
+--1711-- REDIR: 0x556bab0 (libc.so.6:__mempcpy_avx_unaligned_erms) redirected to 0x4c37130 (mempcpy)
+==1711== 
+==1711== Process terminating with default action of signal 2 (SIGINT)
+==1711==    at 0x54ED081: read (read.c:27)
+==1711==    by 0x546A147: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:531)
+==1711==    by 0x546B3F1: _IO_default_uflow (genops.c:380)
+==1711==    by 0x4F2995C: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==1711==    by 0x4F37739: std::istream::sentry::sentry(std::istream&, bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==1711==    by 0x4F3796D: std::istream::operator>>(int&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==1711==    by 0x117AE9: RouteCreator::Create(Reader const&, Travel_Times const&) (in /mnt/c/Users/pkerts/source/repos/Ass3/Ass3/a.out)
+==1711==    by 0x10A411: main (in /mnt/c/Users/pkerts/source/repos/Ass3/Ass3/a.out)
+==1711== 
+==1711== HEAP SUMMARY:
+==1711==     in use at exit: 55,194 bytes in 397 blocks
+==1711==   total heap usage: 421 allocs, 24 frees, 138,667 bytes allocated
+==1711== 
+==1711== Searching for pointers to 397 not-freed blocks
+==1711== Checked 135,424 bytes
+==1711== 
+==1711== LEAK SUMMARY:
+==1711==    definitely lost: 0 bytes in 0 blocks
+==1711==    indirectly lost: 0 bytes in 0 blocks
+==1711==      possibly lost: 0 bytes in 0 blocks
+==1711==    still reachable: 55,194 bytes in 397 blocks
+==1711==         suppressed: 0 bytes in 0 blocks
+==1711== Reachable blocks (those to which a pointer was found) are not shown.
+==1711== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==1711== 
+==1711== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==1711== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
